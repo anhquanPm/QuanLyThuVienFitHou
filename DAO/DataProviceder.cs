@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -50,6 +51,32 @@ namespace DAO
                 return "Tài khoản hoặc mật khẩu không chính xác !";
             }
             return user;
+        }
+
+        public static DataSet GetDataDTO(string procName, Dictionary<string, object> parameters)
+        {
+            DataSet dataSet = new DataSet();
+            using (SqlConnection conn = SqlConnectionData.Connection())
+            {
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand(procName, conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    // Thêm các tham số vào command
+                    foreach (var param in parameters)
+                    {
+                        cmd.Parameters.AddWithValue(param.Key, param.Value);
+                    }
+
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                    {
+                        // Đổ dữ liệu vào DataSet
+                        adapter.Fill(dataSet);
+                    }
+                }
+            }
+            return dataSet;
         }
 
     }

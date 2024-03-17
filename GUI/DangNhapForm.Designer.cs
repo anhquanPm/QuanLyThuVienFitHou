@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class Form1
+    partial class DangNhapForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DangNhapForm));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chk_save = new System.Windows.Forms.CheckBox();
             this.btn_thoat = new System.Windows.Forms.Button();
             this.btn_dang_nhap = new System.Windows.Forms.Button();
             this.tb_mat_khau = new System.Windows.Forms.TextBox();
@@ -57,7 +58,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(37, 150);
+            this.label2.Location = new System.Drawing.Point(37, 132);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 23);
@@ -66,6 +67,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.chk_save);
             this.groupBox1.Controls.Add(this.btn_thoat);
             this.groupBox1.Controls.Add(this.btn_dang_nhap);
             this.groupBox1.Controls.Add(this.tb_mat_khau);
@@ -76,14 +78,25 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox1.Size = new System.Drawing.Size(478, 274);
+            this.groupBox1.Size = new System.Drawing.Size(478, 298);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin đăng nhập";
             // 
+            // chk_save
+            // 
+            this.chk_save.AutoSize = true;
+            this.chk_save.Location = new System.Drawing.Point(178, 194);
+            this.chk_save.Name = "chk_save";
+            this.chk_save.Size = new System.Drawing.Size(153, 27);
+            this.chk_save.TabIndex = 4;
+            this.chk_save.Text = "Nhớ đăng nhập";
+            this.chk_save.UseVisualStyleBackColor = true;
+            this.chk_save.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // btn_thoat
             // 
-            this.btn_thoat.Location = new System.Drawing.Point(306, 222);
+            this.btn_thoat.Location = new System.Drawing.Point(308, 242);
             this.btn_thoat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_thoat.Name = "btn_thoat";
             this.btn_thoat.Size = new System.Drawing.Size(85, 32);
@@ -94,7 +107,7 @@
             // 
             // btn_dang_nhap
             // 
-            this.btn_dang_nhap.Location = new System.Drawing.Point(83, 222);
+            this.btn_dang_nhap.Location = new System.Drawing.Point(85, 242);
             this.btn_dang_nhap.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_dang_nhap.Name = "btn_dang_nhap";
             this.btn_dang_nhap.Size = new System.Drawing.Size(103, 32);
@@ -105,7 +118,7 @@
             // 
             // tb_mat_khau
             // 
-            this.tb_mat_khau.Location = new System.Drawing.Point(178, 150);
+            this.tb_mat_khau.Location = new System.Drawing.Point(178, 132);
             this.tb_mat_khau.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tb_mat_khau.Name = "tb_mat_khau";
             this.tb_mat_khau.Size = new System.Drawing.Size(232, 30);
@@ -154,21 +167,22 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "THƯ VIỆN FITHOU";
             // 
-            // Form1
+            // DangNhapForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ClientSize = new System.Drawing.Size(718, 392);
+            this.ClientSize = new System.Drawing.Size(718, 416);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "DangNhapForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";
+            this.Load += new System.EventHandler(this.DangNhapForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -190,6 +204,7 @@
         private System.Windows.Forms.Button btn_dang_nhap;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.CheckBox chk_save;
     }
 }
 
