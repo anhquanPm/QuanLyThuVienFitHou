@@ -56,5 +56,29 @@ namespace GUI.Properties {
                 return ((string)(this["QuanLyThuVienFitHou"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string tk {
+            get {
+                return ((string)(this["tk"]));
+            }
+            set {
+                this["tk"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string mk {
+            get {
+                return ((string)(this["mk"]));
+            }
+            set {
+                this["mk"] = value;
+            }
+        }
     }
 }

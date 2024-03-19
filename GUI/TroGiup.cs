@@ -2,34 +2,24 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BUS;
 
 namespace GUI
 {
-    public partial class WellCome : Form
+    public partial class HDSD : Form
     {
-        TaiKhoanBUS taiKhoanBUS = new TaiKhoanBUS();
         private Timer labelTimer = new Timer();
         private bool isLabelBlinking = false;
-        public WellCome()
+        public HDSD()
         {
             InitializeComponent();
             InitializeLabelTimer();
             StartLabelBlink(); // Bắt đầu nhấp nháy khi form được tạo
-        }
-
-        private void WellCome_Load(object sender, EventArgs e)
-        {
-            DataSet dataSet = taiKhoanBUS.getTaiKhoanData(Properties.Settings.Default.taiKhoan, Properties.Settings.Default.matKhau);
-            if (dataSet.Tables[0].Rows.Count > 0 )
-            {
-                lb_ten_ngui_dung.Text = dataSet.Tables[0].Rows[0]["sTenNV"].ToString();
-            }
         }
 
         private void InitializeLabelTimer()
@@ -41,8 +31,10 @@ namespace GUI
         private void LabelTimer_Tick(object sender, EventArgs e)
         {
             // Thay đổi màu sắc của Label giữa đỏ và đen
-            label1.ForeColor = (label1.ForeColor == Color.Black) ? Color.Red : Color.Black;
-            lb_ten_ngui_dung.ForeColor = (label1.ForeColor == Color.Black) ? Color.Red : Color.Black;
+            lb_tacgia.ForeColor = (lb_tacgia.ForeColor == Color.Black) ? Color.Red : Color.Black;
+            lb_hdsd.ForeColor = (lb_hdsd.ForeColor == Color.Black) ? Color.Red : Color.Black;
+            lb_lienhe.ForeColor = (lb_lienhe.ForeColor == Color.Black) ? Color.Red : Color.Black;
+
         }
 
         private void StartLabelBlink()
@@ -51,14 +43,21 @@ namespace GUI
             isLabelBlinking = true;
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void TroGiup_Load(object sender, EventArgs e)
         {
-
+         
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void btn_hdsd_Click(object sender, EventArgs e)
         {
+            string url = "";
+            //Process.Start(url);
+        }
 
+        private void btn_lhtg_Click(object sender, EventArgs e)
+        {
+            string url = "https://www.facebook.com/2uanvy";
+            Process.Start(url);
         }
     }
 }

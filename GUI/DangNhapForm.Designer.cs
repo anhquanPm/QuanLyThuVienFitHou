@@ -124,6 +124,7 @@
             this.tb_mat_khau.Size = new System.Drawing.Size(232, 30);
             this.tb_mat_khau.TabIndex = 1;
             this.tb_mat_khau.UseSystemPasswordChar = true;
+            this.tb_mat_khau.TextChanged += new System.EventHandler(this.tb_mat_khau_TextChanged);
             // 
             // tb_tai_khoan
             // 
@@ -132,6 +133,7 @@
             this.tb_tai_khoan.Name = "tb_tai_khoan";
             this.tb_tai_khoan.Size = new System.Drawing.Size(232, 30);
             this.tb_tai_khoan.TabIndex = 0;
+            this.tb_tai_khoan.TextChanged += new System.EventHandler(this.tb_tai_khoan_TextChanged);
             // 
             // groupBox2
             // 

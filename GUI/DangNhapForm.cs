@@ -8,6 +8,9 @@ namespace GUI
     {
         TaiKhoan taiKhoan = new TaiKhoan();
         TaiKhoanBUS taiKhoanBUS = new TaiKhoanBUS();
+        public string tk;
+        public string mk;
+
         public DangNhapForm()
         {
             InitializeComponent();
@@ -22,6 +25,10 @@ namespace GUI
         {
             taiKhoan.SUserName = tb_tai_khoan.Text;
             taiKhoan.SPassWord = tb_mat_khau.Text;
+
+            tk = tb_tai_khoan.Text;
+            mk = tb_mat_khau.Text;
+            chk_save.Checked = true;
 
             string getUser = taiKhoanBUS.checkLogin(taiKhoan);
             // trả lại kết quả nghiệp vụ không đúng
@@ -50,8 +57,8 @@ namespace GUI
             {
                 if (chk_save.Checked == true)
                 {
-                    string taiKhoan = tb_tai_khoan.Text.Trim();
-                    string matKhau = tb_mat_khau.Text.Trim();
+                     string taiKhoan = tb_tai_khoan.Text.Trim();
+                     string matKhau = tb_mat_khau.Text.Trim();
                     Properties.Settings.Default.taiKhoan = taiKhoan;
                     Properties.Settings.Default.matKhau = matKhau;
 
@@ -62,7 +69,10 @@ namespace GUI
                     Properties.Settings.Default.Reset();
                 }
             }
-       
+
+
+
+
         }
 
         private void DangNhapForm_Load(object sender, EventArgs e)
@@ -73,6 +83,16 @@ namespace GUI
             {
                 chk_save.Checked = true;
             }
+        }
+
+        private void tb_tai_khoan_TextChanged(object sender, EventArgs e)
+        {
+            chk_save.Checked = false;
+        }
+
+        private void tb_mat_khau_TextChanged(object sender, EventArgs e)
+        {
+            chk_save.Checked = false;
         }
     }
 }

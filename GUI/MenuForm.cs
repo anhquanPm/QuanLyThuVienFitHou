@@ -43,7 +43,16 @@ namespace GUI
 
         private void ThoatToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Close();
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn thoát", "???", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if(result == DialogResult.Yes)
+            {
+               Application.Exit();
+            }
+            else
+            {
+
+            }
         }
 
         private void SachToolStripMenuItem_Click(object sender, EventArgs e)
@@ -56,6 +65,32 @@ namespace GUI
         {
             WellCome wellCome = new WellCome();
             addForm(wellCome);
+        }
+
+        private void InforToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ThongTinTaiKhoanForm f = new ThongTinTaiKhoanForm();
+            addForm(f);
+        }
+
+        private void DangXuatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DangNhapForm f = new DangNhapForm();
+            
+           this.Close();
+            f.Show();
+        }
+
+        private void DoiMatKhauToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DoiMatKhau doiMatKhau = new DoiMatKhau();
+            addForm(doiMatKhau);
+        }
+
+        private void HDSDToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HDSD f = new HDSD();
+            addForm(f);
         }
     }
 }

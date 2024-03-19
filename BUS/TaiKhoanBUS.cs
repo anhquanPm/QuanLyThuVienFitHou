@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using DTO;
 using DAO;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Data;
 namespace BUS
 {
     public class TaiKhoanBUS
@@ -26,6 +27,27 @@ namespace BUS
 
             string infor = taiKhoanDAO.checkLogin(taiKhoan);
             return infor;
+        }
+
+        public DataSet getTaiKhoanData(string taiKhoan, string matkhau)
+        {
+            return taiKhoanDAO.GetDataTaiKhoan(taiKhoan, matkhau);
+        }
+
+        public DataSet getTaiKhoanDataDMK(string taiKhoan, string matkhau)
+        {
+            return taiKhoanDAO.GetDataTaiKhoanDMK(taiKhoan, matkhau);
+        }
+
+        public int updateTaiKhoanData(string manv, string tennv, string gioitinh,
+            string diachi, string sdt, string ngaysinh)
+        {
+            return taiKhoanDAO.UpdateTaiKhoan(manv, tennv, gioitinh, diachi, sdt, ngaysinh);
+        }
+
+        public int doiMatKhau(string tenTaiKhoan, string matKhau)
+        {
+            return taiKhoanDAO.DoiMatKhau(tenTaiKhoan, matKhau);
         }
     }
 }

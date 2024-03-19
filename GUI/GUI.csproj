@@ -52,6 +52,12 @@
     <Compile Include="DangNhapForm.Designer.cs">
       <DependentUpon>DangNhapForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoiMatKhau.Designer.cs">
+      <DependentUpon>DoiMatKhau.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,18 @@
     <Compile Include="SachForm.Designer.cs">
       <DependentUpon>SachForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThongTinTaiKhoanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongTinTaiKhoanForm.Designer.cs">
+      <DependentUpon>ThongTinTaiKhoanForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TroGiup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TroGiup.Designer.cs">
+      <DependentUpon>TroGiup.cs</DependentUpon>
+    </Compile>
     <Compile Include="WellCome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +98,9 @@
     </Compile>
     <EmbeddedResource Include="DangNhapForm.resx">
       <DependentUpon>DangNhapForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoiMatKhau.resx">
+      <DependentUpon>DoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuForm.resx">
       <DependentUpon>MenuForm.cs</DependentUpon>
@@ -98,6 +119,12 @@
     </Compile>
     <EmbeddedResource Include="SachForm.resx">
       <DependentUpon>SachForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongTinTaiKhoanForm.resx">
+      <DependentUpon>ThongTinTaiKhoanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TroGiup.resx">
+      <DependentUpon>TroGiup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WellCome.resx">
       <DependentUpon>WellCome.cs</DependentUpon>

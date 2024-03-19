@@ -79,5 +79,26 @@ namespace DAO
             return dataSet;
         }
 
+        public static int them_sua_xoa(string procName, Dictionary<string, object> parameters)
+        {
+            using (SqlConnection conn = SqlConnectionData.Connection())
+            {
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand(procName, conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    // Thêm các tham số vào command
+                    foreach (var param in parameters)
+                    {
+                        cmd.Parameters.AddWithValue(param.Key, param.Value);
+                    }
+                    // Thực thi stored procedure cập nhật và trả về số dòng ảnh hưởng
+                    return cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+
     }
 }
