@@ -117,4 +117,51 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="label10.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAk9JREFUSEtj
+        GAVUAKHMGtqW7rrmHvMNbQOXgTCIraFj5QaSgyoiD+iZumWZe8Zf8c+f+COkZMb/4NKZ/0PL5/wPq1rw
+        3z9/0g8Lz7jLWmauGVDlxANjY2NWQ1v/1cEl076BDA0HGpgyYe//tMkHwTh14r7/8e0b/0fWL/8fXD7r
+        q4FNwCqQHqh2wsAAaHhE9aJ/INfCDAXhrLYl/zPalqKIxbWs/R9eueifgY3fSqh2/EDXxD07uHTGN3TD
+        E9vW/n/w8DEYJwHZyHIhZbP+BxVP+aZt7pIGNQYXCGW28Eq6CAoWZANAOL5t/f/HT57+f/T4CZiNLh9U
+        NO2/uUfiBaAhTBCzsAANfVv3gKIpP0Bhjm4AKA6OHD/z/9DR08A4QMQHDIdWzPsfWDT1u5KepTPUOEyg
+        b+U9M7RiDjgS0Q0A4Y3bDwExpjgIgywNrZj7X8/CexrUOExg7BiyCj3skfHS9XvBGJscCIP0GtuH4I5s
+        QhbMXL4DjLHJgTBBCxBBhN2VffO3/O+dvxmrHCiOCAaRqqapXUD+xC+gCMNmSEHf+v/5/RuwyoEM98+b
+        8Fld3cQaahw2EMps7plwHpTk0A0AubBz+or/E+ZtQMnVYDzpACgF/Td3jz8LNAR3MgUBHVO3TOwZbf3/
+        m7fu/n/46Mn/xHZUX4DUgjOaqUsq1Bj8AFdRUdi7GhhMa1DEQGoiqhcTX1SAAKHCDsQGiYHkAkunkV7Y
+        wQC24hqMgWyKims0wKSpa2Wnb+0zxcgheDEIg9haeva2IDmIklFANmBgAAAPTGqVJ0dyXwAAAABJRU5E
+        rkJggg==
+</value>
+  </data>
+  <metadata name="tACGIABindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>720, 17</value>
+  </metadata>
+  <metadata name="nHAXUATBANBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 58</value>
+  </metadata>
+  <metadata name="tHELOAISACHBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>229, 17</value>
+  </metadata>
+  <metadata name="quanLyThuVienDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="tHELOAISACHBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>229, 17</value>
+  </metadata>
+  <metadata name="tHELOAISACHTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>478, 17</value>
+  </metadata>
+  <metadata name="tACGIABindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>720, 17</value>
+  </metadata>
+  <metadata name="tACGIATableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>924, 17</value>
+  </metadata>
+  <metadata name="nHAXUATBANBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 58</value>
+  </metadata>
+  <metadata name="nHAXUATBANTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>268, 58</value>
+  </metadata>
 </root>

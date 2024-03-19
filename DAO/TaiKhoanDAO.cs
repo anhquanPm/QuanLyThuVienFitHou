@@ -47,7 +47,7 @@ namespace DAO
             parameters.Add("@tenNV", tennv);
             parameters.Add("@gioiTinh", gioitinh);
             parameters.Add("@diaChi", diachi);
-            parameters.Add("@sdt", manv);
+            parameters.Add("@sdt", sdt);
             parameters.Add("@ngaySinh", ngaysinh);
 
             return them_sua_xoa("proc_capNhatNhanVien", parameters);

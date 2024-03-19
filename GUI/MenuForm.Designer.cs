@@ -40,9 +40,16 @@
             this.NhanVienToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trợGiúpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.HDSDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelContent = new System.Windows.Forms.Panel();
-            this.HDSDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.PhieuMuonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.PhieuTraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.DocGiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.PhieuPhatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SachSapDenHanTraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SachQuaHanTraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TongTienPhatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,33 +77,37 @@
             // 
             // InforToolStripMenuItem
             // 
-            this.InforToolStripMenuItem.Name = "InforToolStripMenuItem";
             resources.ApplyResources(this.InforToolStripMenuItem, "InforToolStripMenuItem");
+            this.InforToolStripMenuItem.Name = "InforToolStripMenuItem";
             this.InforToolStripMenuItem.Click += new System.EventHandler(this.InforToolStripMenuItem_Click);
             // 
             // DoiMatKhauToolStripMenuItem
             // 
-            this.DoiMatKhauToolStripMenuItem.Name = "DoiMatKhauToolStripMenuItem";
             resources.ApplyResources(this.DoiMatKhauToolStripMenuItem, "DoiMatKhauToolStripMenuItem");
+            this.DoiMatKhauToolStripMenuItem.Name = "DoiMatKhauToolStripMenuItem";
             this.DoiMatKhauToolStripMenuItem.Click += new System.EventHandler(this.DoiMatKhauToolStripMenuItem_Click);
             // 
             // ThoatToolStripMenuItem
             // 
-            this.ThoatToolStripMenuItem.Name = "ThoatToolStripMenuItem";
             resources.ApplyResources(this.ThoatToolStripMenuItem, "ThoatToolStripMenuItem");
+            this.ThoatToolStripMenuItem.Name = "ThoatToolStripMenuItem";
             this.ThoatToolStripMenuItem.Click += new System.EventHandler(this.ThoatToolStripMenuItem_Click);
             // 
             // DangXuatToolStripMenuItem
             // 
-            this.DangXuatToolStripMenuItem.Name = "DangXuatToolStripMenuItem";
             resources.ApplyResources(this.DangXuatToolStripMenuItem, "DangXuatToolStripMenuItem");
+            this.DangXuatToolStripMenuItem.Name = "DangXuatToolStripMenuItem";
             this.DangXuatToolStripMenuItem.Click += new System.EventHandler(this.DangXuatToolStripMenuItem_Click);
             // 
             // quảnLýToolStripMenuItem
             // 
             this.quảnLýToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.SachToolStripMenuItem,
-            this.NhanVienToolStripMenuItem});
+            this.NhanVienToolStripMenuItem,
+            this.DocGiaToolStripMenuItem,
+            this.PhieuMuonToolStripMenuItem,
+            this.PhieuTraToolStripMenuItem,
+            this.PhieuPhatToolStripMenuItem});
             resources.ApplyResources(this.quảnLýToolStripMenuItem, "quảnLýToolStripMenuItem");
             this.quảnLýToolStripMenuItem.Name = "quảnLýToolStripMenuItem";
             // 
@@ -114,6 +125,10 @@
             // 
             // thốngKêToolStripMenuItem
             // 
+            this.thốngKêToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.SachSapDenHanTraToolStripMenuItem,
+            this.SachQuaHanTraToolStripMenuItem,
+            this.TongTienPhatToolStripMenuItem});
             resources.ApplyResources(this.thốngKêToolStripMenuItem, "thốngKêToolStripMenuItem");
             this.thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
             // 
@@ -123,6 +138,12 @@
             this.HDSDToolStripMenuItem});
             resources.ApplyResources(this.trợGiúpToolStripMenuItem, "trợGiúpToolStripMenuItem");
             this.trợGiúpToolStripMenuItem.Name = "trợGiúpToolStripMenuItem";
+            // 
+            // HDSDToolStripMenuItem
+            // 
+            resources.ApplyResources(this.HDSDToolStripMenuItem, "HDSDToolStripMenuItem");
+            this.HDSDToolStripMenuItem.Name = "HDSDToolStripMenuItem";
+            this.HDSDToolStripMenuItem.Click += new System.EventHandler(this.HDSDToolStripMenuItem_Click);
             // 
             // homeToolStripMenuItem
             // 
@@ -135,11 +156,40 @@
             resources.ApplyResources(this.panelContent, "panelContent");
             this.panelContent.Name = "panelContent";
             // 
-            // HDSDToolStripMenuItem
+            // PhieuMuonToolStripMenuItem
             // 
-            this.HDSDToolStripMenuItem.Name = "HDSDToolStripMenuItem";
-            resources.ApplyResources(this.HDSDToolStripMenuItem, "HDSDToolStripMenuItem");
-            this.HDSDToolStripMenuItem.Click += new System.EventHandler(this.HDSDToolStripMenuItem_Click);
+            resources.ApplyResources(this.PhieuMuonToolStripMenuItem, "PhieuMuonToolStripMenuItem");
+            this.PhieuMuonToolStripMenuItem.Name = "PhieuMuonToolStripMenuItem";
+            // 
+            // PhieuTraToolStripMenuItem
+            // 
+            resources.ApplyResources(this.PhieuTraToolStripMenuItem, "PhieuTraToolStripMenuItem");
+            this.PhieuTraToolStripMenuItem.Name = "PhieuTraToolStripMenuItem";
+            // 
+            // DocGiaToolStripMenuItem
+            // 
+            resources.ApplyResources(this.DocGiaToolStripMenuItem, "DocGiaToolStripMenuItem");
+            this.DocGiaToolStripMenuItem.Name = "DocGiaToolStripMenuItem";
+            // 
+            // PhieuPhatToolStripMenuItem
+            // 
+            resources.ApplyResources(this.PhieuPhatToolStripMenuItem, "PhieuPhatToolStripMenuItem");
+            this.PhieuPhatToolStripMenuItem.Name = "PhieuPhatToolStripMenuItem";
+            // 
+            // SachSapDenHanTraToolStripMenuItem
+            // 
+            resources.ApplyResources(this.SachSapDenHanTraToolStripMenuItem, "SachSapDenHanTraToolStripMenuItem");
+            this.SachSapDenHanTraToolStripMenuItem.Name = "SachSapDenHanTraToolStripMenuItem";
+            // 
+            // SachQuaHanTraToolStripMenuItem
+            // 
+            resources.ApplyResources(this.SachQuaHanTraToolStripMenuItem, "SachQuaHanTraToolStripMenuItem");
+            this.SachQuaHanTraToolStripMenuItem.Name = "SachQuaHanTraToolStripMenuItem";
+            // 
+            // TongTienPhatToolStripMenuItem
+            // 
+            resources.ApplyResources(this.TongTienPhatToolStripMenuItem, "TongTienPhatToolStripMenuItem");
+            this.TongTienPhatToolStripMenuItem.Name = "TongTienPhatToolStripMenuItem";
             // 
             // MenuForm
             // 
@@ -173,5 +223,12 @@
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem DangXuatToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem HDSDToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem DocGiaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem PhieuMuonToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem PhieuTraToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem PhieuPhatToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem SachSapDenHanTraToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem SachQuaHanTraToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem TongTienPhatToolStripMenuItem;
     }
 }

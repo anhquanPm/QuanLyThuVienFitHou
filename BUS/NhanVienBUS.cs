@@ -15,5 +15,32 @@ namespace BUS
         {
             return NhanVienDAO.GetNhanVienData();
         }
+
+        public int updateNhanVien(string manv, string tennv, string gioitinh,
+            string diachi, string sdt, string macv, string ngaysinh)
+        {
+            return NhanVienDAO.upDateNhanVien(manv, tennv, gioitinh, diachi, sdt, macv ,ngaysinh);
+        }
+
+        public int themNhanVien(string manv, string tennv, string gioitinh,
+           string diachi, string sdt, string macv, string ngaysinh)
+        {
+            return NhanVienDAO.themNhanVien(manv, tennv, gioitinh, diachi, sdt, macv, ngaysinh);
+        }
+
+        public int xoaNhanVien(string manv)
+        {
+            return NhanVienDAO.xoaNhanVien(manv);
+        }
+
+        public DataSet timKiemNhanVienTheoMaNV(string manv)
+        {
+            return NhanVienDAO.timKiemTheoMaNV(manv);
+        }
+
+        public DataSet timKiemNhanVienTheoTen(string tennv)
+        {
+            return NhanVienDAO.timKiemTheoTen(tennv);
+        }
     }
 }

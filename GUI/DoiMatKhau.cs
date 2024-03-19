@@ -41,13 +41,15 @@ namespace GUI
                     int res = taiKhoanBUS.doiMatKhau(tenTK, matKhau);
                     if (res > 0) {
                         MessageBox.Show("Cập nhật mật khẩu thành công");
-                        
-
                     }
                     else
                     {
                         MessageBox.Show("Cập nhật mật khẩu thất bại");
                     }
+                }
+                else
+                {
+                    MessageBox.Show("Mật khẩu không khớp");
                 }
             }
             else

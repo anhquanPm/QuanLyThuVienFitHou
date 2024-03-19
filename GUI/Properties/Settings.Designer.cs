@@ -80,5 +80,16 @@ namespace GUI.Properties {
                 this["mk"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ANHQUAN;Initial Catalog=QuanLyThuVien;Integrated Security=True;Encryp" +
+            "t=True;TrustServerCertificate=True")]
+        public string QuanLyThuVienConnectionString {
+            get {
+                return ((string)(this["QuanLyThuVienConnectionString"]));
+            }
+        }
     }
 }
