@@ -148,7 +148,6 @@ namespace GUI
             {
                 string user = tb_ten_tk.Text;
                 string pass = tb_mk.Text;
-                string manv = cbb_ma_nv.Text;
                 string quyen = cbb_quyen.Text;
                 bool bquyen = false;
                 if(quyen == "Quản lý")
@@ -165,6 +164,23 @@ namespace GUI
                 {
                     MessageBox.Show("Cập nhật thông tin thành công");
                     loadTaiKhoan();
+                    DataSet check = taiKhoanBUS.checkQuyen(Properties.Settings.Default.taiKhoan,
+                        Properties.Settings.Default.matKhau);
+
+                    if (check.Tables[0].Rows.Count > 0)
+                    {
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Phiên đăng nhập của bạn đã hết hạn");
+                        Application.Exit();
+                        
+                       
+                       
+                    }
+                    
+               
                 }
                 else
                 {

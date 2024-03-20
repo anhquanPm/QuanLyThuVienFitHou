@@ -18,7 +18,7 @@ namespace GUI
             InitializeComponent();
         }
 
-        private void MenuForm_Load(object sender, EventArgs e)
+        public void MenuForm_Load(object sender, EventArgs e)
         {
             WellCome wellCome = new WellCome();
             addForm(wellCome);
