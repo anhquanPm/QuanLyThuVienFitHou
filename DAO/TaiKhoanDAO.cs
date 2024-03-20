@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Web;
 using DTO;
 
 namespace DAO
@@ -61,5 +62,51 @@ namespace DAO
             return them_sua_xoa("proc_capNhatNhanVien", parameters);
         }
 
+        public DataSet quanLyTaiKhoan()
+        {
+
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            return GetDataDTO("proc_dsTaiKhoan",parameters);
+        }
+
+        public int themTaiKhoan(string user, string pass, string manv, bool quyen)
+        {
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@user", user);
+            parameters.Add("@pass", pass);
+            parameters.Add("@maNv", manv);
+            parameters.Add("@quyen", quyen);
+            return them_sua_xoa("proc_themTaiKhoan", parameters);
+        }
+
+        public int capNhatTaiKhoan(string user, string pass,  bool quyen)
+        {
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@user", user);
+            parameters.Add("@pass", pass);
+            parameters.Add("@quyen", quyen);
+            return them_sua_xoa("proc_capNhatTaiKhoan", parameters);
+        }
+
+        public int xoaTaiKhoan(string user)
+        {
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@user", user);
+            return them_sua_xoa("proc_xoaTaiKhoan", parameters);
+        }
+
+        public DataSet timKiemTKTheoUser(string user)
+        {
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@user", user);
+            return GetDataDTO("proc_timKiemTKTheoUser", parameters);
+        }
+
+        public DataSet timKiemTKTheoMaNV(string maNV)
+        {
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@maNV", maNV);
+            return GetDataDTO("proc_timKiemTheoMaNV", parameters);
+        }
     }
 }

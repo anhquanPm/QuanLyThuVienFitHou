@@ -33,6 +33,7 @@ namespace GUI
                 NhanVienToolStripMenuItem.Visible = false;
                 QLTCToolStripMenuItem.Visible = false;
                 TongTienPhatToolStripMenuItem.Visible = false;
+                TKToolStripMenuItem.Visible = false;
             }
         }
 
@@ -103,6 +104,12 @@ namespace GUI
         private void HDSDToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HDSD f = new HDSD();
+            addForm(f);
+        }
+
+        private void TKToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            QuanLyTaiKhoan f = new QuanLyTaiKhoan();
             addForm(f);
         }
     }

@@ -54,5 +54,36 @@ namespace BUS
         {
             return taiKhoanDAO.DoiMatKhau(tenTaiKhoan, matKhau);
         }
+
+        public DataSet quanLyTaiKhoan()
+        {
+            return taiKhoanDAO.quanLyTaiKhoan();
+        }
+
+        public int capNhatTaiKhoan(string user, string pass, bool quyen)
+        {
+            return taiKhoanDAO.capNhatTaiKhoan(user, pass, quyen);
+        }
+
+        public int themTaiKhoan(string user, string pass, string maNV ,bool quyen)
+        {
+            return taiKhoanDAO.themTaiKhoan(user, pass, maNV, quyen);
+        }
+
+        public int xoaTaiKhoan(string user)
+        {
+            return taiKhoanDAO.xoaTaiKhoan(user);
+        }
+
+        public DataSet timKiemTaiKhoanTheoUser(string user)
+        {
+            return taiKhoanDAO.timKiemTKTheoUser(user);
+        }
+
+        public DataSet timKiemTaiKhoanTheoMaNV(string maNV)
+        {
+            return taiKhoanDAO.timKiemTKTheoMaNV(maNV);
+        }
+
     }
 }

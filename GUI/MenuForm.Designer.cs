@@ -39,21 +39,21 @@
             this.SachToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.NhanVienToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DocGiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tácGiảToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TKToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SachSapDenHanTraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SachQuaHanTraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TongTienPhatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trợGiúpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HDSDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panelContent = new System.Windows.Forms.Panel();
             this.phiếuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.phiếuMượnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.phiếuTrảToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.phiếuPhạtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tácGiảToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.QLTCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panelContent = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -112,7 +112,7 @@
             this.NhanVienToolStripMenuItem,
             this.DocGiaToolStripMenuItem,
             this.tácGiảToolStripMenuItem,
-            this.tàiKhoảnToolStripMenuItem});
+            this.TKToolStripMenuItem});
             resources.ApplyResources(this.quảnLýToolStripMenuItem, "quảnLýToolStripMenuItem");
             this.quảnLýToolStripMenuItem.Name = "quảnLýToolStripMenuItem";
             // 
@@ -132,6 +132,17 @@
             // 
             resources.ApplyResources(this.DocGiaToolStripMenuItem, "DocGiaToolStripMenuItem");
             this.DocGiaToolStripMenuItem.Name = "DocGiaToolStripMenuItem";
+            // 
+            // tácGiảToolStripMenuItem
+            // 
+            resources.ApplyResources(this.tácGiảToolStripMenuItem, "tácGiảToolStripMenuItem");
+            this.tácGiảToolStripMenuItem.Name = "tácGiảToolStripMenuItem";
+            // 
+            // TKToolStripMenuItem
+            // 
+            resources.ApplyResources(this.TKToolStripMenuItem, "TKToolStripMenuItem");
+            this.TKToolStripMenuItem.Name = "TKToolStripMenuItem";
+            this.TKToolStripMenuItem.Click += new System.EventHandler(this.TKToolStripMenuItem_Click);
             // 
             // thốngKêToolStripMenuItem
             // 
@@ -170,17 +181,6 @@
             this.HDSDToolStripMenuItem.Name = "HDSDToolStripMenuItem";
             this.HDSDToolStripMenuItem.Click += new System.EventHandler(this.HDSDToolStripMenuItem_Click);
             // 
-            // homeToolStripMenuItem
-            // 
-            resources.ApplyResources(this.homeToolStripMenuItem, "homeToolStripMenuItem");
-            this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
-            this.homeToolStripMenuItem.Click += new System.EventHandler(this.homeToolStripMenuItem_Click);
-            // 
-            // panelContent
-            // 
-            resources.ApplyResources(this.panelContent, "panelContent");
-            this.panelContent.Name = "panelContent";
-            // 
             // phiếuToolStripMenuItem
             // 
             this.phiếuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -205,20 +205,21 @@
             resources.ApplyResources(this.phiếuPhạtToolStripMenuItem, "phiếuPhạtToolStripMenuItem");
             this.phiếuPhạtToolStripMenuItem.Name = "phiếuPhạtToolStripMenuItem";
             // 
-            // tácGiảToolStripMenuItem
+            // homeToolStripMenuItem
             // 
-            resources.ApplyResources(this.tácGiảToolStripMenuItem, "tácGiảToolStripMenuItem");
-            this.tácGiảToolStripMenuItem.Name = "tácGiảToolStripMenuItem";
+            resources.ApplyResources(this.homeToolStripMenuItem, "homeToolStripMenuItem");
+            this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
+            this.homeToolStripMenuItem.Click += new System.EventHandler(this.homeToolStripMenuItem_Click);
             // 
             // QLTCToolStripMenuItem
             // 
             resources.ApplyResources(this.QLTCToolStripMenuItem, "QLTCToolStripMenuItem");
             this.QLTCToolStripMenuItem.Name = "QLTCToolStripMenuItem";
             // 
-            // tàiKhoảnToolStripMenuItem
+            // panelContent
             // 
-            resources.ApplyResources(this.tàiKhoảnToolStripMenuItem, "tàiKhoảnToolStripMenuItem");
-            this.tàiKhoảnToolStripMenuItem.Name = "tàiKhoảnToolStripMenuItem";
+            resources.ApplyResources(this.panelContent, "panelContent");
+            this.panelContent.Name = "panelContent";
             // 
             // MenuForm
             // 
@@ -262,6 +263,6 @@
         private System.Windows.Forms.ToolStripMenuItem phiếuTrảToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem phiếuPhạtToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem QLTCToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tàiKhoảnToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem TKToolStripMenuItem;
     }
 }
