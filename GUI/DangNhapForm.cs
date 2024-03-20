@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Windows.Forms;
 using BUS;
 using DTO;
@@ -83,6 +84,8 @@ namespace GUI
             {
                 chk_save.Checked = true;
             }
+
+
         }
 
         private void tb_tai_khoan_TextChanged(object sender, EventArgs e)

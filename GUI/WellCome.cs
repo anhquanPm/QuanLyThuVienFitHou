@@ -25,11 +25,24 @@ namespace GUI
 
         private void WellCome_Load(object sender, EventArgs e)
         {
+            DataSet data = taiKhoanBUS.checkQuyen(Properties.Settings.Default.taiKhoan, Properties.Settings.Default.matKhau);
+
+            if (data.Tables[0].Rows.Count > 0)
+            {
+                lb_chao.Text = "Chào ngài: ";
+            }
+            else
+            {
+                lb_chao.Text = "Xin chào: ";
+            }
+
             DataSet dataSet = taiKhoanBUS.getTaiKhoanData(Properties.Settings.Default.taiKhoan, Properties.Settings.Default.matKhau);
             if (dataSet.Tables[0].Rows.Count > 0 )
             {
                 lb_ten_ngui_dung.Text = dataSet.Tables[0].Rows[0]["sTenNV"].ToString();
             }
+
+           
         }
 
         private void InitializeLabelTimer()
@@ -41,8 +54,8 @@ namespace GUI
         private void LabelTimer_Tick(object sender, EventArgs e)
         {
             // Thay đổi màu sắc của Label giữa đỏ và đen
-            label1.ForeColor = (label1.ForeColor == Color.Black) ? Color.Red : Color.Black;
-            lb_ten_ngui_dung.ForeColor = (label1.ForeColor == Color.Black) ? Color.Red : Color.Black;
+            lb_chao.ForeColor = (lb_chao.ForeColor == Color.Black) ? Color.Red : Color.Black;
+            lb_ten_ngui_dung.ForeColor = (lb_chao.ForeColor == Color.Black) ? Color.Red : Color.Black;
         }
 
         private void StartLabelBlink()
@@ -57,6 +70,11 @@ namespace GUI
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

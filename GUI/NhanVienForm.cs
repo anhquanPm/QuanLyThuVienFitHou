@@ -97,7 +97,15 @@ namespace GUI
                 tb_diachi.Text = selectedRow.Cells["Địa chỉ"].Value.ToString();
                 tb_sdt.Text = selectedRow.Cells["Số điện thoại"].Value.ToString();
                 cbb_macv.Text = selectedRow.Cells["Mã chức vụ"].Value.ToString();
-                dtp_ngaysinh.Value = DateTime.Parse(selectedRow.Cells["Ngày sinh"].Value.ToString());
+                //dtp_ngaysinh.Value = DateTime.Parse(selectedRow.Cells["Ngày sinh"].Value.ToString());
+                if (DateTime.TryParseExact(selectedRow.Cells["Ngày sinh"].Value.ToString(), "dd/MM/yyyy", null, System.Globalization.DateTimeStyles.None, out DateTime namXB))
+                {
+                    dtp_ngaysinh.Value = namXB;
+                }
+                else
+                {
+                    MessageBox.Show("Invalid date format!");
+                }
             }
         }
 

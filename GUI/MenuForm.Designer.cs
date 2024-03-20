@@ -38,18 +38,22 @@
             this.quảnLýToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SachToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.NhanVienToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.DocGiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SachSapDenHanTraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SachQuaHanTraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TongTienPhatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trợGiúpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HDSDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelContent = new System.Windows.Forms.Panel();
-            this.PhieuMuonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.PhieuTraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.DocGiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.PhieuPhatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.SachSapDenHanTraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.SachQuaHanTraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.TongTienPhatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.phiếuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.phiếuMượnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.phiếuTrảToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.phiếuPhạtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tácGiảToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.QLTCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,7 +66,9 @@
             this.quảnLýToolStripMenuItem,
             this.thốngKêToolStripMenuItem,
             this.trợGiúpToolStripMenuItem,
-            this.homeToolStripMenuItem});
+            this.phiếuToolStripMenuItem,
+            this.homeToolStripMenuItem,
+            this.QLTCToolStripMenuItem});
             this.menuStrip1.Name = "menuStrip1";
             // 
             // hệThốngToolStripMenuItem
@@ -105,9 +111,8 @@
             this.SachToolStripMenuItem,
             this.NhanVienToolStripMenuItem,
             this.DocGiaToolStripMenuItem,
-            this.PhieuMuonToolStripMenuItem,
-            this.PhieuTraToolStripMenuItem,
-            this.PhieuPhatToolStripMenuItem});
+            this.tácGiảToolStripMenuItem,
+            this.tàiKhoảnToolStripMenuItem});
             resources.ApplyResources(this.quảnLýToolStripMenuItem, "quảnLýToolStripMenuItem");
             this.quảnLýToolStripMenuItem.Name = "quảnLýToolStripMenuItem";
             // 
@@ -123,6 +128,11 @@
             this.NhanVienToolStripMenuItem.Name = "NhanVienToolStripMenuItem";
             this.NhanVienToolStripMenuItem.Click += new System.EventHandler(this.NhanVienToolStripMenuItem_Click);
             // 
+            // DocGiaToolStripMenuItem
+            // 
+            resources.ApplyResources(this.DocGiaToolStripMenuItem, "DocGiaToolStripMenuItem");
+            this.DocGiaToolStripMenuItem.Name = "DocGiaToolStripMenuItem";
+            // 
             // thốngKêToolStripMenuItem
             // 
             this.thốngKêToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -131,6 +141,21 @@
             this.TongTienPhatToolStripMenuItem});
             resources.ApplyResources(this.thốngKêToolStripMenuItem, "thốngKêToolStripMenuItem");
             this.thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
+            // 
+            // SachSapDenHanTraToolStripMenuItem
+            // 
+            resources.ApplyResources(this.SachSapDenHanTraToolStripMenuItem, "SachSapDenHanTraToolStripMenuItem");
+            this.SachSapDenHanTraToolStripMenuItem.Name = "SachSapDenHanTraToolStripMenuItem";
+            // 
+            // SachQuaHanTraToolStripMenuItem
+            // 
+            resources.ApplyResources(this.SachQuaHanTraToolStripMenuItem, "SachQuaHanTraToolStripMenuItem");
+            this.SachQuaHanTraToolStripMenuItem.Name = "SachQuaHanTraToolStripMenuItem";
+            // 
+            // TongTienPhatToolStripMenuItem
+            // 
+            resources.ApplyResources(this.TongTienPhatToolStripMenuItem, "TongTienPhatToolStripMenuItem");
+            this.TongTienPhatToolStripMenuItem.Name = "TongTienPhatToolStripMenuItem";
             // 
             // trợGiúpToolStripMenuItem
             // 
@@ -156,40 +181,44 @@
             resources.ApplyResources(this.panelContent, "panelContent");
             this.panelContent.Name = "panelContent";
             // 
-            // PhieuMuonToolStripMenuItem
+            // phiếuToolStripMenuItem
             // 
-            resources.ApplyResources(this.PhieuMuonToolStripMenuItem, "PhieuMuonToolStripMenuItem");
-            this.PhieuMuonToolStripMenuItem.Name = "PhieuMuonToolStripMenuItem";
+            this.phiếuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.phiếuMượnToolStripMenuItem,
+            this.phiếuTrảToolStripMenuItem,
+            this.phiếuPhạtToolStripMenuItem});
+            resources.ApplyResources(this.phiếuToolStripMenuItem, "phiếuToolStripMenuItem");
+            this.phiếuToolStripMenuItem.Name = "phiếuToolStripMenuItem";
             // 
-            // PhieuTraToolStripMenuItem
+            // phiếuMượnToolStripMenuItem
             // 
-            resources.ApplyResources(this.PhieuTraToolStripMenuItem, "PhieuTraToolStripMenuItem");
-            this.PhieuTraToolStripMenuItem.Name = "PhieuTraToolStripMenuItem";
+            resources.ApplyResources(this.phiếuMượnToolStripMenuItem, "phiếuMượnToolStripMenuItem");
+            this.phiếuMượnToolStripMenuItem.Name = "phiếuMượnToolStripMenuItem";
             // 
-            // DocGiaToolStripMenuItem
+            // phiếuTrảToolStripMenuItem
             // 
-            resources.ApplyResources(this.DocGiaToolStripMenuItem, "DocGiaToolStripMenuItem");
-            this.DocGiaToolStripMenuItem.Name = "DocGiaToolStripMenuItem";
+            resources.ApplyResources(this.phiếuTrảToolStripMenuItem, "phiếuTrảToolStripMenuItem");
+            this.phiếuTrảToolStripMenuItem.Name = "phiếuTrảToolStripMenuItem";
             // 
-            // PhieuPhatToolStripMenuItem
+            // phiếuPhạtToolStripMenuItem
             // 
-            resources.ApplyResources(this.PhieuPhatToolStripMenuItem, "PhieuPhatToolStripMenuItem");
-            this.PhieuPhatToolStripMenuItem.Name = "PhieuPhatToolStripMenuItem";
+            resources.ApplyResources(this.phiếuPhạtToolStripMenuItem, "phiếuPhạtToolStripMenuItem");
+            this.phiếuPhạtToolStripMenuItem.Name = "phiếuPhạtToolStripMenuItem";
             // 
-            // SachSapDenHanTraToolStripMenuItem
+            // tácGiảToolStripMenuItem
             // 
-            resources.ApplyResources(this.SachSapDenHanTraToolStripMenuItem, "SachSapDenHanTraToolStripMenuItem");
-            this.SachSapDenHanTraToolStripMenuItem.Name = "SachSapDenHanTraToolStripMenuItem";
+            resources.ApplyResources(this.tácGiảToolStripMenuItem, "tácGiảToolStripMenuItem");
+            this.tácGiảToolStripMenuItem.Name = "tácGiảToolStripMenuItem";
             // 
-            // SachQuaHanTraToolStripMenuItem
+            // QLTCToolStripMenuItem
             // 
-            resources.ApplyResources(this.SachQuaHanTraToolStripMenuItem, "SachQuaHanTraToolStripMenuItem");
-            this.SachQuaHanTraToolStripMenuItem.Name = "SachQuaHanTraToolStripMenuItem";
+            resources.ApplyResources(this.QLTCToolStripMenuItem, "QLTCToolStripMenuItem");
+            this.QLTCToolStripMenuItem.Name = "QLTCToolStripMenuItem";
             // 
-            // TongTienPhatToolStripMenuItem
+            // tàiKhoảnToolStripMenuItem
             // 
-            resources.ApplyResources(this.TongTienPhatToolStripMenuItem, "TongTienPhatToolStripMenuItem");
-            this.TongTienPhatToolStripMenuItem.Name = "TongTienPhatToolStripMenuItem";
+            resources.ApplyResources(this.tàiKhoảnToolStripMenuItem, "tàiKhoảnToolStripMenuItem");
+            this.tàiKhoảnToolStripMenuItem.Name = "tàiKhoảnToolStripMenuItem";
             // 
             // MenuForm
             // 
@@ -224,11 +253,15 @@
         private System.Windows.Forms.ToolStripMenuItem DangXuatToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem HDSDToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem DocGiaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem PhieuMuonToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem PhieuTraToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem PhieuPhatToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem SachSapDenHanTraToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem SachQuaHanTraToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem TongTienPhatToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tácGiảToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem phiếuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem phiếuMượnToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem phiếuTrảToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem phiếuPhạtToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem QLTCToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tàiKhoảnToolStripMenuItem;
     }
 }

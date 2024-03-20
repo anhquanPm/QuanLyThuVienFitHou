@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WellCome));
-            this.label1 = new System.Windows.Forms.Label();
+            this.lb_chao = new System.Windows.Forms.Label();
             this.lb_ten_ngui_dung = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -37,17 +37,18 @@
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // lb_chao
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(6, 139);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 23);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Chào mừng: ";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.lb_chao.AutoSize = true;
+            this.lb_chao.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_chao.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lb_chao.Location = new System.Drawing.Point(6, 139);
+            this.lb_chao.Name = "lb_chao";
+            this.lb_chao.Size = new System.Drawing.Size(113, 23);
+            this.lb_chao.TabIndex = 1;
+            this.lb_chao.Text = "Chào mừng: ";
+            this.lb_chao.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.lb_chao.Click += new System.EventHandler(this.label1_Click);
             // 
             // lb_ten_ngui_dung
             // 
@@ -79,7 +80,7 @@
             this.groupBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBox1.BackgroundImage")));
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.groupBox1.Controls.Add(this.lb_ten_ngui_dung);
-            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.lb_chao);
             this.groupBox1.Location = new System.Drawing.Point(602, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(286, 165);
@@ -108,7 +109,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lb_chao;
         private System.Windows.Forms.Label lb_ten_ngui_dung;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.GroupBox groupBox1;

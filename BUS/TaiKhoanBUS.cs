@@ -39,6 +39,11 @@ namespace BUS
             return taiKhoanDAO.GetDataTaiKhoanDMK(taiKhoan, matkhau);
         }
 
+        public DataSet checkQuyen(string tenTaiKhoan, string matKhau)
+        {
+            return taiKhoanDAO.checkQuyen(tenTaiKhoan, matKhau);
+        }
+
         public int updateTaiKhoanData(string manv, string tennv, string gioitinh,
             string diachi, string sdt, string ngaysinh)
         {

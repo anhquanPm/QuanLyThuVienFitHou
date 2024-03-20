@@ -37,6 +37,14 @@ namespace DAO
             return them_sua_xoa("proc_doiMatKhau", parameters);
         }
 
+        public DataSet checkQuyen(string tenTaiKhoan, string matKhau)
+        {
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@user", tenTaiKhoan);
+            parameters.Add("@pass", matKhau);
+            return GetDataDTO("proc_checkQuyen", parameters);
+        }
+
 
 
         public int UpdateTaiKhoan(string manv, string tennv, string gioitinh, 

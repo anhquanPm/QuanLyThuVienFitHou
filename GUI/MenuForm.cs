@@ -7,11 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using BUS;
 namespace GUI
 {
     public partial class MenuForm : Form
     {
+        TaiKhoanBUS taiKhoanBUS = new TaiKhoanBUS();
         public MenuForm()
         {
             InitializeComponent();
@@ -21,6 +22,18 @@ namespace GUI
         {
             WellCome wellCome = new WellCome();
             addForm(wellCome);
+
+            DataSet dataSet = taiKhoanBUS.checkQuyen(Properties.Settings.Default.taiKhoan, Properties.Settings.Default.matKhau);
+            if (dataSet.Tables[0].Rows.Count > 0)
+            {
+
+            }
+            else
+            {
+                NhanVienToolStripMenuItem.Visible = false;
+                QLTCToolStripMenuItem.Visible = false;
+                TongTienPhatToolStripMenuItem.Visible = false;
+            }
         }
 
         private void addForm(Form f)

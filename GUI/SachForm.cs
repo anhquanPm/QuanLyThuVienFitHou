@@ -99,7 +99,15 @@ namespace GUI
                 
                 tb_ma_sach.Text = selectedRow.Cells["Mã sách"].Value.ToString();
                 tb_ten_sach.Text = selectedRow.Cells["Tên sách"].Value.ToString();
-                dtp_nam_xb.Value = DateTime.Parse(selectedRow.Cells["Năm xuất bản"].Value.ToString());
+                //dtp_nam_xb.Value = DateTime.Parse(selectedRow.Cells["Năm xuất bản"].Value.ToString());
+                if (DateTime.TryParseExact(selectedRow.Cells["Năm xuất bản"].Value.ToString(), "dd/MM/yyyy", null, System.Globalization.DateTimeStyles.None, out DateTime namXB))
+                {
+                    dtp_nam_xb.Value = namXB;
+                }
+                else
+                {
+                    MessageBox.Show("Invalid date format!");
+                }
                 tb_so_luong.Text = selectedRow.Cells["Số lượng"].Value.ToString();
                 cbb_ma_loai.Text = selectedRow.Cells["Mã loại"].Value.ToString();
                 cbb_ma_tg.Text = selectedRow.Cells["Mã tác giả"].Value.ToString();

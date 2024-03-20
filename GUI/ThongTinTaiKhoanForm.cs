@@ -23,11 +23,29 @@ namespace GUI
 
         private void ThongTinTaiKhoanForm_Load(object sender, EventArgs e)
         {
+
+            
+
             DataSet data = taiKhoanBUS.getTaiKhoanData(Properties.Settings.Default.taiKhoan, Properties.Settings.Default.matKhau);
 
-           
+            DataSet datacheck = taiKhoanBUS.checkQuyen(Properties.Settings.Default.taiKhoan, Properties.Settings.Default.matKhau);
 
-            if(data.Tables.Count > 0 && data.Tables[0].Rows.Count > 0)
+            if (datacheck.Tables[0].Rows.Count > 0)
+            {
+
+                lb_nguoi_dung.Text = "Chào ngài: ";
+                lb_ten_nguoi_dung.Text = data.Tables[0].Rows[0]["sTenNV"].ToString();
+                pb_tick_xanh.Visible = true;
+            }
+            else
+            {
+                lb_nguoi_dung.Text = "Xin chào: ";
+                lb_ten_nguoi_dung.Text = data.Tables[0].Rows[0]["sTenNV"].ToString();
+                pb_tick_xanh.Visible = false;
+            }
+
+
+            if (data.Tables.Count > 0 && data.Tables[0].Rows.Count > 0)
             {
                 tb_ma_nv.Text = data.Tables[0].Rows[0]["sMaNV"].ToString();
                 tb_ten_nv.Text = data.Tables[0].Rows[0]["sTenNV"].ToString();
@@ -75,6 +93,11 @@ namespace GUI
             {
                 MessageBox.Show("Cập nhật thông tin thất bại");
             }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
