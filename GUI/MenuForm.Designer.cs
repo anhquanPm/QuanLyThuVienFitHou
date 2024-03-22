@@ -132,6 +132,7 @@
             // 
             resources.ApplyResources(this.DocGiaToolStripMenuItem, "DocGiaToolStripMenuItem");
             this.DocGiaToolStripMenuItem.Name = "DocGiaToolStripMenuItem";
+            this.DocGiaToolStripMenuItem.Click += new System.EventHandler(this.DocGiaToolStripMenuItem_Click);
             // 
             // tácGiảToolStripMenuItem
             // 

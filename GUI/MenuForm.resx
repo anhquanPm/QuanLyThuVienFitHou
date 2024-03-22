@@ -3334,7 +3334,7 @@
 </value>
   </data>
   <data name="phiếuMượnToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 32</value>
+    <value>203, 32</value>
   </data>
   <data name="phiếuMượnToolStripMenuItem.Text" xml:space="preserve">
     <value>Phiếu mượn</value>
@@ -3352,7 +3352,7 @@
 </value>
   </data>
   <data name="phiếuTrảToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 32</value>
+    <value>203, 32</value>
   </data>
   <data name="phiếuTrảToolStripMenuItem.Text" xml:space="preserve">
     <value>Phiếu trả</value>
@@ -3370,7 +3370,7 @@
 </value>
   </data>
   <data name="phiếuPhạtToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 32</value>
+    <value>203, 32</value>
   </data>
   <data name="phiếuPhạtToolStripMenuItem.Text" xml:space="preserve">
     <value>Phiếu phạt</value>

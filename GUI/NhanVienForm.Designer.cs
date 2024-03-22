@@ -44,13 +44,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.tb_diachi = new System.Windows.Forms.TextBox();
-            this.tb_sdt = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.dtp_ngaysinh = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.cbb_macv = new System.Windows.Forms.ComboBox();
             this.cHUCVUBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.quanLyThuVienDataSet = new GUI.QuanLyThuVienDataSet();
             this.nHANVIENBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -61,6 +57,10 @@
             this.btn_xoa = new System.Windows.Forms.Button();
             this.btn_clean = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.tb_sdt = new System.Windows.Forms.TextBox();
+            this.cbb_macv = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_nhan_vien)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cHUCVUBindingSource)).BeginInit();
@@ -208,24 +208,6 @@
             this.tb_diachi.Size = new System.Drawing.Size(294, 30);
             this.tb_diachi.TabIndex = 5;
             // 
-            // tb_sdt
-            // 
-            this.tb_sdt.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tb_sdt.Location = new System.Drawing.Point(192, 244);
-            this.tb_sdt.Name = "tb_sdt";
-            this.tb_sdt.Size = new System.Drawing.Size(294, 30);
-            this.tb_sdt.TabIndex = 6;
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(72, 244);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(111, 23);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "Số điện thoại";
-            // 
             // dtp_ngaysinh
             // 
             this.dtp_ngaysinh.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -269,26 +251,6 @@
             this.groupBox1.Size = new System.Drawing.Size(573, 426);
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
-            // 
-            // label9
-            // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(72, 296);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(98, 23);
-            this.label9.TabIndex = 20;
-            this.label9.Text = "Mã chức vụ";
-            // 
-            // cbb_macv
-            // 
-            this.cbb_macv.DataSource = this.cHUCVUBindingSource;
-            this.cbb_macv.DisplayMember = "sMaChucVu";
-            this.cbb_macv.FormattingEnabled = true;
-            this.cbb_macv.Location = new System.Drawing.Point(191, 293);
-            this.cbb_macv.Name = "cbb_macv";
-            this.cbb_macv.Size = new System.Drawing.Size(294, 31);
-            this.cbb_macv.TabIndex = 7;
             // 
             // cHUCVUBindingSource
             // 
@@ -366,6 +328,44 @@
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(72, 244);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(111, 23);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Số điện thoại";
+            // 
+            // tb_sdt
+            // 
+            this.tb_sdt.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tb_sdt.Location = new System.Drawing.Point(192, 244);
+            this.tb_sdt.Name = "tb_sdt";
+            this.tb_sdt.Size = new System.Drawing.Size(294, 30);
+            this.tb_sdt.TabIndex = 6;
+            // 
+            // cbb_macv
+            // 
+            this.cbb_macv.DataSource = this.cHUCVUBindingSource;
+            this.cbb_macv.DisplayMember = "sMaChucVu";
+            this.cbb_macv.FormattingEnabled = true;
+            this.cbb_macv.Location = new System.Drawing.Point(191, 293);
+            this.cbb_macv.Name = "cbb_macv";
+            this.cbb_macv.Size = new System.Drawing.Size(294, 31);
+            this.cbb_macv.TabIndex = 7;
+            // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(72, 296);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(98, 23);
+            this.label9.TabIndex = 20;
+            this.label9.Text = "Mã chức vụ";
+            // 
             // NhanVienForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
@@ -415,13 +415,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox tb_diachi;
-        private System.Windows.Forms.TextBox tb_sdt;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker dtp_ngaysinh;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox cbb_macv;
         private QuanLyThuVienDataSet quanLyThuVienDataSet;
         private System.Windows.Forms.BindingSource nHANVIENBindingSource;
         private QuanLyThuVienDataSetTableAdapters.NHANVIENTableAdapter nHANVIENTableAdapter;
@@ -432,5 +428,9 @@
         private System.Windows.Forms.Button btn_xoa;
         private System.Windows.Forms.Button btn_clean;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox cbb_macv;
+        private System.Windows.Forms.TextBox tb_sdt;
+        private System.Windows.Forms.Label label7;
     }
 }

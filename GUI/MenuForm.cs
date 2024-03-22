@@ -112,5 +112,11 @@ namespace GUI
             QuanLyTaiKhoan f = new QuanLyTaiKhoan();
             addForm(f);
         }
+
+        private void DocGiaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DocGiaForm docGiaForm = new DocGiaForm();
+            addForm(docGiaForm);
+        }
     }
 }

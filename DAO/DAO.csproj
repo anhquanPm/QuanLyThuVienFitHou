@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DocGiaDAO.cs" />
     <Compile Include="NhanVienDAO.cs" />
     <Compile Include="DataProviceder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
