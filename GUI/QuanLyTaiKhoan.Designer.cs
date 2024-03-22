@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuanLyTaiKhoan));
             this.dgv_tai_khoan = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btn_clean = new System.Windows.Forms.Button();
@@ -50,6 +51,7 @@
             this.cbb_bo_loc = new System.Windows.Forms.ComboBox();
             this.tb_tim_kiem = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_tai_khoan)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nHANVIENBindingSource)).BeginInit();
@@ -68,7 +70,7 @@
             this.dgv_tai_khoan.Name = "dgv_tai_khoan";
             this.dgv_tai_khoan.RowHeadersWidth = 51;
             this.dgv_tai_khoan.RowTemplate.Height = 24;
-            this.dgv_tai_khoan.Size = new System.Drawing.Size(1083, 218);
+            this.dgv_tai_khoan.Size = new System.Drawing.Size(1115, 218);
             this.dgv_tai_khoan.TabIndex = 0;
             this.dgv_tai_khoan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_tai_khoan_CellClick);
             // 
@@ -259,11 +261,24 @@
             this.label6.TabIndex = 15;
             this.label6.Text = "Bộ lọc";
             // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Image = ((System.Drawing.Image)(resources.GetObject("label10.Image")));
+            this.label10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label10.Location = new System.Drawing.Point(657, 180);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(428, 23);
+            this.label10.TabIndex = 31;
+            this.label10.Text = "Lưu ý: Bạn hãy chọn bộ lọc trước khi tìm kiếm nhé!\r\n";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // QuanLyTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1082, 744);
+            this.ClientSize = new System.Drawing.Size(1114, 744);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tb_tim_kiem);
             this.Controls.Add(this.cbb_bo_loc);
@@ -308,5 +323,6 @@
         private System.Windows.Forms.TextBox tb_tim_kiem;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btn_clean;
+        private System.Windows.Forms.Label label10;
     }
 }

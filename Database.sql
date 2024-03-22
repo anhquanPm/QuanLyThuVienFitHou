@@ -1,6 +1,6 @@
 ﻿USE [QuanLyThuVien]
 GO
-/****** Object:  Table [dbo].[SACH]    Script Date: 3/17/2024 11:30:14 AM ******/
+/****** Object:  Table [dbo].[SACH]    Script Date: 22/03/2024 7:12:38 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -20,7 +20,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[CHITIETPHIEUMUON]    Script Date: 3/17/2024 11:30:14 AM ******/
+/****** Object:  Table [dbo].[CHITIETPHIEUMUON]    Script Date: 22/03/2024 7:12:38 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -37,7 +37,7 @@ CREATE TABLE [dbo].[CHITIETPHIEUMUON](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  View [dbo].[DS_SACH_MUON_TRONG_NGAY_HOM_NAY]    Script Date: 3/17/2024 11:30:14 AM ******/
+/****** Object:  View [dbo].[DS_SACH_MUON_TRONG_NGAY_HOM_NAY]    Script Date: 22/03/2024 7:12:38 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -49,7 +49,7 @@ AS
 				INNER JOIN PHIEUMUON ON CHITIETPHIEUMUON.iSoPhieuMuon = PHIEUMUON.iSoPhieuMuon
 	WHERE DATEDIFF(DAY, PHIEUMUON.dNgayMuon, GETDATE()) = 0
 GO
-/****** Object:  Table [dbo].[CHITIETPHIEUTRA]    Script Date: 3/17/2024 11:30:14 AM ******/
+/****** Object:  Table [dbo].[CHITIETPHIEUTRA]    Script Date: 22/03/2024 7:12:38 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -66,7 +66,7 @@ CREATE TABLE [dbo].[CHITIETPHIEUTRA](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[CHUCVU]    Script Date: 3/17/2024 11:30:14 AM ******/
+/****** Object:  Table [dbo].[CHUCVU]    Script Date: 22/03/2024 7:12:38 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -80,7 +80,7 @@ CREATE TABLE [dbo].[CHUCVU](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[DOCGIA]    Script Date: 3/17/2024 11:30:14 AM ******/
+/****** Object:  Table [dbo].[DOCGIA]    Script Date: 22/03/2024 7:12:38 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -98,7 +98,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[LOAIPHIEU]    Script Date: 3/17/2024 11:30:14 AM ******/
+/****** Object:  Table [dbo].[LOAIPHIEU]    Script Date: 22/03/2024 7:12:38 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -112,7 +112,7 @@ CREATE TABLE [dbo].[LOAIPHIEU](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[NHANVIEN]    Script Date: 3/17/2024 11:30:14 AM ******/
+/****** Object:  Table [dbo].[NHANVIEN]    Script Date: 22/03/2024 7:12:38 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -131,7 +131,7 @@ CREATE TABLE [dbo].[NHANVIEN](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[NHAXUATBAN]    Script Date: 3/17/2024 11:30:14 AM ******/
+/****** Object:  Table [dbo].[NHAXUATBAN]    Script Date: 22/03/2024 7:12:38 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -145,7 +145,7 @@ CREATE TABLE [dbo].[NHAXUATBAN](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[PHIEUMUONSACH]    Script Date: 3/17/2024 11:30:14 AM ******/
+/****** Object:  Table [dbo].[PHIEUMUONSACH]    Script Date: 22/03/2024 7:12:38 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -161,7 +161,7 @@ CREATE TABLE [dbo].[PHIEUMUONSACH](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[PHIEUPHAT]    Script Date: 3/17/2024 11:30:14 AM ******/
+/****** Object:  Table [dbo].[PHIEUPHAT]    Script Date: 22/03/2024 7:12:38 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -177,7 +177,7 @@ CREATE TABLE [dbo].[PHIEUPHAT](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[PHIEUTRASACH]    Script Date: 3/17/2024 11:30:14 AM ******/
+/****** Object:  Table [dbo].[PHIEUTRASACH]    Script Date: 22/03/2024 7:12:38 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -194,7 +194,7 @@ CREATE TABLE [dbo].[PHIEUTRASACH](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[TACGIA]    Script Date: 3/17/2024 11:30:14 AM ******/
+/****** Object:  Table [dbo].[TACGIA]    Script Date: 22/03/2024 7:12:38 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -210,7 +210,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[TaiKhoan]    Script Date: 3/17/2024 11:30:14 AM ******/
+/****** Object:  Table [dbo].[TaiKhoan]    Script Date: 22/03/2024 7:12:38 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -226,7 +226,7 @@ CREATE TABLE [dbo].[TaiKhoan](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[THELOAISACH]    Script Date: 3/17/2024 11:30:14 AM ******/
+/****** Object:  Table [dbo].[THELOAISACH]    Script Date: 22/03/2024 7:12:38 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -240,7 +240,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[TINHTRANGSACH]    Script Date: 3/17/2024 11:30:14 AM ******/
+/****** Object:  Table [dbo].[TINHTRANGSACH]    Script Date: 22/03/2024 7:12:38 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -282,11 +282,11 @@ GO
 INSERT [dbo].[LOAIPHIEU] ([iMaLoaiPhieu], [sTenLoaiPhieu]) VALUES (1, N'Ngắn hạn')
 INSERT [dbo].[LOAIPHIEU] ([iMaLoaiPhieu], [sTenLoaiPhieu]) VALUES (2, N'Dài hạn')
 GO
-INSERT [dbo].[NHANVIEN] ([sMaNV], [sTenNV], [sGioiTinh], [sDiaChi], [sSdt], [sMaChucVu], [dNgaySinh]) VALUES (N'NV01', N'Trần Anh Quân', N'Nam', N'Phú Thọ', N'028374834', N'CV02', CAST(N'2004-07-10' AS Date))
+INSERT [dbo].[NHANVIEN] ([sMaNV], [sTenNV], [sGioiTinh], [sDiaChi], [sSdt], [sMaChucVu], [dNgaySinh]) VALUES (N'NV01', N'Trần Anh Quân', N'Nam', N'Phú Thọ', N'0333241634', N'CV02', CAST(N'2004-07-10' AS Date))
 INSERT [dbo].[NHANVIEN] ([sMaNV], [sTenNV], [sGioiTinh], [sDiaChi], [sSdt], [sMaChucVu], [dNgaySinh]) VALUES (N'NV02', N'Trần Trường Giang', N'Nam', N'Hà Nội', N'03545465', N'CV01', CAST(N'2004-04-09' AS Date))
 INSERT [dbo].[NHANVIEN] ([sMaNV], [sTenNV], [sGioiTinh], [sDiaChi], [sSdt], [sMaChucVu], [dNgaySinh]) VALUES (N'NV03', N'Hoàng Anh Thắng', N'Nam', N'Hà Nội', N'063537574', N'CV01', CAST(N'2004-03-09' AS Date))
 INSERT [dbo].[NHANVIEN] ([sMaNV], [sTenNV], [sGioiTinh], [sDiaChi], [sSdt], [sMaChucVu], [dNgaySinh]) VALUES (N'NV04', N'Nguyễn Ngọc Anh', N'Nữ', N'Nam Định', N'017836748', N'CV02', CAST(N'2000-09-09' AS Date))
-INSERT [dbo].[NHANVIEN] ([sMaNV], [sTenNV], [sGioiTinh], [sDiaChi], [sSdt], [sMaChucVu], [dNgaySinh]) VALUES (N'NV06', N'eee', N'Nữ', N'oke', N'03545465', N'CV01', CAST(N'2004-04-09' AS Date))
+INSERT [dbo].[NHANVIEN] ([sMaNV], [sTenNV], [sGioiTinh], [sDiaChi], [sSdt], [sMaChucVu], [dNgaySinh]) VALUES (N'NV07', N'Anh Quân 7', N'Nam', N'Hà Nội', N'02636344', N'CV02', CAST(N'2004-07-20' AS Date))
 GO
 INSERT [dbo].[NHAXUATBAN] ([sMaNxb], [sTenNxb]) VALUES (N'NXB01', N'KIM ĐỒNG')
 INSERT [dbo].[NHAXUATBAN] ([sMaNxb], [sTenNxb]) VALUES (N'NXB02', N'THANH NIÊN')
@@ -309,14 +309,16 @@ INSERT [dbo].[PHIEUTRASACH] ([sMaPhieuTra], [sMaPhieuMuon], [sMaNV], [dNgayTra],
 INSERT [dbo].[PHIEUTRASACH] ([sMaPhieuTra], [sMaPhieuMuon], [sMaNV], [dNgayTra], [sMaDG]) VALUES (N'T5', N'M5', N'NV01', NULL, N'DG04')
 INSERT [dbo].[PHIEUTRASACH] ([sMaPhieuTra], [sMaPhieuMuon], [sMaNV], [dNgayTra], [sMaDG]) VALUES (N'T6', N'M6', N'NV03', NULL, N'DG05')
 GO
-INSERT [dbo].[SACH] ([sMaSach], [sTenSach], [dNamXB], [iSoLuong], [sMaLoai], [sMaTG], [fGiaTien], [sMaNxb]) VALUES (N'MS01', N'Thám tử Conan', CAST(N'2012-12-12T00:00:00.000' AS DateTime), 10, N'ttranh', N'TG01', 15000, N'NXB01')
-INSERT [dbo].[SACH] ([sMaSach], [sTenSach], [dNamXB], [iSoLuong], [sMaLoai], [sMaTG], [fGiaTien], [sMaNxb]) VALUES (N'MS02', N'Thám tử POKO', CAST(N'2012-12-12T00:00:00.000' AS DateTime), 20, N'ttranh', N'TG01', 15000, N'NXB01')
-INSERT [dbo].[SACH] ([sMaSach], [sTenSach], [dNamXB], [iSoLuong], [sMaLoai], [sMaTG], [fGiaTien], [sMaNxb]) VALUES (N'MS04', N'Cô gái bán dâm', CAST(N'2018-12-12T00:00:00.000' AS DateTime), 1, N'cotich', N'TG02', 30000, N'NXB03')
-INSERT [dbo].[SACH] ([sMaSach], [sTenSach], [dNamXB], [iSoLuong], [sMaLoai], [sMaTG], [fGiaTien], [sMaNxb]) VALUES (N'MS05', N'Tạp chí hoa học trò số 12', CAST(N'2020-12-12T00:00:00.000' AS DateTime), 20, N'tapchi', N'TG02', 40000, N'NXB02')
-INSERT [dbo].[SACH] ([sMaSach], [sTenSach], [dNamXB], [iSoLuong], [sMaLoai], [sMaTG], [fGiaTien], [sMaNxb]) VALUES (N'MS06', N'Kí sự tây bắc tập 1', CAST(N'2021-12-12T00:00:00.000' AS DateTime), 20, N'kinhdi', N'TG01', 40000, N'NXB02')
-INSERT [dbo].[SACH] ([sMaSach], [sTenSach], [dNamXB], [iSoLuong], [sMaLoai], [sMaTG], [fGiaTien], [sMaNxb]) VALUES (N'MS07', N'Kí sự tây bắc tập 2', CAST(N'2021-12-02T00:00:00.000' AS DateTime), 10, N'kinhdi', N'TG01', 20000, N'NXB02')
-INSERT [dbo].[SACH] ([sMaSach], [sTenSach], [dNamXB], [iSoLuong], [sMaLoai], [sMaTG], [fGiaTien], [sMaNxb]) VALUES (N'MS08', N'Kí tự tây bắc tập 3', CAST(N'2022-03-09T00:00:00.000' AS DateTime), 10, N'kinhdi', N'TG01', 30000, N'NXB02')
-INSERT [dbo].[SACH] ([sMaSach], [sTenSach], [dNamXB], [iSoLuong], [sMaLoai], [sMaTG], [fGiaTien], [sMaNxb]) VALUES (N'MS09', N'Toán nâng cao 12', CAST(N'2023-12-08T00:00:00.000' AS DateTime), 7, N'thamkhao', N'TG04', 50000, N'NXB03')
+INSERT [dbo].[SACH] ([sMaSach], [sTenSach], [dNamXB], [iSoLuong], [sMaLoai], [sMaTG], [fGiaTien], [sMaNxb]) VALUES (N'MS01', N'7 viên ngọc rồng', CAST(N'2019-07-16T00:00:00.000' AS DateTime), 11, N'cotich', N'TG01', 15000, N'NXB01')
+INSERT [dbo].[SACH] ([sMaSach], [sTenSach], [dNamXB], [iSoLuong], [sMaLoai], [sMaTG], [fGiaTien], [sMaNxb]) VALUES (N'MS02', N'Naruto và đồng bọn', CAST(N'2013-08-06T00:00:00.000' AS DateTime), 12, N'cotich', N'TG01', 20000, N'NXB02')
+INSERT [dbo].[SACH] ([sMaSach], [sTenSach], [dNamXB], [iSoLuong], [sMaLoai], [sMaTG], [fGiaTien], [sMaNxb]) VALUES (N'MS04', N'Chú bé ngu ngơ', CAST(N'2024-03-19T00:00:00.000' AS DateTime), 20, N'cotich', N'TG01', 20000, N'NXB02')
+INSERT [dbo].[SACH] ([sMaSach], [sTenSach], [dNamXB], [iSoLuong], [sMaLoai], [sMaTG], [fGiaTien], [sMaNxb]) VALUES (N'MS05', N'Lập trình Java', CAST(N'2024-03-19T00:00:00.000' AS DateTime), 100, N'thamKhao', N'TG02', 100000, N'NXB03')
+INSERT [dbo].[SACH] ([sMaSach], [sTenSach], [dNamXB], [iSoLuong], [sMaLoai], [sMaTG], [fGiaTien], [sMaNxb]) VALUES (N'MS06', N'Ngôn ngữ C', CAST(N'2024-03-19T00:00:00.000' AS DateTime), 30, N'thamKhao', N'TG02', 50000, N'NXB03')
+INSERT [dbo].[SACH] ([sMaSach], [sTenSach], [dNamXB], [iSoLuong], [sMaLoai], [sMaTG], [fGiaTien], [sMaNxb]) VALUES (N'MS07', N'Tình yêu của Quân', CAST(N'2015-07-01T00:00:00.000' AS DateTime), 12, N'kinhdi', N'TG03', 120000, N'NXB04')
+INSERT [dbo].[SACH] ([sMaSach], [sTenSach], [dNamXB], [iSoLuong], [sMaLoai], [sMaTG], [fGiaTien], [sMaNxb]) VALUES (N'MS08', N'Chúa hề và chúa tể', CAST(N'2024-03-19T00:00:00.000' AS DateTime), 12, N'kinhdi', N'TG03', 200000, N'NXB04')
+INSERT [dbo].[SACH] ([sMaSach], [sTenSach], [dNamXB], [iSoLuong], [sMaLoai], [sMaTG], [fGiaTien], [sMaNxb]) VALUES (N'MS09', N'Đôi bạn Nhện và Bò', CAST(N'2024-03-19T00:00:00.000' AS DateTime), 23, N'ttranh', N'TG03', 12000, N'NXB01')
+INSERT [dbo].[SACH] ([sMaSach], [sTenSach], [dNamXB], [iSoLuong], [sMaLoai], [sMaTG], [fGiaTien], [sMaNxb]) VALUES (N'MS10', N'Khỉ con chơi đồ', CAST(N'2024-03-19T00:00:00.000' AS DateTime), 4, N'cotich', N'TG03', 12000, N'NXB03')
+INSERT [dbo].[SACH] ([sMaSach], [sTenSach], [dNamXB], [iSoLuong], [sMaLoai], [sMaTG], [fGiaTien], [sMaNxb]) VALUES (N'MS11', N'Chu be loat choat', CAST(N'2019-06-13T00:00:00.000' AS DateTime), 12, N'cotich', N'TG02', 12000, N'NXB02')
 GO
 INSERT [dbo].[TACGIA] ([sMaTG], [sTenTG], [sDiaChi], [sSdt]) VALUES (N'TG01', N'Trần Anh Quân', N'Phú Thọ -Việt Nam', NULL)
 INSERT [dbo].[TACGIA] ([sMaTG], [sTenTG], [sDiaChi], [sSdt]) VALUES (N'TG02', N'Lưu Bang', N'Trung Quốc', NULL)
@@ -325,6 +327,7 @@ INSERT [dbo].[TACGIA] ([sMaTG], [sTenTG], [sDiaChi], [sSdt]) VALUES (N'TG04 ', N
 GO
 INSERT [dbo].[TaiKhoan] ([sUserName], [sPassWord], [sMaNV], [bQuyen]) VALUES (N'admin', N'1', N'NV01', 1)
 INSERT [dbo].[TaiKhoan] ([sUserName], [sPassWord], [sMaNV], [bQuyen]) VALUES (N'giang', N'giang', N'NV02', 0)
+INSERT [dbo].[TaiKhoan] ([sUserName], [sPassWord], [sMaNV], [bQuyen]) VALUES (N'quan', N'q', N'NV07', 0)
 INSERT [dbo].[TaiKhoan] ([sUserName], [sPassWord], [sMaNV], [bQuyen]) VALUES (N'thang', N'thang', N'NV03', 0)
 GO
 INSERT [dbo].[THELOAISACH] ([sMaLoai], [sTenTheLoai]) VALUES (N'cotich', N'Cổ tích')
@@ -339,7 +342,7 @@ INSERT [dbo].[TINHTRANGSACH] ([iMaTinhTrang], [sTinhTrangSach]) VALUES (3, N'M�
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [UNIQUE_sTenTheLoai]    Script Date: 3/17/2024 11:30:14 AM ******/
+/****** Object:  Index [UNIQUE_sTenTheLoai]    Script Date: 22/03/2024 7:12:38 PM ******/
 ALTER TABLE [dbo].[THELOAISACH] ADD  CONSTRAINT [UNIQUE_sTenTheLoai] UNIQUE NONCLUSTERED 
 (
 	[sTenTheLoai] ASC
@@ -439,7 +442,7 @@ ALTER TABLE [dbo].[SACH]  WITH CHECK ADD  CONSTRAINT [Check_namXB] CHECK  ((date
 GO
 ALTER TABLE [dbo].[SACH] CHECK CONSTRAINT [Check_namXB]
 GO
-/****** Object:  StoredProcedure [dbo].[KiemTraCapNhatNgayHenTra]    Script Date: 3/17/2024 11:30:14 AM ******/
+/****** Object:  StoredProcedure [dbo].[KiemTraCapNhatNgayHenTra]    Script Date: 22/03/2024 7:12:38 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -481,7 +484,124 @@ BEGIN
     DEALLOCATE PhieuMuonCursor;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[proc_login]    Script Date: 3/17/2024 11:30:14 AM ******/
+/****** Object:  StoredProcedure [dbo].[proc_capNhatNhanVien]    Script Date: 22/03/2024 7:12:38 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROC [dbo].[proc_capNhatNhanVien]
+@maNV varchar(10) ,@tenNV nvarchar(30), @gioiTinh nvarchar(5), @diaChi nvarchar(30), @sdt varchar(10), @ngaySinh date
+AS
+	Update NHANVIEN
+	Set sTenNV = @tenNV, sGioiTinh = @gioiTinh, sDiaChi = @diaChi, sSdt = @sdt, dNgaySinh = @ngaySinh
+	WHERE sMaNV = @maNV
+
+GO
+/****** Object:  StoredProcedure [dbo].[proc_capNhatNhanVienQLNV]    Script Date: 22/03/2024 7:12:38 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROC [dbo].[proc_capNhatNhanVienQLNV]
+@maNV varchar(10) ,@tenNV nvarchar(30), @gioiTinh nvarchar(5), @diaChi nvarchar(30), @sdt varchar(10),@macv varchar(10)  ,@ngaySinh date
+AS
+	Update NHANVIEN
+	Set sTenNV = @tenNV, sGioiTinh = @gioiTinh, sDiaChi = @diaChi, sSdt = @sdt, sMaChucVu = @macv ,dNgaySinh = @ngaySinh
+	WHERE sMaNV = @maNV
+
+GO
+/****** Object:  StoredProcedure [dbo].[proc_capNhatSach]    Script Date: 22/03/2024 7:12:38 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROC [dbo].[proc_capNhatSach]
+@maSach varchar(10), @tenSach nvarchar(30), @namXB date, @soLuong int,
+@maLoai varchar(10), @maTacGia varchar(10), @giaTien float, @maNXB varchar(10)
+AS
+	UPDATE SACH
+	SET  sTenSach = @tenSach, dNamXB = @namXB, iSoLuong = @soLuong,
+		sMaLoai = @maLoai, sMaTG = @maTacGia, fGiaTien = @giaTien, sMaNxb = @maNXB
+	WHERE sMaSach = @maSach
+GO
+/****** Object:  StoredProcedure [dbo].[proc_capNhatTaiKhoan]    Script Date: 22/03/2024 7:12:38 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROC [dbo].[proc_capNhatTaiKhoan]
+@user varchar(10), @pass varchar(10), @quyen bit
+AS
+	UPDATE TaiKhoan
+	SET sPassWord = @pass, bQuyen = @quyen
+	WHERE sUserName = @user
+GO
+/****** Object:  StoredProcedure [dbo].[proc_checkQuyen]    Script Date: 22/03/2024 7:12:38 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROC [dbo].[proc_checkQuyen]
+@user varchar(10), @pass varchar(10)
+AS
+	SELECT bQuyen FROM TaiKhoan 
+	WHERE sUserName = @user AND sPassWord = @pass AND bQuyen = 1
+GO
+/****** Object:  StoredProcedure [dbo].[proc_doiMatKhau]    Script Date: 22/03/2024 7:12:38 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROC [dbo].[proc_doiMatKhau]
+@user varchar(10), @pass varchar(10)
+AS	
+	UPDATE TaiKhoan		
+	set sPassWord = @pass
+	WHERE sUserName = @user
+GO
+/****** Object:  StoredProcedure [dbo].[proc_dsTaiKhoan]    Script Date: 22/03/2024 7:12:38 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROC [dbo].[proc_dsTaiKhoan]
+AS
+	SELECT *
+	FROM TaiKhoan
+GO
+/****** Object:  StoredProcedure [dbo].[proc_getNhanVien]    Script Date: 22/03/2024 7:12:38 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROC [dbo].[proc_getNhanVien]
+AS
+	SELECT sMaNV, sTenNV, sGioiTinh, sDiaChi, sSdt, sMaChucVu, FORMAT(dNgaySinh, 'dd/MM/yyyy') as 'dNgaySinh' FROM NHANVIEN
+GO
+/****** Object:  StoredProcedure [dbo].[proc_getSach]    Script Date: 22/03/2024 7:12:38 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROC [dbo].[proc_getSach]
+AS
+	SELECT sMaSach, sTenSach, FORMAT(dNamXB, 'dd/MM/yyyy') AS N'dNamXB', iSoLuong, sMaLoai, sMaTG, fGiaTien, sMaNxb 
+	FROM SACH
+GO
+/****** Object:  StoredProcedure [dbo].[proc_getTaiKhoan]    Script Date: 22/03/2024 7:12:38 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROC [dbo].[proc_getTaiKhoan]
+@user varchar(10), @pass varchar(10)
+AS
+	select NHANVIEN.sMaNV,  NHANVIEN.sTenNV, NHANVIEN.sGioiTinh, NHANVIEN.sDiaChi, NHANVIEN.sSdt, NHANVIEN.dNgaySinh
+	from TaiKhoan INNER JOIN NHANVIEN ON TaiKhoan.sMaNV = NHANVIEN.sMaNV
+	WHERE TaiKhoan.sUserName = @user and TaiKhoan.sPassWord = @pass
+GO
+/****** Object:  StoredProcedure [dbo].[proc_login]    Script Date: 22/03/2024 7:12:38 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -493,7 +613,167 @@ AS
 	SELECT * FROM TaiKhoan 
 	WHERE sUserName = @user and sPassWord = @pass 
 GO
-/****** Object:  StoredProcedure [dbo].[SELECT_NHANVIEN]    Script Date: 3/17/2024 11:30:14 AM ******/
+/****** Object:  StoredProcedure [dbo].[proc_themNhanVien]    Script Date: 22/03/2024 7:12:38 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROC [dbo].[proc_themNhanVien]
+@maNV varchar(10) ,@tenNV nvarchar(30), @gioiTinh nvarchar(5), @diaChi nvarchar(30), @sdt varchar(10),@macv varchar(10)  ,@ngaySinh date
+AS
+	INSERT INTO NHANVIEN
+	VALUES
+	(
+		@maNV, @tenNV, @gioiTinh, @diaChi, @sdt, @macv, @ngaySinh
+	);
+GO
+/****** Object:  StoredProcedure [dbo].[proc_themSach]    Script Date: 22/03/2024 7:12:38 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROC	[dbo].[proc_themSach]
+@maSach varchar(10), @tenSach nvarchar(30), @namXB date, @soLuong int,
+@maLoai varchar(10), @maTacGia varchar(10), @giaTien float, @maNXB varchar(10)
+AS
+	INSERT INTO SACH 
+	VALUES(
+		@maSach, @tenSach, @namXB, @soLuong, @maLoai, @maTacGia, @giaTien, @maNXB
+	);
+GO
+/****** Object:  StoredProcedure [dbo].[proc_themTaiKhoan]    Script Date: 22/03/2024 7:12:38 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROC [dbo].[proc_themTaiKhoan]
+@user varchar(10), @pass varchar(10), @maNv varchar(10), @quyen bit
+AS
+	INSERT INTO TaiKhoan
+	VALUES
+	(
+		@user, @pass, @maNv, @quyen
+	);
+GO
+/****** Object:  StoredProcedure [dbo].[proc_timKiemTheoMaLoai]    Script Date: 22/03/2024 7:12:38 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROC [dbo].[proc_timKiemTheoMaLoai]
+@maLoai varchar(10)
+AS
+	SELECT sMaSach, sTenSach, FORMAT(dNamXB, 'dd/MM/yyyy') as 'dNamXB', iSoLuong, sMaLoai, sMaTG, fGiaTien,sMaNxb
+	FROM SACH
+	WHERE sMaLoai LIKE '%' + @maLoai +'%'
+GO
+/****** Object:  StoredProcedure [dbo].[proc_timKiemTheoMaNV]    Script Date: 22/03/2024 7:12:38 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROC [dbo].[proc_timKiemTheoMaNV]
+@manv varchar(10)
+AS
+	SELECT sMaNV, sTenNV, sGioiTinh, sDiaChi, sSdt, sMaChucVu, FORMAT(dNgaySinh, 'dd/MM/yyyy') as 'dNgaySinh'
+	FROM NHANVIEN
+	WHERE sMaNV LIKE '%' + @manv + '%';
+
+GO
+/****** Object:  StoredProcedure [dbo].[proc_timKiemTheoMaSach]    Script Date: 22/03/2024 7:12:38 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROC [dbo].[proc_timKiemTheoMaSach]
+@maSach varchar(10)
+AS
+	SELECT sMaSach, sTenSach, FORMAT(dNamXB, 'dd/MM/yyyy') as 'dNamXB', iSoLuong, sMaLoai, sMaTG, fGiaTien,sMaNxb
+	FROM SACH
+	WHERE sMaSach LIKE '%' + @maSach +'%'
+GO
+/****** Object:  StoredProcedure [dbo].[proc_timKiemTheoTenNV]    Script Date: 22/03/2024 7:12:38 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROC [dbo].[proc_timKiemTheoTenNV]
+@tennv varchar(10)
+AS
+	SELECT sMaNV, sTenNV, sGioiTinh, sDiaChi, sSdt, sMaChucVu, FORMAT(dNgaySinh, 'dd/MM/yyyy') as 'dNgaySinh'
+	FROM NHANVIEN
+	WHERE sTenNV LIKE '%' + @tennv + '%';
+GO
+/****** Object:  StoredProcedure [dbo].[proc_timKiemTheoTenSach]    Script Date: 22/03/2024 7:12:38 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROC [dbo].[proc_timKiemTheoTenSach]
+@tenSach nvarchar(30)
+AS
+	SELECT sMaSach, sTenSach, FORMAT(dNamXB, 'dd/MM/yyyy') as 'dNamXB', iSoLuong, sMaLoai, sMaTG, fGiaTien,sMaNxb
+	FROM SACH
+	WHERE sTenSach LIKE '%' + @tenSach +'%'
+GO
+/****** Object:  StoredProcedure [dbo].[proc_timkiemTKTheoTenNV]    Script Date: 22/03/2024 7:12:38 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROC [dbo].[proc_timkiemTKTheoTenNV]
+@tenNV nvarchar(30)
+AS
+	SELECT *
+	FROM TaiKhoan 
+	WHERE sUserName LIKE '%' + @tenNV + '%'
+GO
+/****** Object:  StoredProcedure [dbo].[proc_timKiemTKTheoUser]    Script Date: 22/03/2024 7:12:38 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROC [dbo].[proc_timKiemTKTheoUser]
+@user varchar(10)
+AS
+	SELECT *
+	FROM TaiKhoan
+	WHERE sUserName LIKE '%' + @user + '%'
+GO
+/****** Object:  StoredProcedure [dbo].[proc_xoaNhanVien]    Script Date: 22/03/2024 7:12:38 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROC [dbo].[proc_xoaNhanVien]
+@manv varchar(10)
+AS	
+	DELETE NHANVIEN
+	WHERE sMaNV = @manv
+GO
+/****** Object:  StoredProcedure [dbo].[proc_xoaSach]    Script Date: 22/03/2024 7:12:38 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROC [dbo].[proc_xoaSach]
+@maSach varchar(10)
+AS
+	DELETE SACH
+	WHERE sMaSach = @maSach
+GO
+/****** Object:  StoredProcedure [dbo].[proc_xoaTaiKhoan]    Script Date: 22/03/2024 7:12:38 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROC [dbo].[proc_xoaTaiKhoan]
+@user varchar(10)
+AS
+	DELETE FROM TaiKhoan
+	WHERE sUserName = @user
+GO
+/****** Object:  StoredProcedure [dbo].[SELECT_NHANVIEN]    Script Date: 22/03/2024 7:12:38 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -503,7 +783,7 @@ AS
 	SELECT NHANVIEN.sMaNV, NHANVIEN.sTenNV, NHANVIEN.sGioiTinh, NHANVIEN.sDiaChi, NHANVIEN.sSdt, FORMAT( NHANVIEN.dNgaySinh, 'dd/MM/yyyy') AS [Ngày sinh], NHANVIEN.sMaChucVu
 	FROM NHANVIEN
 GO
-/****** Object:  StoredProcedure [dbo].[SP_DS_CHUCVU]    Script Date: 3/17/2024 11:30:14 AM ******/
+/****** Object:  StoredProcedure [dbo].[SP_DS_CHUCVU]    Script Date: 22/03/2024 7:12:38 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -513,7 +793,7 @@ AS
 	SELECT CHUCVU.sTenChucVu
 	FROM CHUCVU
 GO
-/****** Object:  StoredProcedure [dbo].[sp_Lay_Tuoi_Nhan_Vien_Cao_Nhat]    Script Date: 3/17/2024 11:30:14 AM ******/
+/****** Object:  StoredProcedure [dbo].[sp_Lay_Tuoi_Nhan_Vien_Cao_Nhat]    Script Date: 22/03/2024 7:12:38 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -527,7 +807,7 @@ BEGIN
     FROM NHANVIEN;
 END
 GO
-/****** Object:  StoredProcedure [dbo].[sp_So_luong_Sinh_Vien_Sinh_Sinh_trong_thang]    Script Date: 3/17/2024 11:30:14 AM ******/
+/****** Object:  StoredProcedure [dbo].[sp_So_luong_Sinh_Vien_Sinh_Sinh_trong_thang]    Script Date: 22/03/2024 7:12:38 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -540,7 +820,7 @@ AS
 	WHERE MONTH(dNgaySinh) = @thang
 
 GO
-/****** Object:  StoredProcedure [dbo].[SP_UPDATE_NHANVIEN]    Script Date: 3/17/2024 11:30:14 AM ******/
+/****** Object:  StoredProcedure [dbo].[SP_UPDATE_NHANVIEN]    Script Date: 22/03/2024 7:12:38 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -554,7 +834,7 @@ AS
 	sSdt = @sSDT, sMaChucVu = @sMaChucVu, dNgaySinh = @dNgaySinh
 	WHERE @sMaNV = sMaNV
 GO
-/****** Object:  StoredProcedure [dbo].[SP_XOA_NHANVIEN]    Script Date: 3/17/2024 11:30:14 AM ******/
+/****** Object:  StoredProcedure [dbo].[SP_XOA_NHANVIEN]    Script Date: 22/03/2024 7:12:38 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -565,7 +845,7 @@ AS
 	DELETE FROM NHANVIEN
 	WHERE sMaNV = @sMaNV
 GO
-/****** Object:  StoredProcedure [dbo].[spDem_Sinh_Vien]    Script Date: 3/17/2024 11:30:14 AM ******/
+/****** Object:  StoredProcedure [dbo].[spDem_Sinh_Vien]    Script Date: 22/03/2024 7:12:38 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -582,7 +862,7 @@ AS
 	SELECT @Nu = COUNT(*) FROM NHANVIEN
 	WHERE sGioiTinh = N'Nữ'
 GO
-/****** Object:  StoredProcedure [dbo].[THEM_NHANVIEN]    Script Date: 3/17/2024 11:30:14 AM ******/
+/****** Object:  StoredProcedure [dbo].[THEM_NHANVIEN]    Script Date: 22/03/2024 7:12:38 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -594,4 +874,18 @@ AS
 	INSERT INTO NHANVIEN
 	VALUES
 	(@sMaNV, @sTenNV, @sGioiTinh, @sDiaChi, @sSDT, @sMaChucVu, @dNgaySinh );
+GO
+/****** Object:  StoredProcedure [dbo].[themTaiKhoan]    Script Date: 22/03/2024 7:12:38 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROC [dbo].[themTaiKhoan]
+@user varchar(10), @pass varchar(10), @maNv varchar(10), @quyen bit
+AS
+	INSERT INTO TaiKhoan
+	VALUES
+	(
+		@user, @pass, @maNv, @quyen
+	);
 GO

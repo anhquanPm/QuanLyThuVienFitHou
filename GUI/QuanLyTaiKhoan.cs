@@ -173,11 +173,9 @@ namespace GUI
                     }
                     else
                     {
+                        
                         MessageBox.Show("Phiên đăng nhập của bạn đã hết hạn");
                         Application.Exit();
-                        
-                       
-                       
                     }
                     
                
