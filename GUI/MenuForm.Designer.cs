@@ -159,6 +159,7 @@
             // 
             resources.ApplyResources(this.phiếuMượnToolStripMenuItem, "phiếuMượnToolStripMenuItem");
             this.phiếuMượnToolStripMenuItem.Name = "phiếuMượnToolStripMenuItem";
+            this.phiếuMượnToolStripMenuItem.Click += new System.EventHandler(this.phiếuMượnToolStripMenuItem_Click);
             // 
             // phiếuTrảToolStripMenuItem
             // 

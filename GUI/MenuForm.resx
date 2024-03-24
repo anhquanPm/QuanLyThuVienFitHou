@@ -977,7 +977,7 @@
 </value>
   </data>
   <data name="SachToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 32</value>
+    <value>186, 32</value>
   </data>
   <data name="SachToolStripMenuItem.Text" xml:space="preserve">
     <value>Sách</value>
@@ -1866,7 +1866,7 @@
 </value>
   </data>
   <data name="NhanVienToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 32</value>
+    <value>186, 32</value>
   </data>
   <data name="NhanVienToolStripMenuItem.Text" xml:space="preserve">
     <value>Nhân viên</value>
@@ -1903,7 +1903,7 @@
 </value>
   </data>
   <data name="DocGiaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 32</value>
+    <value>186, 32</value>
   </data>
   <data name="DocGiaToolStripMenuItem.Text" xml:space="preserve">
     <value>Độc giả</value>
@@ -1968,7 +1968,7 @@
 </value>
   </data>
   <data name="tácGiảToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 32</value>
+    <value>186, 32</value>
   </data>
   <data name="tácGiảToolStripMenuItem.Text" xml:space="preserve">
     <value>Tác giả</value>
@@ -2005,7 +2005,7 @@
 </value>
   </data>
   <data name="TKToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 32</value>
+    <value>186, 32</value>
   </data>
   <data name="TKToolStripMenuItem.Text" xml:space="preserve">
     <value>Tài khoản</value>
@@ -2179,7 +2179,7 @@
 </value>
   </data>
   <data name="phiếuMượnToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 32</value>
+    <value>224, 32</value>
   </data>
   <data name="phiếuMượnToolStripMenuItem.Text" xml:space="preserve">
     <value>Phiếu mượn</value>
@@ -2197,7 +2197,7 @@
 </value>
   </data>
   <data name="phiếuTrảToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 32</value>
+    <value>224, 32</value>
   </data>
   <data name="phiếuTrảToolStripMenuItem.Text" xml:space="preserve">
     <value>Phiếu trả</value>
@@ -2215,7 +2215,7 @@
 </value>
   </data>
   <data name="phiếuPhạtToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 32</value>
+    <value>224, 32</value>
   </data>
   <data name="phiếuPhạtToolStripMenuItem.Text" xml:space="preserve">
     <value>Phiếu phạt</value>

@@ -130,5 +130,11 @@ namespace GUI
             TacGiafrm f = new TacGiafrm();
             addForm(f);
         }
+
+        private void phiếuMượnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PhieuMuonFrm frm = new PhieuMuonFrm();
+            addForm(frm);
+        }
     }
 }
