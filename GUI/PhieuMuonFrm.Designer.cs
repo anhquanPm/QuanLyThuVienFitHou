@@ -31,9 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PhieuMuonFrm));
             this.cbb_ma_dg = new System.Windows.Forms.ComboBox();
-            this.quanLyThuVienDataSet1 = new GUI.QuanLyThuVienDataSet1();
-            this.quanLyThuVienDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dOCGIABindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.quanLyThuVienDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.quanLyThuVienDataSet1 = new GUI.QuanLyThuVienDataSet1();
             this.dOCGIATableAdapter = new GUI.QuanLyThuVienDataSet1TableAdapters.DOCGIATableAdapter();
             this.label10 = new System.Windows.Forms.Label();
             this.btn_clean = new System.Windows.Forms.Button();
@@ -41,6 +41,13 @@
             this.btn_capnhat = new System.Windows.Forms.Button();
             this.btn_them = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbb_loai_phieu = new System.Windows.Forms.ComboBox();
+            this.lOAIPHIEUBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cbb_ma_sach = new System.Windows.Forms.ComboBox();
+            this.sACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cbb_ma_nv = new System.Windows.Forms.ComboBox();
+            this.nHANVIENBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dtp_ngay_muon = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -54,25 +61,18 @@
             this.cbb_boloc = new System.Windows.Forms.ComboBox();
             this.tb_timkiem = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgv_nhan_vien = new System.Windows.Forms.DataGridView();
-            this.dtp_ngay_muon = new System.Windows.Forms.DateTimePicker();
-            this.cbb_ma_nv = new System.Windows.Forms.ComboBox();
-            this.cbb_ma_sach = new System.Windows.Forms.ComboBox();
-            this.cbb_loai_phieu = new System.Windows.Forms.ComboBox();
-            this.nHANVIENBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dgv_phieu_muon = new System.Windows.Forms.DataGridView();
             this.nHANVIENTableAdapter = new GUI.QuanLyThuVienDataSet1TableAdapters.NHANVIENTableAdapter();
-            this.sACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sACHTableAdapter = new GUI.QuanLyThuVienDataSet1TableAdapters.SACHTableAdapter();
-            this.lOAIPHIEUBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lOAIPHIEUTableAdapter = new GUI.QuanLyThuVienDataSet1TableAdapters.LOAIPHIEUTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dOCGIABindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet1)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_nhan_vien)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nHANVIENBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sACHBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOAIPHIEUBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sACHBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nHANVIENBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_phieu_muon)).BeginInit();
             this.SuspendLayout();
             // 
             // cbb_ma_dg
@@ -85,20 +85,20 @@
             this.cbb_ma_dg.Size = new System.Drawing.Size(293, 31);
             this.cbb_ma_dg.TabIndex = 0;
             // 
-            // quanLyThuVienDataSet1
+            // dOCGIABindingSource
             // 
-            this.quanLyThuVienDataSet1.DataSetName = "QuanLyThuVienDataSet1";
-            this.quanLyThuVienDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.dOCGIABindingSource.DataMember = "DOCGIA";
+            this.dOCGIABindingSource.DataSource = this.quanLyThuVienDataSet1BindingSource;
             // 
             // quanLyThuVienDataSet1BindingSource
             // 
             this.quanLyThuVienDataSet1BindingSource.DataSource = this.quanLyThuVienDataSet1;
             this.quanLyThuVienDataSet1BindingSource.Position = 0;
             // 
-            // dOCGIABindingSource
+            // quanLyThuVienDataSet1
             // 
-            this.dOCGIABindingSource.DataMember = "DOCGIA";
-            this.dOCGIABindingSource.DataSource = this.quanLyThuVienDataSet1BindingSource;
+            this.quanLyThuVienDataSet1.DataSetName = "QuanLyThuVienDataSet1";
+            this.quanLyThuVienDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dOCGIATableAdapter
             // 
@@ -174,6 +174,61 @@
             this.groupBox1.Size = new System.Drawing.Size(573, 426);
             this.groupBox1.TabIndex = 30;
             this.groupBox1.TabStop = false;
+            // 
+            // cbb_loai_phieu
+            // 
+            this.cbb_loai_phieu.DataSource = this.lOAIPHIEUBindingSource;
+            this.cbb_loai_phieu.DisplayMember = "iMaLoaiPhieu";
+            this.cbb_loai_phieu.FormattingEnabled = true;
+            this.cbb_loai_phieu.Location = new System.Drawing.Point(193, 296);
+            this.cbb_loai_phieu.Name = "cbb_loai_phieu";
+            this.cbb_loai_phieu.Size = new System.Drawing.Size(292, 31);
+            this.cbb_loai_phieu.TabIndex = 24;
+            // 
+            // lOAIPHIEUBindingSource
+            // 
+            this.lOAIPHIEUBindingSource.DataMember = "LOAIPHIEU";
+            this.lOAIPHIEUBindingSource.DataSource = this.quanLyThuVienDataSet1BindingSource;
+            // 
+            // cbb_ma_sach
+            // 
+            this.cbb_ma_sach.DataSource = this.sACHBindingSource;
+            this.cbb_ma_sach.DisplayMember = "sMaSach";
+            this.cbb_ma_sach.FormattingEnabled = true;
+            this.cbb_ma_sach.Location = new System.Drawing.Point(193, 242);
+            this.cbb_ma_sach.Name = "cbb_ma_sach";
+            this.cbb_ma_sach.Size = new System.Drawing.Size(292, 31);
+            this.cbb_ma_sach.TabIndex = 23;
+            // 
+            // sACHBindingSource
+            // 
+            this.sACHBindingSource.DataMember = "SACH";
+            this.sACHBindingSource.DataSource = this.quanLyThuVienDataSet1BindingSource;
+            // 
+            // cbb_ma_nv
+            // 
+            this.cbb_ma_nv.DataSource = this.nHANVIENBindingSource;
+            this.cbb_ma_nv.DisplayMember = "sMaNV";
+            this.cbb_ma_nv.FormattingEnabled = true;
+            this.cbb_ma_nv.Location = new System.Drawing.Point(193, 184);
+            this.cbb_ma_nv.Name = "cbb_ma_nv";
+            this.cbb_ma_nv.Size = new System.Drawing.Size(292, 31);
+            this.cbb_ma_nv.TabIndex = 22;
+            // 
+            // nHANVIENBindingSource
+            // 
+            this.nHANVIENBindingSource.DataMember = "NHANVIEN";
+            this.nHANVIENBindingSource.DataSource = this.quanLyThuVienDataSet1BindingSource;
+            // 
+            // dtp_ngay_muon
+            // 
+            this.dtp_ngay_muon.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtp_ngay_muon.CustomFormat = "dd/MM/yyyy";
+            this.dtp_ngay_muon.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_ngay_muon.Location = new System.Drawing.Point(192, 142);
+            this.dtp_ngay_muon.Name = "dtp_ngay_muon";
+            this.dtp_ngay_muon.Size = new System.Drawing.Size(294, 30);
+            this.dtp_ngay_muon.TabIndex = 21;
             // 
             // label9
             // 
@@ -276,8 +331,8 @@
             // 
             this.cbb_boloc.FormattingEnabled = true;
             this.cbb_boloc.Items.AddRange(new object[] {
-            "Mã nhân viên",
-            "Tên nhân viên"});
+            "Mã phiếu mượn",
+            "Mã Độc Giả"});
             this.cbb_boloc.Location = new System.Drawing.Point(725, 95);
             this.cbb_boloc.Name = "cbb_boloc";
             this.cbb_boloc.Size = new System.Drawing.Size(294, 31);
@@ -299,82 +354,27 @@
             this.label1.TabIndex = 22;
             this.label1.Text = "Tìm kiếm";
             // 
-            // dgv_nhan_vien
+            // dgv_phieu_muon
             // 
-            this.dgv_nhan_vien.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgv_phieu_muon.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgv_nhan_vien.BackgroundColor = System.Drawing.SystemColors.Menu;
-            this.dgv_nhan_vien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_nhan_vien.Location = new System.Drawing.Point(0, 449);
-            this.dgv_nhan_vien.Name = "dgv_nhan_vien";
-            this.dgv_nhan_vien.RowHeadersWidth = 51;
-            this.dgv_nhan_vien.RowTemplate.Height = 24;
-            this.dgv_nhan_vien.Size = new System.Drawing.Size(1032, 157);
-            this.dgv_nhan_vien.TabIndex = 21;
-            // 
-            // dtp_ngay_muon
-            // 
-            this.dtp_ngay_muon.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dtp_ngay_muon.CustomFormat = "dd/MM/yyyy";
-            this.dtp_ngay_muon.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_ngay_muon.Location = new System.Drawing.Point(192, 142);
-            this.dtp_ngay_muon.Name = "dtp_ngay_muon";
-            this.dtp_ngay_muon.Size = new System.Drawing.Size(294, 30);
-            this.dtp_ngay_muon.TabIndex = 21;
-            // 
-            // cbb_ma_nv
-            // 
-            this.cbb_ma_nv.DataSource = this.nHANVIENBindingSource;
-            this.cbb_ma_nv.DisplayMember = "sMaNV";
-            this.cbb_ma_nv.FormattingEnabled = true;
-            this.cbb_ma_nv.Location = new System.Drawing.Point(193, 184);
-            this.cbb_ma_nv.Name = "cbb_ma_nv";
-            this.cbb_ma_nv.Size = new System.Drawing.Size(292, 31);
-            this.cbb_ma_nv.TabIndex = 22;
-            // 
-            // cbb_ma_sach
-            // 
-            this.cbb_ma_sach.DataSource = this.sACHBindingSource;
-            this.cbb_ma_sach.DisplayMember = "sMaSach";
-            this.cbb_ma_sach.FormattingEnabled = true;
-            this.cbb_ma_sach.Location = new System.Drawing.Point(193, 242);
-            this.cbb_ma_sach.Name = "cbb_ma_sach";
-            this.cbb_ma_sach.Size = new System.Drawing.Size(292, 31);
-            this.cbb_ma_sach.TabIndex = 23;
-            // 
-            // cbb_loai_phieu
-            // 
-            this.cbb_loai_phieu.DataSource = this.lOAIPHIEUBindingSource;
-            this.cbb_loai_phieu.DisplayMember = "iMaLoaiPhieu";
-            this.cbb_loai_phieu.FormattingEnabled = true;
-            this.cbb_loai_phieu.Location = new System.Drawing.Point(193, 296);
-            this.cbb_loai_phieu.Name = "cbb_loai_phieu";
-            this.cbb_loai_phieu.Size = new System.Drawing.Size(292, 31);
-            this.cbb_loai_phieu.TabIndex = 24;
-            // 
-            // nHANVIENBindingSource
-            // 
-            this.nHANVIENBindingSource.DataMember = "NHANVIEN";
-            this.nHANVIENBindingSource.DataSource = this.quanLyThuVienDataSet1BindingSource;
+            this.dgv_phieu_muon.BackgroundColor = System.Drawing.SystemColors.Menu;
+            this.dgv_phieu_muon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_phieu_muon.Location = new System.Drawing.Point(0, 449);
+            this.dgv_phieu_muon.Name = "dgv_phieu_muon";
+            this.dgv_phieu_muon.RowHeadersWidth = 51;
+            this.dgv_phieu_muon.RowTemplate.Height = 24;
+            this.dgv_phieu_muon.Size = new System.Drawing.Size(1032, 157);
+            this.dgv_phieu_muon.TabIndex = 21;
             // 
             // nHANVIENTableAdapter
             // 
             this.nHANVIENTableAdapter.ClearBeforeFill = true;
             // 
-            // sACHBindingSource
-            // 
-            this.sACHBindingSource.DataMember = "SACH";
-            this.sACHBindingSource.DataSource = this.quanLyThuVienDataSet1BindingSource;
-            // 
             // sACHTableAdapter
             // 
             this.sACHTableAdapter.ClearBeforeFill = true;
-            // 
-            // lOAIPHIEUBindingSource
-            // 
-            this.lOAIPHIEUBindingSource.DataMember = "LOAIPHIEU";
-            this.lOAIPHIEUBindingSource.DataSource = this.quanLyThuVienDataSet1BindingSource;
             // 
             // lOAIPHIEUTableAdapter
             // 
@@ -395,21 +395,21 @@
             this.Controls.Add(this.cbb_boloc);
             this.Controls.Add(this.tb_timkiem);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dgv_nhan_vien);
+            this.Controls.Add(this.dgv_phieu_muon);
             this.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "PhieuMuonFrm";
-            this.Text = "PhieuMuonFrm";
+            this.Text = "Phiếu Mượn";
             this.Load += new System.EventHandler(this.PhieuMuonFrm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dOCGIABindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_nhan_vien)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nHANVIENBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sACHBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOAIPHIEUBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sACHBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nHANVIENBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_phieu_muon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -441,7 +441,7 @@
         private System.Windows.Forms.ComboBox cbb_boloc;
         private System.Windows.Forms.TextBox tb_timkiem;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgv_nhan_vien;
+        private System.Windows.Forms.DataGridView dgv_phieu_muon;
         private System.Windows.Forms.ComboBox cbb_loai_phieu;
         private System.Windows.Forms.ComboBox cbb_ma_sach;
         private System.Windows.Forms.ComboBox cbb_ma_nv;
