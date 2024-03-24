@@ -47,8 +47,12 @@
             this.dtp_ngaysinh = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cbb_macv = new System.Windows.Forms.ComboBox();
             this.cHUCVUBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.quanLyThuVienDataSet = new GUI.QuanLyThuVienDataSet();
+            this.tb_sdt = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.nHANVIENBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nHANVIENTableAdapter = new GUI.QuanLyThuVienDataSetTableAdapters.NHANVIENTableAdapter();
             this.cHUCVUTableAdapter = new GUI.QuanLyThuVienDataSetTableAdapters.CHUCVUTableAdapter();
@@ -57,10 +61,6 @@
             this.btn_xoa = new System.Windows.Forms.Button();
             this.btn_clean = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.tb_sdt = new System.Windows.Forms.TextBox();
-            this.cbb_macv = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_nhan_vien)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cHUCVUBindingSource)).BeginInit();
@@ -252,6 +252,26 @@
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(72, 296);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(98, 23);
+            this.label9.TabIndex = 20;
+            this.label9.Text = "Mã chức vụ";
+            // 
+            // cbb_macv
+            // 
+            this.cbb_macv.DataSource = this.cHUCVUBindingSource;
+            this.cbb_macv.DisplayMember = "sMaChucVu";
+            this.cbb_macv.FormattingEnabled = true;
+            this.cbb_macv.Location = new System.Drawing.Point(191, 293);
+            this.cbb_macv.Name = "cbb_macv";
+            this.cbb_macv.Size = new System.Drawing.Size(294, 31);
+            this.cbb_macv.TabIndex = 7;
+            // 
             // cHUCVUBindingSource
             // 
             this.cHUCVUBindingSource.DataMember = "CHUCVU";
@@ -261,6 +281,24 @@
             // 
             this.quanLyThuVienDataSet.DataSetName = "QuanLyThuVienDataSet";
             this.quanLyThuVienDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tb_sdt
+            // 
+            this.tb_sdt.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tb_sdt.Location = new System.Drawing.Point(192, 244);
+            this.tb_sdt.Name = "tb_sdt";
+            this.tb_sdt.Size = new System.Drawing.Size(294, 30);
+            this.tb_sdt.TabIndex = 6;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(72, 244);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(111, 23);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Số điện thoại";
             // 
             // nHANVIENBindingSource
             // 
@@ -309,9 +347,9 @@
             // 
             this.btn_clean.Location = new System.Drawing.Point(940, 347);
             this.btn_clean.Name = "btn_clean";
-            this.btn_clean.Size = new System.Drawing.Size(79, 34);
+            this.btn_clean.Size = new System.Drawing.Size(92, 34);
             this.btn_clean.TabIndex = 14;
-            this.btn_clean.Text = "Clean";
+            this.btn_clean.Text = "Làm mới";
             this.btn_clean.UseVisualStyleBackColor = true;
             this.btn_clean.Click += new System.EventHandler(this.btn_clean_Click);
             // 
@@ -327,44 +365,6 @@
             this.label10.Text = "Lưu ý: Bạn hãy chọn bộ lọc trước khi tìm kiếm nhé!\r\n";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label10.Click += new System.EventHandler(this.label10_Click);
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(72, 244);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(111, 23);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "Số điện thoại";
-            // 
-            // tb_sdt
-            // 
-            this.tb_sdt.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tb_sdt.Location = new System.Drawing.Point(192, 244);
-            this.tb_sdt.Name = "tb_sdt";
-            this.tb_sdt.Size = new System.Drawing.Size(294, 30);
-            this.tb_sdt.TabIndex = 6;
-            // 
-            // cbb_macv
-            // 
-            this.cbb_macv.DataSource = this.cHUCVUBindingSource;
-            this.cbb_macv.DisplayMember = "sMaChucVu";
-            this.cbb_macv.FormattingEnabled = true;
-            this.cbb_macv.Location = new System.Drawing.Point(191, 293);
-            this.cbb_macv.Name = "cbb_macv";
-            this.cbb_macv.Size = new System.Drawing.Size(294, 31);
-            this.cbb_macv.TabIndex = 7;
-            // 
-            // label9
-            // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(72, 296);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(98, 23);
-            this.label9.TabIndex = 20;
-            this.label9.Text = "Mã chức vụ";
             // 
             // NhanVienForm
             // 

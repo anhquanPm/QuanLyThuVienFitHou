@@ -71,6 +71,7 @@ namespace GUI
 
         private void SachToolStripMenuItem_Click(object sender, EventArgs e)
         {
+          
             SachForm sachForm = new SachForm();
             addForm(sachForm);
         }
@@ -117,6 +118,17 @@ namespace GUI
         {
             DocGiaForm docGiaForm = new DocGiaForm();
             addForm(docGiaForm);
+        }
+
+        private void panelContent_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tácGiảToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TacGiafrm f = new TacGiafrm();
+            addForm(f);
         }
     }
 }

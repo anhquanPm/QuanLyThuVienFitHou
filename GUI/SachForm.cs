@@ -39,6 +39,7 @@ namespace GUI
             // Cài đặt chế độ hiển thị dữ liệu đầy đủ trên DataGridView
             dgv_sach.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgv_sach.AllowUserToAddRows = false;
+            dgv_sach.CellFormatting += dgv_sach_CellFormatting;
         }
 
         private void SachForm_Load(object sender, EventArgs e)
@@ -53,7 +54,7 @@ namespace GUI
 
             DataSet dataSet = sachBUS.getSachData();
             dgv_sach.Rows.Clear(); // Xóa dữ liệu cũ trước khi đổ dữ liệu mới
-
+           
             // Kiểm tra nếu có dữ liệu trong DataSet
             if (dataSet.Tables.Count > 0 && dataSet.Tables[0].Rows.Count > 0)
             {
@@ -71,6 +72,7 @@ namespace GUI
 
         private void loadSach()
         {
+          
             DataSet dataSet = sachBUS.getSachData();
             dgv_sach.Rows.Clear(); // Xóa dữ liệu cũ trước khi đổ dữ liệu mới
 
@@ -89,11 +91,24 @@ namespace GUI
             }
         }
 
+        private void dgv_sach_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+           
+            // Kiểm tra cột "Số lượng" và dòng có giá trị là 0
+            if (dgv_sach.Columns[e.ColumnIndex].Name == "Số lượng" && Convert.ToInt32(e.Value) == 0)
+            {
+                // Đổi màu cell sang màu đỏ
+                e.CellStyle.BackColor = Color.Red;
+                e.CellStyle.ForeColor = Color.White;
+            }
+        }
+
         private void dgv_sach_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int indexRow = e.RowIndex;
-            
-            if(indexRow >= 0 && indexRow <= dgv_sach.Rows.Count)
+            tb_ma_sach.Enabled = false;
+
+            if (indexRow >= 0 && indexRow <= dgv_sach.Rows.Count)
             {
                 DataGridViewRow selectedRow = dgv_sach.Rows[indexRow];
                 

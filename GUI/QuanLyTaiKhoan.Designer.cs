@@ -100,9 +100,9 @@
             // 
             this.btn_clean.Location = new System.Drawing.Point(460, 325);
             this.btn_clean.Name = "btn_clean";
-            this.btn_clean.Size = new System.Drawing.Size(75, 38);
+            this.btn_clean.Size = new System.Drawing.Size(91, 38);
             this.btn_clean.TabIndex = 14;
-            this.btn_clean.Text = "Clean";
+            this.btn_clean.Text = "Làm mới";
             this.btn_clean.UseVisualStyleBackColor = true;
             this.btn_clean.Click += new System.EventHandler(this.btn_clean_Click);
             // 

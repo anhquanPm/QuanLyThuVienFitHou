@@ -204,6 +204,10 @@ namespace GUI
                 cbb_ma_nv.Text = "";
                 cbb_quyen.Text = "";
             }
+            else
+            {
+                MessageBox.Show("Dữ liệu đang trống");
+            }
         }
 
         private void btn_xoa_Click(object sender, EventArgs e)

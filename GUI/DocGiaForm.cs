@@ -124,7 +124,7 @@ namespace GUI
                 {
                     gioiTinh = "Nữ";
                 }
-                string diaChi = tb_madg.Text.Trim();
+                string diaChi = tb_diachi.Text.Trim();
                 string sdt = tb_sdt.Text.Trim();
                 int res = DocGiaBUS.themDocGia(maDG, tenDG, ngaySinh, gioiTinh, diaChi, sdt);
                 if (res > 0) {
@@ -161,7 +161,7 @@ namespace GUI
                 {
                     gioiTinh = "Nữ";
                 }
-                string diaChi = tb_madg.Text.Trim();
+                string diaChi = tb_diachi.Text.Trim();
                 string sdt = tb_sdt.Text.Trim();
                 int res = DocGiaBUS.suaDocGia(maDG, tenDG, ngaySinh, gioiTinh, diaChi, sdt);
                 if (res > 0)

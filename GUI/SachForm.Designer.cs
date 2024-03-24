@@ -37,13 +37,22 @@
             this.btn_capnhat = new System.Windows.Forms.Button();
             this.btn_them = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbb_ma_loai = new System.Windows.Forms.ComboBox();
+            this.tHELOAISACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.quanLyThuVienDataSet = new GUI.QuanLyThuVienDataSet();
+            this.cbb_nha_xb = new System.Windows.Forms.ComboBox();
+            this.nHAXUATBANBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label5 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.tb_gia_tien = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.cbb_ma_tg = new System.Windows.Forms.ComboBox();
+            this.tACGIABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label3 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.tb_ma_sach = new System.Windows.Forms.TextBox();
-            this.dtp_nam_xb = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
+            this.dtp_nam_xb = new System.Windows.Forms.DateTimePicker();
             this.tb_ten_sach = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.tb_so_luong = new System.Windows.Forms.TextBox();
@@ -52,24 +61,15 @@
             this.cbb_boloc = new System.Windows.Forms.ComboBox();
             this.tb_timkiem = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.tb_gia_tien = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cbb_nha_xb = new System.Windows.Forms.ComboBox();
-            this.cbb_ma_loai = new System.Windows.Forms.ComboBox();
-            this.quanLyThuVienDataSet = new GUI.QuanLyThuVienDataSet();
-            this.tHELOAISACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tHELOAISACHTableAdapter = new GUI.QuanLyThuVienDataSetTableAdapters.THELOAISACHTableAdapter();
-            this.tACGIABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tACGIATableAdapter = new GUI.QuanLyThuVienDataSetTableAdapters.TACGIATableAdapter();
-            this.nHAXUATBANBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nHAXUATBANTableAdapter = new GUI.QuanLyThuVienDataSetTableAdapters.NHAXUATBANTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_sach)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tHELOAISACHBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tACGIABindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nHAXUATBANBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tACGIABindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dgv_sach
@@ -104,9 +104,9 @@
             // 
             this.btn_clean.Location = new System.Drawing.Point(940, 349);
             this.btn_clean.Name = "btn_clean";
-            this.btn_clean.Size = new System.Drawing.Size(79, 34);
+            this.btn_clean.Size = new System.Drawing.Size(90, 34);
             this.btn_clean.TabIndex = 6;
-            this.btn_clean.Text = "Clean";
+            this.btn_clean.Text = "Làm mới";
             this.btn_clean.UseVisualStyleBackColor = true;
             this.btn_clean.Click += new System.EventHandler(this.btn_clean_Click);
             // 
@@ -165,6 +165,69 @@
             this.groupBox1.TabIndex = 29;
             this.groupBox1.TabStop = false;
             // 
+            // cbb_ma_loai
+            // 
+            this.cbb_ma_loai.DataSource = this.tHELOAISACHBindingSource;
+            this.cbb_ma_loai.DisplayMember = "sMaLoai";
+            this.cbb_ma_loai.FormattingEnabled = true;
+            this.cbb_ma_loai.Location = new System.Drawing.Point(193, 224);
+            this.cbb_ma_loai.Name = "cbb_ma_loai";
+            this.cbb_ma_loai.Size = new System.Drawing.Size(294, 31);
+            this.cbb_ma_loai.TabIndex = 5;
+            // 
+            // tHELOAISACHBindingSource
+            // 
+            this.tHELOAISACHBindingSource.DataMember = "THELOAISACH";
+            this.tHELOAISACHBindingSource.DataSource = this.quanLyThuVienDataSet;
+            // 
+            // quanLyThuVienDataSet
+            // 
+            this.quanLyThuVienDataSet.DataSetName = "QuanLyThuVienDataSet";
+            this.quanLyThuVienDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // cbb_nha_xb
+            // 
+            this.cbb_nha_xb.DataSource = this.nHAXUATBANBindingSource;
+            this.cbb_nha_xb.DisplayMember = "sMaNxb";
+            this.cbb_nha_xb.FormattingEnabled = true;
+            this.cbb_nha_xb.Location = new System.Drawing.Point(192, 378);
+            this.cbb_nha_xb.Name = "cbb_nha_xb";
+            this.cbb_nha_xb.Size = new System.Drawing.Size(294, 31);
+            this.cbb_nha_xb.TabIndex = 8;
+            // 
+            // nHAXUATBANBindingSource
+            // 
+            this.nHAXUATBANBindingSource.DataMember = "NHAXUATBAN";
+            this.nHAXUATBANBindingSource.DataSource = this.quanLyThuVienDataSet;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(43, 378);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(140, 23);
+            this.label5.TabIndex = 23;
+            this.label5.Text = "Mã nhà xuất bản";
+            // 
+            // label11
+            // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(73, 327);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(69, 23);
+            this.label11.TabIndex = 22;
+            this.label11.Text = "Giá tiền";
+            // 
+            // tb_gia_tien
+            // 
+            this.tb_gia_tien.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tb_gia_tien.Location = new System.Drawing.Point(193, 327);
+            this.tb_gia_tien.Name = "tb_gia_tien";
+            this.tb_gia_tien.Size = new System.Drawing.Size(294, 30);
+            this.tb_gia_tien.TabIndex = 7;
+            // 
             // label9
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -184,6 +247,11 @@
             this.cbb_ma_tg.Name = "cbb_ma_tg";
             this.cbb_ma_tg.Size = new System.Drawing.Size(294, 31);
             this.cbb_ma_tg.TabIndex = 6;
+            // 
+            // tACGIABindingSource
+            // 
+            this.tACGIABindingSource.DataMember = "TACGIA";
+            this.tACGIABindingSource.DataSource = this.quanLyThuVienDataSet;
             // 
             // label3
             // 
@@ -213,16 +281,6 @@
             this.tb_ma_sach.Size = new System.Drawing.Size(294, 30);
             this.tb_ma_sach.TabIndex = 1;
             // 
-            // dtp_nam_xb
-            // 
-            this.dtp_nam_xb.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dtp_nam_xb.CustomFormat = "dd/MM/yyyy";
-            this.dtp_nam_xb.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_nam_xb.Location = new System.Drawing.Point(193, 124);
-            this.dtp_nam_xb.Name = "dtp_nam_xb";
-            this.dtp_nam_xb.Size = new System.Drawing.Size(294, 30);
-            this.dtp_nam_xb.TabIndex = 3;
-            // 
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -232,6 +290,16 @@
             this.label4.Size = new System.Drawing.Size(75, 23);
             this.label4.TabIndex = 8;
             this.label4.Text = "Tên sách";
+            // 
+            // dtp_nam_xb
+            // 
+            this.dtp_nam_xb.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtp_nam_xb.CustomFormat = "dd/MM/yyyy";
+            this.dtp_nam_xb.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_nam_xb.Location = new System.Drawing.Point(193, 124);
+            this.dtp_nam_xb.Name = "dtp_nam_xb";
+            this.dtp_nam_xb.Size = new System.Drawing.Size(294, 30);
+            this.dtp_nam_xb.TabIndex = 3;
             // 
             // tb_ten_sach
             // 
@@ -307,81 +375,13 @@
             this.label1.TabIndex = 21;
             this.label1.Text = "Tìm kiếm";
             // 
-            // label11
-            // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(73, 327);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(69, 23);
-            this.label11.TabIndex = 22;
-            this.label11.Text = "Giá tiền";
-            // 
-            // tb_gia_tien
-            // 
-            this.tb_gia_tien.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tb_gia_tien.Location = new System.Drawing.Point(193, 327);
-            this.tb_gia_tien.Name = "tb_gia_tien";
-            this.tb_gia_tien.Size = new System.Drawing.Size(294, 30);
-            this.tb_gia_tien.TabIndex = 7;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(43, 378);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(140, 23);
-            this.label5.TabIndex = 23;
-            this.label5.Text = "Mã nhà xuất bản";
-            // 
-            // cbb_nha_xb
-            // 
-            this.cbb_nha_xb.DataSource = this.nHAXUATBANBindingSource;
-            this.cbb_nha_xb.DisplayMember = "sMaNxb";
-            this.cbb_nha_xb.FormattingEnabled = true;
-            this.cbb_nha_xb.Location = new System.Drawing.Point(192, 378);
-            this.cbb_nha_xb.Name = "cbb_nha_xb";
-            this.cbb_nha_xb.Size = new System.Drawing.Size(294, 31);
-            this.cbb_nha_xb.TabIndex = 8;
-            // 
-            // cbb_ma_loai
-            // 
-            this.cbb_ma_loai.DataSource = this.tHELOAISACHBindingSource;
-            this.cbb_ma_loai.DisplayMember = "sMaLoai";
-            this.cbb_ma_loai.FormattingEnabled = true;
-            this.cbb_ma_loai.Location = new System.Drawing.Point(193, 224);
-            this.cbb_ma_loai.Name = "cbb_ma_loai";
-            this.cbb_ma_loai.Size = new System.Drawing.Size(294, 31);
-            this.cbb_ma_loai.TabIndex = 5;
-            // 
-            // quanLyThuVienDataSet
-            // 
-            this.quanLyThuVienDataSet.DataSetName = "QuanLyThuVienDataSet";
-            this.quanLyThuVienDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tHELOAISACHBindingSource
-            // 
-            this.tHELOAISACHBindingSource.DataMember = "THELOAISACH";
-            this.tHELOAISACHBindingSource.DataSource = this.quanLyThuVienDataSet;
-            // 
             // tHELOAISACHTableAdapter
             // 
             this.tHELOAISACHTableAdapter.ClearBeforeFill = true;
             // 
-            // tACGIABindingSource
-            // 
-            this.tACGIABindingSource.DataMember = "TACGIA";
-            this.tACGIABindingSource.DataSource = this.quanLyThuVienDataSet;
-            // 
             // tACGIATableAdapter
             // 
             this.tACGIATableAdapter.ClearBeforeFill = true;
-            // 
-            // nHAXUATBANBindingSource
-            // 
-            this.nHAXUATBANBindingSource.DataMember = "NHAXUATBAN";
-            this.nHAXUATBANBindingSource.DataSource = this.quanLyThuVienDataSet;
             // 
             // nHAXUATBANTableAdapter
             // 
@@ -412,10 +412,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_sach)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tHELOAISACHBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tACGIABindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nHAXUATBANBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tACGIABindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

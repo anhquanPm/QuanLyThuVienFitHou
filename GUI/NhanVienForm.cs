@@ -75,6 +75,7 @@ namespace GUI
 
         private void dgv_nhan_vien_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            tb_manv.Enabled = false;
             int rowIndex = e.RowIndex;
 
             if (rowIndex >= 0 && rowIndex < dgv_nhan_vien.Rows.Count)
