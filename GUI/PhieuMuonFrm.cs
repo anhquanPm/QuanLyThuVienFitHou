@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,13 +14,13 @@ namespace GUI
     public partial class PhieuMuonFrm : Form
     {
         PhieuMuonBUS phieuMuonBUS = new PhieuMuonBUS();
-        List<string> id;
+       
 
         public PhieuMuonFrm()
         {
             InitializeComponent();
             InitializeDataGridView();
-            id = new List<string>();
+           
         }
 
         private void InitializeDataGridView()
@@ -52,12 +53,14 @@ namespace GUI
             this.dOCGIATableAdapter.Fill(this.quanLyThuVienDataSet1.DOCGIA);
 
             loadPhieuMuon();
-            SetGreenColorForSameBorrowIDs();
+           
 
         }
 
         private void loadPhieuMuon()
         {
+            tb_ma_phieu_muon.Enabled = false;
+            dtp_ngay_hen_tra.Enabled = false;
             DataSet dataSet = phieuMuonBUS.ds_phieuMuon();
             dgv_phieu_muon.Rows.Clear();
             // Dictionary để lưu trữ các hàng theo mã phiếu mượn
@@ -69,6 +72,7 @@ namespace GUI
                     dgv_phieu_muon.Rows.Add(row.ItemArray);
                 }
             }
+            SetGreenColorForSameBorrowIDs();
         }
 
 
@@ -76,7 +80,7 @@ namespace GUI
         private void SetGreenColorForSameBorrowIDs()
         {
             // Initialize id list
-            id = new List<string>();
+           
 
             foreach (DataGridViewRow row1 in dgv_phieu_muon.Rows)
             {
@@ -85,16 +89,8 @@ namespace GUI
 
                 // Skip if borrowID1 is null or empty
                 if (string.IsNullOrEmpty(borrowID1))
-                    continue;
-
-                // Check if this borrow ID has already been processed
-                if (id.Contains(borrowID1))
-                    continue; // Skip if already processed
-
-                // Mark the borrow ID as processed
-                id.Add(borrowID1);
-
-                // Iterate through all other rows to find matches
+                    continue; // Iterate through all other rows to find matches
+                
                 foreach (DataGridViewRow row2 in dgv_phieu_muon.Rows)
                 {
                     // Skip comparing with the same row
@@ -118,5 +114,142 @@ namespace GUI
             }
         }
 
+        private void dgv_phieu_muon_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int rowIndex = e.RowIndex;
+            tb_ma_phieu_muon.Enabled = false;
+            dtp_ngay_hen_tra.Enabled = false;
+
+            if (rowIndex >= 0 && rowIndex < dgv_phieu_muon.Rows.Count)
+            {
+                DataGridViewRow selectRow = dgv_phieu_muon.Rows[rowIndex];
+
+                tb_ma_phieu_muon.Text = selectRow.Cells["Mã phiếu mượn"].Value.ToString();
+                cbb_ma_dg.Text = selectRow.Cells["Mã độc giả"].Value.ToString();
+                dtp_ngay_muon.Text = selectRow.Cells["Ngày mượn"].Value.ToString();
+                cbb_ma_nv.Text = selectRow.Cells["Mã nhân viên"].Value.ToString();
+                cbb_ma_sach.Text = selectRow.Cells["Mã sách"].Value.ToString();
+                cbb_loai_phieu.Text = selectRow.Cells["Mã loại phiếu"].Value.ToString();
+                dtp_ngay_hen_tra.Text = selectRow.Cells["Ngày hẹn trả"].Value.ToString();
+            }
+        }
+
+        private void btn_them_Click(object sender, EventArgs e)
+        {
+            if(tb_ma_phieu_muon.Text.Trim() != "" &&
+                cbb_ma_dg.Text.Trim() != "" &&
+                dtp_ngay_muon.Text != "" &&
+                cbb_ma_nv.Text.Trim() != "" &&
+                cbb_ma_sach.Text.Trim() != "" &&
+                cbb_loai_phieu.Text.Trim() != ""&&
+                chk_check.Checked == false
+                )
+            {
+                string maPM = tb_ma_phieu_muon.Text.Trim();
+                string maDG = cbb_ma_dg.Text.Trim();
+                DateTime ngayMuon = dtp_ngay_muon.Value;
+                string ngayMuonFormated = ngayMuon.ToString("yyyy/MM/dd");
+          
+                string maNV = cbb_ma_nv.Text.Trim();
+                string maSach = cbb_ma_sach.Text.Trim();
+                string maLoaiPhieu = cbb_loai_phieu.Text.Trim();
+
+                
+
+                try
+                {
+                    int res = phieuMuonBUS.themPhieuMuon(maPM, maDG, ngayMuonFormated, maNV, maSach, maLoaiPhieu);
+                    if(res > 0)
+                    {
+                        MessageBox.Show("Thêm phiếu mượn sách thành công");
+                        loadPhieuMuon();
+                        tb_ma_phieu_muon.Enabled = false;
+                    }
+                    else
+                    {
+
+                    }
+                   
+                }
+                catch (Exception ex)
+                {
+                        // Xử lý lỗi SQL Server                 
+                        // Xử lý khi sách đã hết
+                        MessageBox.Show("Lỗi: " + ex.Message); 
+                }
+
+            }else if(tb_ma_phieu_muon.Text.Trim() != "" &&
+                cbb_ma_sach.Text.Trim() != "" &&
+                cbb_loai_phieu.Text.Trim() != "" &&
+                chk_check.Checked == true)
+            {
+                string maPM = tb_ma_phieu_muon.Text.Trim();
+                string maSach = cbb_ma_sach.Text.Trim();
+                string maLoaiPhieu = cbb_loai_phieu.Text.Trim();
+
+                try
+                {
+                    int res = phieuMuonBUS.themChiTietPhieuMuon(maPM, maSach, maLoaiPhieu);
+                    if (res > 0)
+                    {
+                        MessageBox.Show("Thêm phiếu mượn sách thành công");
+                        loadPhieuMuon();
+                        tb_ma_phieu_muon.Enabled = false;
+                    }
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("Lỗi: " + ex.Message);
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng nhập đủ thông tin");
+            }
+        }
+
+        private void btn_clean_Click(object sender, EventArgs e)
+        {
+            if (tb_ma_phieu_muon.Text.Trim() != "" ||
+                cbb_ma_dg.Text.Trim() != "" ||
+                dtp_ngay_muon.Text != "" ||
+                cbb_ma_nv.Text.Trim() != "" ||
+                cbb_ma_sach.Text.Trim() != "" ||
+                cbb_loai_phieu.Text.Trim() != "")
+            {
+                tb_ma_phieu_muon.Enabled = true;
+                tb_ma_phieu_muon.Text = "";
+                cbb_ma_dg.Text = "";
+                dtp_ngay_muon.Text = "";
+                cbb_ma_nv.Text = "";
+                cbb_ma_sach.Text = "";
+                cbb_loai_phieu.Text = "";
+            }
+            else
+            {
+                MessageBox.Show("Dữ liệu đang trống");
+            }
+        }
+
+        private void chk_check_CheckedChanged(object sender, EventArgs e)
+        {
+            if(chk_check.Checked == true)
+            {
+                tb_ma_phieu_muon.Enabled = false;
+                cbb_ma_dg.Enabled = false;
+                dtp_ngay_muon.Enabled = false;
+                cbb_ma_nv.Enabled = false;
+                dtp_ngay_hen_tra.Enabled = false;
+            }
+            else
+            {
+                cbb_ma_dg.Enabled = true;
+                dtp_ngay_muon.Enabled = true;
+                cbb_ma_nv.Enabled = true;
+                
+            }
+
+        }
     }
 }

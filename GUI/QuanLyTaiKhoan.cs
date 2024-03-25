@@ -79,6 +79,7 @@ namespace GUI
 
         private void dgv_tai_khoan_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            tb_ten_tk.Enabled = false;
             int rowIndex = e.RowIndex;
             if(rowIndex >= 0 && rowIndex <= dgv_tai_khoan.Rows.Count ) 
             {

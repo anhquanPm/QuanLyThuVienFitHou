@@ -65,6 +65,7 @@
             this.nHANVIENTableAdapter = new GUI.QuanLyThuVienDataSet1TableAdapters.NHANVIENTableAdapter();
             this.sACHTableAdapter = new GUI.QuanLyThuVienDataSet1TableAdapters.SACHTableAdapter();
             this.lOAIPHIEUTableAdapter = new GUI.QuanLyThuVienDataSet1TableAdapters.LOAIPHIEUTableAdapter();
+            this.chk_check = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dOCGIABindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet1)).BeginInit();
@@ -124,6 +125,7 @@
             this.btn_clean.TabIndex = 29;
             this.btn_clean.Text = "Làm mới";
             this.btn_clean.UseVisualStyleBackColor = true;
+            this.btn_clean.Click += new System.EventHandler(this.btn_clean_Click);
             // 
             // btn_xoa
             // 
@@ -151,9 +153,11 @@
             this.btn_them.TabIndex = 26;
             this.btn_them.Text = "Thêm";
             this.btn_them.UseVisualStyleBackColor = true;
+            this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.chk_check);
             this.groupBox1.Controls.Add(this.cbb_loai_phieu);
             this.groupBox1.Controls.Add(this.cbb_ma_sach);
             this.groupBox1.Controls.Add(this.cbb_ma_nv);
@@ -367,6 +371,7 @@
             this.dgv_phieu_muon.RowTemplate.Height = 24;
             this.dgv_phieu_muon.Size = new System.Drawing.Size(1032, 157);
             this.dgv_phieu_muon.TabIndex = 21;
+            this.dgv_phieu_muon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_phieu_muon_CellClick);
             // 
             // nHANVIENTableAdapter
             // 
@@ -379,6 +384,17 @@
             // lOAIPHIEUTableAdapter
             // 
             this.lOAIPHIEUTableAdapter.ClearBeforeFill = true;
+            // 
+            // chk_check
+            // 
+            this.chk_check.AutoSize = true;
+            this.chk_check.Location = new System.Drawing.Point(76, 389);
+            this.chk_check.Name = "chk_check";
+            this.chk_check.Size = new System.Drawing.Size(325, 27);
+            this.chk_check.TabIndex = 25;
+            this.chk_check.Text = "Thêm sách vào phiếu có mã đã tồn tại";
+            this.chk_check.UseVisualStyleBackColor = true;
+            this.chk_check.CheckedChanged += new System.EventHandler(this.chk_check_CheckedChanged);
             // 
             // PhieuMuonFrm
             // 
@@ -452,5 +468,6 @@
         private QuanLyThuVienDataSet1TableAdapters.SACHTableAdapter sACHTableAdapter;
         private System.Windows.Forms.BindingSource lOAIPHIEUBindingSource;
         private QuanLyThuVienDataSet1TableAdapters.LOAIPHIEUTableAdapter lOAIPHIEUTableAdapter;
+        private System.Windows.Forms.CheckBox chk_check;
     }
 }
