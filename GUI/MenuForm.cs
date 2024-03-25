@@ -136,5 +136,11 @@ namespace GUI
             PhieuMuonFrm frm = new PhieuMuonFrm();
             addForm(frm);
         }
+
+        private void phiếuTrảToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PhieuTraForm frm = new PhieuTraForm();
+            addForm(frm);
+        }
     }
 }

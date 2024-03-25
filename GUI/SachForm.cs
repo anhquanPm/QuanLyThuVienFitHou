@@ -30,9 +30,9 @@ namespace GUI
             dgv_sach.Columns[2].Name = "Năm xuất bản";
             dgv_sach.Columns[3].Name = "Số lượng";
             dgv_sach.Columns[4].Name = "Mã loại";
-            dgv_sach.Columns[5].Name = "Mã tác giả";
-            dgv_sach.Columns[6].Name = "Giá tiền";
-            dgv_sach.Columns[7].Name = "Mã nhà xuất bản";
+            dgv_sach.Columns[5].Name = "Giá tiền";
+            dgv_sach.Columns[6].Name = "Mã nhà xuất bản";
+            dgv_sach.Columns[7].Name = "Mã tác giả";
 
             // Không cho phép chỉnh sửa dữ liệu trực tiếp trên DataGridView
             dgv_sach.ReadOnly = true;
@@ -140,7 +140,7 @@ namespace GUI
                 cbb_ma_loai.Text != "" &&
                 cbb_ma_tg.Text != "" &&
                 tb_gia_tien.Text != ""&&
-                cbb_nha_xb.Text != "")
+                cbb_nha_xb.Text != "" && chk_dongTG.Checked == false)
             {
                 string maSach = tb_ma_sach.Text.Trim();
                 string tenSach = tb_ten_sach.Text.Trim();
@@ -163,6 +163,28 @@ namespace GUI
                 {
                     MessageBox.Show("Thêm sách thất bại!");
                 }
+            }
+            else if (chk_dongTG.Checked == true && cbb_ma_tg.Text.Trim() != ""
+                 && tb_ma_sach.Text.Trim() != ""   ) 
+            {
+                try
+                {
+                    int res = sachBUS.dongTacGia(cbb_ma_tg.Text.Trim(), tb_ma_sach.Text.Trim());
+                    if(res > 0)
+                    {
+                        MessageBox.Show("Thêm đồng tác giả thành công");
+                        loadSach();
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thêm đồng tác giả thất bại");
+                    }
+                }catch
+                {
+                    MessageBox.Show("Tác giả này đã viết cuốn sách này rồi, bạn không thể thêm");
+                }
+               
             }
             else
             {
@@ -217,7 +239,7 @@ namespace GUI
                 string maTG = cbb_ma_tg.Text.Trim();
                 float giaTien = float.Parse(tb_gia_tien.Text.Trim());
                 string nhaXB = cbb_nha_xb.Text.Trim();
-                int res = sachBUS.capNhatSach(maSach, tenSach, namXBFormatted, soLuong, maLoai, maTG, giaTien, nhaXB);
+                int res = sachBUS.capNhatSach(maSach, tenSach, namXBFormatted, soLuong, maLoai, giaTien, nhaXB);
                 if (res > 0)
                 {
                     MessageBox.Show("Cập nhật sách thành công");
@@ -236,7 +258,7 @@ namespace GUI
 
         private void btn_xoa_Click(object sender, EventArgs e)
         {
-            if(tb_ma_sach.Text.Trim() != "")
+            if(tb_ma_sach.Text.Trim() != "" && cbb_ma_tg.Text.Trim() != "")
             {
                 string maSach = tb_ma_sach.Text.Trim();
                 DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa: " + maSach +
@@ -245,7 +267,7 @@ namespace GUI
 
                 if (result == DialogResult.Yes)
                 {
-                    int res = sachBUS.xoaSach(tb_ma_sach.Text);
+                    int res = sachBUS.xoaSach(tb_ma_sach.Text, cbb_ma_tg.Text);
                     if (res > 0)
                     {
                         MessageBox.Show("Xóa sách thành công");
@@ -300,6 +322,29 @@ namespace GUI
                     // Thêm dữ liệu từ mỗi dòng của DataSet vào DataGridView
                     dgv_sach.Rows.Add(row.ItemArray);
                 }
+            }
+        }
+
+        private void chk_dongTG_CheckedChanged(object sender, EventArgs e)
+        {
+            if(chk_dongTG.Checked == true)
+            {
+                tb_ma_sach.Enabled = false;
+                tb_ten_sach.Enabled = false;
+                dtp_nam_xb.Enabled = false;
+                tb_so_luong.Enabled = false;
+                cbb_ma_loai.Enabled = false;
+                tb_gia_tien.Enabled = false;
+                cbb_nha_xb.Enabled=false;
+            }
+            else
+            {
+                tb_ten_sach.Enabled = true;
+                dtp_nam_xb.Enabled = true;
+                tb_so_luong.Enabled = true;
+                cbb_ma_loai.Enabled = true;
+                tb_gia_tien.Enabled = true;
+                cbb_nha_xb.Enabled = true;
             }
         }
     }

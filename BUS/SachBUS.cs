@@ -24,14 +24,19 @@ namespace BUS
         }
 
         public int capNhatSach(string maSach, string tenSach, string namXb, int soLuong,
-            string maLoai, string maTG, float giaTien, string maNXB)
+            string maLoai, float giaTien, string maNXB)
         {
-            return sachDAO.capNhatSach(maSach, tenSach, namXb, soLuong, maLoai, maTG, giaTien, maNXB);
+            return sachDAO.capNhatSach(maSach, tenSach, namXb, soLuong, maLoai, giaTien, maNXB);
         }
 
-        public int xoaSach(string maSach)
+        public int dongTacGia(string maTG, string maSach)
         {
-            return sachDAO.xoaSach(maSach);
+            return sachDAO.dongTacGia(maTG, maSach);
+        }
+
+        public int xoaSach(string maSach, string maTG)
+        {
+            return sachDAO.xoaSach(maSach, maTG);
         }
 
         public DataSet timKiemSachTheoMaSach(string maSach)

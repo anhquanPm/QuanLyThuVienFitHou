@@ -29,38 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WellCome));
-            this.lb_chao = new System.Windows.Forms.Label();
-            this.lb_ten_ngui_dung = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // lb_chao
-            // 
-            this.lb_chao.AutoSize = true;
-            this.lb_chao.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_chao.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lb_chao.Location = new System.Drawing.Point(6, 139);
-            this.lb_chao.Name = "lb_chao";
-            this.lb_chao.Size = new System.Drawing.Size(113, 23);
-            this.lb_chao.TabIndex = 1;
-            this.lb_chao.Text = "Chào mừng: ";
-            this.lb_chao.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.lb_chao.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // lb_ten_ngui_dung
-            // 
-            this.lb_ten_ngui_dung.AutoSize = true;
-            this.lb_ten_ngui_dung.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_ten_ngui_dung.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lb_ten_ngui_dung.Location = new System.Drawing.Point(109, 139);
-            this.lb_ten_ngui_dung.Name = "lb_ten_ngui_dung";
-            this.lb_ten_ngui_dung.Size = new System.Drawing.Size(137, 23);
-            this.lb_ten_ngui_dung.TabIndex = 2;
-            this.lb_ten_ngui_dung.Text = "Tên người dùng";
-            this.lb_ten_ngui_dung.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // pictureBox2
             // 
@@ -68,50 +39,29 @@
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(900, 647);
+            this.pictureBox2.Size = new System.Drawing.Size(1000, 619);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBox1.BackgroundImage")));
-            this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.groupBox1.Controls.Add(this.lb_ten_ngui_dung);
-            this.groupBox1.Controls.Add(this.lb_chao);
-            this.groupBox1.Location = new System.Drawing.Point(602, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(286, 165);
-            this.groupBox1.TabIndex = 4;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
             // WellCome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 647);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(1000, 619);
             this.Controls.Add(this.pictureBox2);
-            this.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("JetBrains Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "WellCome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chào mừng đến với hệ thống";
             this.Load += new System.EventHandler(this.WellCome_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Label lb_chao;
-        private System.Windows.Forms.Label lb_ten_ngui_dung;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

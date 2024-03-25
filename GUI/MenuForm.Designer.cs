@@ -41,6 +41,7 @@
             this.DocGiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tácGiảToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TKToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.loaiSachToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.phiếuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.phiếuMượnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.phiếuTrảToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -112,7 +113,8 @@
             this.NhanVienToolStripMenuItem,
             this.DocGiaToolStripMenuItem,
             this.tácGiảToolStripMenuItem,
-            this.TKToolStripMenuItem});
+            this.TKToolStripMenuItem,
+            this.loaiSachToolStripMenuItem});
             resources.ApplyResources(this.quảnLýToolStripMenuItem, "quảnLýToolStripMenuItem");
             this.quảnLýToolStripMenuItem.Name = "quảnLýToolStripMenuItem";
             // 
@@ -146,6 +148,11 @@
             this.TKToolStripMenuItem.Name = "TKToolStripMenuItem";
             this.TKToolStripMenuItem.Click += new System.EventHandler(this.TKToolStripMenuItem_Click);
             // 
+            // loaiSachToolStripMenuItem
+            // 
+            resources.ApplyResources(this.loaiSachToolStripMenuItem, "loaiSachToolStripMenuItem");
+            this.loaiSachToolStripMenuItem.Name = "loaiSachToolStripMenuItem";
+            // 
             // phiếuToolStripMenuItem
             // 
             this.phiếuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -165,6 +172,7 @@
             // 
             resources.ApplyResources(this.phiếuTrảToolStripMenuItem, "phiếuTrảToolStripMenuItem");
             this.phiếuTrảToolStripMenuItem.Name = "phiếuTrảToolStripMenuItem";
+            this.phiếuTrảToolStripMenuItem.Click += new System.EventHandler(this.phiếuTrảToolStripMenuItem_Click);
             // 
             // phiếuPhạtToolStripMenuItem
             // 
@@ -268,5 +276,6 @@
         private System.Windows.Forms.ToolStripMenuItem phiếuPhạtToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem QLTCToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem TKToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem loaiSachToolStripMenuItem;
     }
 }

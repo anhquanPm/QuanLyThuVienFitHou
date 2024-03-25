@@ -45,6 +45,7 @@
     <Compile Include="NhanVienDAO.cs" />
     <Compile Include="DataProviceder.cs" />
     <Compile Include="PhieuMuonDAO.cs" />
+    <Compile Include="PhieuTraSachDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SachDAO.cs" />
     <Compile Include="TacGiaDAO.cs" />

@@ -31,7 +31,7 @@ namespace DAO
         }
 
         public int capNhatSach(string maSach, string tenSach, string namXb, int soLuong,
-            string maLoai, string maTG, float giaTien, string maNXB)
+            string maLoai, float giaTien, string maNXB)
         {
             Dictionary<string, object> parameters = new Dictionary<string, object>();
             parameters.Add("@maSach", maSach);
@@ -39,16 +39,25 @@ namespace DAO
             parameters.Add("@namXB", namXb);
             parameters.Add("@soLuong", soLuong);
             parameters.Add("@maLoai", maLoai);
-            parameters.Add("@maTacGia", maTG);
+            
             parameters.Add("@giaTien", giaTien);
             parameters.Add("@maNXB", maNXB);
-            return them_sua_xoa("proc_capNhatSach", parameters);
+            return them_sua_xoa("proc_capNhatSachs", parameters);
+        }
+        
+        public int dongTacGia(string maTG, string maSach)
+        {
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@maTG", maTG);
+            parameters.Add("@maSach", maSach);
+            return them_sua_xoa("proc_dongTacGia", parameters);
         }
 
-        public int xoaSach(string maSach)
+        public int xoaSach(string maSach, string maTG)
         {
             Dictionary<string, object> parameters = new Dictionary<string, object>();
             parameters.Add("@maSach", maSach);
+            parameters.Add("@maTG", maTG);
             return them_sua_xoa("proc_xoaSach", parameters);
         }
 

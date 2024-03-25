@@ -33,8 +33,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -64,6 +70,12 @@
     <Compile Include="DoiMatKhau.Designer.cs">
       <DependentUpon>DoiMatKhau.cs</DependentUpon>
     </Compile>
+    <Compile Include="PhieuTraForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhieuTraForm.Designer.cs">
+      <DependentUpon>PhieuTraForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +93,18 @@
     </Compile>
     <Compile Include="PhieuMuonFrm.Designer.cs">
       <DependentUpon>PhieuMuonFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhieuMuonReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PhieuMuonReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PhieuTraSachForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhieuTraSachForm.Designer.cs">
+      <DependentUpon>PhieuTraSachForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -100,11 +124,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QuanLyThuVienDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyThuVienDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyThuVienDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SachForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SachForm.Designer.cs">
       <DependentUpon>SachForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowReport.Designer.cs">
+      <DependentUpon>ShowReport.cs</DependentUpon>
     </Compile>
     <Compile Include="TacGia.cs">
       <SubType>Form</SubType>
@@ -148,6 +183,16 @@
     <EmbeddedResource Include="PhieuMuonFrm.resx">
       <DependentUpon>PhieuMuonFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PhieuMuonReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PhieuMuonReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhieuTraForm.resx">
+      <DependentUpon>PhieuTraForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhieuTraSachForm.resx">
+      <DependentUpon>PhieuTraSachForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -162,6 +207,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SachForm.resx">
       <DependentUpon>SachForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowReport.resx">
+      <DependentUpon>ShowReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TacGia.resx">
       <DependentUpon>TacGia.cs</DependentUpon>
@@ -206,6 +254,17 @@
     <None Include="QuanLyThuVienDataSet1.xss">
       <DependentUpon>QuanLyThuVienDataSet1.xsd</DependentUpon>
     </None>
+    <None Include="QuanLyThuVienDataSet2.xsc">
+      <DependentUpon>QuanLyThuVienDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyThuVienDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyThuVienDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyThuVienDataSet2.xss">
+      <DependentUpon>QuanLyThuVienDataSet2.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -219,6 +278,9 @@
       <Project>{ca2e4a7c-72d1-4c6f-babd-caff0547dd6b}</Project>
       <Name>DTO</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

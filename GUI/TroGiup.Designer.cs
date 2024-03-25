@@ -42,9 +42,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(133, 91);
+            this.label1.Location = new System.Drawing.Point(148, 87);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 23);
+            this.label1.Size = new System.Drawing.Size(0, 22);
             this.label1.TabIndex = 0;
             // 
             // lb_hdsd
@@ -54,7 +54,7 @@
             this.lb_hdsd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lb_hdsd.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_hdsd.ForeColor = System.Drawing.Color.Black;
-            this.lb_hdsd.Location = new System.Drawing.Point(187, 270);
+            this.lb_hdsd.Location = new System.Drawing.Point(208, 258);
             this.lb_hdsd.Name = "lb_hdsd";
             this.lb_hdsd.Size = new System.Drawing.Size(338, 23);
             this.lb_hdsd.TabIndex = 1;
@@ -63,11 +63,14 @@
             // btn_hdsd
             // 
             this.btn_hdsd.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_hdsd.Location = new System.Drawing.Point(557, 264);
+            this.btn_hdsd.Image = ((System.Drawing.Image)(resources.GetObject("btn_hdsd.Image")));
+            this.btn_hdsd.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_hdsd.Location = new System.Drawing.Point(619, 253);
             this.btn_hdsd.Name = "btn_hdsd";
-            this.btn_hdsd.Size = new System.Drawing.Size(141, 35);
+            this.btn_hdsd.Size = new System.Drawing.Size(129, 33);
             this.btn_hdsd.TabIndex = 2;
             this.btn_hdsd.Text = "Xem HDSD";
+            this.btn_hdsd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_hdsd.UseVisualStyleBackColor = true;
             this.btn_hdsd.Click += new System.EventHandler(this.btn_hdsd_Click);
             // 
@@ -83,7 +86,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(900, 647);
+            this.groupBox1.Size = new System.Drawing.Size(1000, 619);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
@@ -93,7 +96,7 @@
             this.lb_tacgia.AutoSize = true;
             this.lb_tacgia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lb_tacgia.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_tacgia.Location = new System.Drawing.Point(317, 66);
+            this.lb_tacgia.Location = new System.Drawing.Point(414, 74);
             this.lb_tacgia.Name = "lb_tacgia";
             this.lb_tacgia.Size = new System.Drawing.Size(245, 23);
             this.lb_tacgia.TabIndex = 5;
@@ -102,11 +105,14 @@
             // btn_lhtg
             // 
             this.btn_lhtg.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_lhtg.Location = new System.Drawing.Point(557, 329);
+            this.btn_lhtg.Image = ((System.Drawing.Image)(resources.GetObject("btn_lhtg.Image")));
+            this.btn_lhtg.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_lhtg.Location = new System.Drawing.Point(619, 315);
             this.btn_lhtg.Name = "btn_lhtg";
-            this.btn_lhtg.Size = new System.Drawing.Size(141, 35);
+            this.btn_lhtg.Size = new System.Drawing.Size(192, 33);
             this.btn_lhtg.TabIndex = 4;
             this.btn_lhtg.Text = "Liên hệ Tác giả";
+            this.btn_lhtg.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_lhtg.UseVisualStyleBackColor = true;
             this.btn_lhtg.Click += new System.EventHandler(this.btn_lhtg_Click);
             // 
@@ -116,7 +122,7 @@
             this.lb_lienhe.AutoSize = true;
             this.lb_lienhe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lb_lienhe.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_lienhe.Location = new System.Drawing.Point(187, 335);
+            this.lb_lienhe.Location = new System.Drawing.Point(208, 320);
             this.lb_lienhe.Name = "lb_lienhe";
             this.lb_lienhe.Size = new System.Drawing.Size(358, 23);
             this.lb_lienhe.TabIndex = 3;
@@ -124,12 +130,12 @@
             // 
             // HDSD
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 647);
+            this.ClientSize = new System.Drawing.Size(1000, 619);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
-            this.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("JetBrains Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "HDSD";
             this.Text = "Hướng dẫn sử dụng";

@@ -56,7 +56,7 @@ namespace GUI
 
         private void btn_lhtg_Click(object sender, EventArgs e)
         {
-            string url = "https://www.facebook.com/2uanvy";
+            string url = "https://www.facebook.com/2uanvy?locale=vi_VN";
             Process.Start(url);
         }
     }
