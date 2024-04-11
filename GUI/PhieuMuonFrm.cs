@@ -258,6 +258,7 @@ namespace GUI
             }
 
         }
+<<<<<<< HEAD
 
         private void btn_xoa_Click(object sender, EventArgs e)
         {
@@ -383,5 +384,7 @@ namespace GUI
             }
 
         }
+=======
+>>>>>>> 6fbe207437f69b598926bfb73747f3013897ac5e
     }
 }

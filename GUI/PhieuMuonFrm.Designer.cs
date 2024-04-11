@@ -67,12 +67,16 @@
             this.dgv_phieu_muon = new System.Windows.Forms.DataGridView();
             this.nHANVIENTableAdapter = new GUI.QuanLyThuVienDataSet1TableAdapters.NHANVIENTableAdapter();
             this.lOAIPHIEUTableAdapter = new GUI.QuanLyThuVienDataSet1TableAdapters.LOAIPHIEUTableAdapter();
+<<<<<<< HEAD
             this.quanLyThuVienDataSet = new GUI.QuanLyThuVienDataSet();
             this.pHIEUTRASACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pHIEUTRASACHTableAdapter = new GUI.QuanLyThuVienDataSetTableAdapters.PHIEUTRASACHTableAdapter();
             this.quanLyThuVienDataSet2BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sACHTableAdapter = new GUI.QuanLyThuVienDataSet2TableAdapters.SACHTableAdapter();
             this.btn_in = new System.Windows.Forms.Button();
+=======
+            this.chk_check = new System.Windows.Forms.CheckBox();
+>>>>>>> 6fbe207437f69b598926bfb73747f3013897ac5e
             ((System.ComponentModel.ISupportInitialize)(this.dOCGIABindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet1)).BeginInit();
@@ -417,6 +421,7 @@
             // 
             this.lOAIPHIEUTableAdapter.ClearBeforeFill = true;
             // 
+<<<<<<< HEAD
             // quanLyThuVienDataSet
             // 
             this.quanLyThuVienDataSet.DataSetName = "QuanLyThuVienDataSet";
@@ -449,6 +454,18 @@
             this.btn_in.Text = "In phiếu mượn";
             this.btn_in.UseVisualStyleBackColor = true;
             this.btn_in.Click += new System.EventHandler(this.btn_in_Click);
+=======
+            // chk_check
+            // 
+            this.chk_check.AutoSize = true;
+            this.chk_check.Location = new System.Drawing.Point(76, 389);
+            this.chk_check.Name = "chk_check";
+            this.chk_check.Size = new System.Drawing.Size(325, 27);
+            this.chk_check.TabIndex = 25;
+            this.chk_check.Text = "Thêm sách vào phiếu có mã đã tồn tại";
+            this.chk_check.UseVisualStyleBackColor = true;
+            this.chk_check.CheckedChanged += new System.EventHandler(this.chk_check_CheckedChanged);
+>>>>>>> 6fbe207437f69b598926bfb73747f3013897ac5e
             // 
             // PhieuMuonFrm
             // 
@@ -527,6 +544,7 @@
         private System.Windows.Forms.BindingSource lOAIPHIEUBindingSource;
         private QuanLyThuVienDataSet1TableAdapters.LOAIPHIEUTableAdapter lOAIPHIEUTableAdapter;
         private System.Windows.Forms.CheckBox chk_check;
+<<<<<<< HEAD
         private QuanLyThuVienDataSet quanLyThuVienDataSet;
         private System.Windows.Forms.BindingSource pHIEUTRASACHBindingSource;
         private QuanLyThuVienDataSetTableAdapters.PHIEUTRASACHTableAdapter pHIEUTRASACHTableAdapter;
@@ -536,5 +554,7 @@
         private System.Windows.Forms.BindingSource sACHBindingSource;
         private QuanLyThuVienDataSet2TableAdapters.SACHTableAdapter sACHTableAdapter;
         private System.Windows.Forms.Button btn_in;
+=======
+>>>>>>> 6fbe207437f69b598926bfb73747f3013897ac5e
     }
 }
