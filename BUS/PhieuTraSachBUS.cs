@@ -23,5 +23,21 @@ namespace BUS
 
             return phieuTraSachDAO.themPhieuTraSach(maPT, maSach, maPM, maNV, ngayTra, maDG, maTT);
         }
+
+        public int capNhatPhieuTraSach(string maPT, string maSach, string maPM, string maNV,
+            string ngayTra, string maDG, int maTT)
+        {
+            return phieuTraSachDAO.capNhatPhieuTraSach(maPT, maSach, maPM, maNV, ngayTra, maDG, maTT);
+        }
+
+        public int xoaPhieuTra(string maPT)
+        {
+            return phieuTraSachDAO.xoaPhieuTraSach(maPT);
+        }
+
+        public bool checkMaPT(string tableName, string primaryKeyColumnName, object primaryKeyValue)
+        {
+            return phieuTraSachDAO.checkMaPT(tableName, primaryKeyColumnName, primaryKeyValue);
+        }
     }
 }

@@ -32,7 +32,7 @@ namespace GUI
             {
                 NhanVienToolStripMenuItem.Visible = false;
                 QLTCToolStripMenuItem.Visible = false;
-                TongTienPhatToolStripMenuItem.Visible = false;
+               
                 TKToolStripMenuItem.Visible = false;
             }
         }

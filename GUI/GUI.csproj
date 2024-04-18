@@ -52,6 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DangNhapForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,12 @@
     </Compile>
     <Compile Include="DoiMatKhau.Designer.cs">
       <DependentUpon>DoiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DSPM.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSPM.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="PhieuTraForm.cs">
       <SubType>Form</SubType>
@@ -108,6 +120,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLTV.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLTV.xsd</DependentUpon>
+    </Compile>
     <Compile Include="QuanLyTaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +182,10 @@
     <Compile Include="WellCome.Designer.cs">
       <DependentUpon>WellCome.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="DangNhapForm.resx">
       <DependentUpon>DangNhapForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -174,6 +195,10 @@
     <EmbeddedResource Include="DoiMatKhau.resx">
       <DependentUpon>DoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DSPM.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DSPM.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenuForm.resx">
       <DependentUpon>MenuForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -182,6 +207,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PhieuMuonFrm.resx">
       <DependentUpon>PhieuMuonFrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="PhieuMuonReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -232,6 +258,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="QLTV.xsc">
+      <DependentUpon>QLTV.xsd</DependentUpon>
+    </None>
+    <None Include="QLTV.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLTV.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLTV.xss">
+      <DependentUpon>QLTV.xsd</DependentUpon>
+    </None>
     <None Include="QuanLyThuVienDataSet.xsc">
       <DependentUpon>QuanLyThuVienDataSet.xsd</DependentUpon>
     </None>

@@ -98,5 +98,36 @@ namespace DAO
                 }
             }
         }
+
+        public static bool CheckPrimaryKeyExist(string tableName, string primaryKeyColumnName, object primaryKeyValue)
+        {
+            bool isExist = false;
+            try
+            {
+                using (SqlConnection conn = SqlConnectionData.Connection())
+                {
+                    conn.Open();
+
+                    string query = $"SELECT COUNT(*) FROM {tableName} WHERE {primaryKeyColumnName} = @PrimaryKeyValue";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@PrimaryKeyValue", primaryKeyValue);
+
+                        int count = (int)cmd.ExecuteScalar();
+
+                        if (count > 0)
+                        {
+                            isExist = true;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
+            return isExist;
+        }
     }
 }

@@ -15,7 +15,7 @@ namespace DAO
             return GetDataDTO("proc_dsPhieuMuon", parameters);
         }
 
-<<<<<<< HEAD
+
         public DataSet ds_phieuMuonTheoMa(string maPM)
         {
             Dictionary<string, object> parameters = new Dictionary<string, object>();
@@ -23,8 +23,7 @@ namespace DAO
             return GetDataDTO("proc_dsPhieuMuonTheoMa", parameters);
         }
 
-=======
->>>>>>> 6fbe207437f69b598926bfb73747f3013897ac5e
+
         public int themPhieuMuon(string maPM, string maDG, string ngayMuon, string maNV,
                                    string maSach, string maLoaiPhieu)
         {
@@ -46,7 +45,7 @@ namespace DAO
             parameters.Add("@maLoaiPhieu", maLoaiPhieu);
             return them_sua_xoa("proc_themChiTietPhieuMuon", parameters);
         }
-<<<<<<< HEAD
+
 
         public int xoaPhieuMuon(string maPM)
         {
@@ -78,8 +77,14 @@ namespace DAO
             return GetDataDTO("proc_timKiemPhieuMuonTheoDG", parameters);
         }
 
+        public bool checkKhoaChinh(string tableName, string primaryKeyColumnName, object primaryKeyValue)
+        {
+            
+            return CheckPrimaryKeyExist(tableName, primaryKeyColumnName, primaryKeyValue);
 
-=======
->>>>>>> 6fbe207437f69b598926bfb73747f3013897ac5e
+        }
+
+
+
     }
 }

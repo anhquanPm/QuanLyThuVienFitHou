@@ -31,17 +31,20 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PhieuTraForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.chk_check = new System.Windows.Forms.CheckBox();
+            this.lb_tb = new System.Windows.Forms.Label();
             this.cbb_ma_phieu_muon = new System.Windows.Forms.ComboBox();
             this.pHIEUMUONSACHBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.quanLyThuVienDataSet2BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.quanLyThuVienDataSet2 = new GUI.QuanLyThuVienDataSet2();
-            this.chk_check = new System.Windows.Forms.CheckBox();
             this.cbb_ma_tinh_trang_sach = new System.Windows.Forms.ComboBox();
             this.tINHTRANGSACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.quanLyThuVienDataSet2BindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.cbb_ma_sach = new System.Windows.Forms.ComboBox();
-            this.sACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.quanLyThuVienDataSet2BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.cHITIETPHIEUMUONBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.quanLyThuVienDataSet2BindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.cbb_ma_nv = new System.Windows.Forms.ComboBox();
             this.nHANVIENBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label9 = new System.Windows.Forms.Label();
@@ -55,7 +58,8 @@
             this.pHIEUMUONSACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.btn_in = new System.Windows.Forms.Button();
+            this.sACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.quanLyThuVienDataSet2BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.label10 = new System.Windows.Forms.Label();
             this.btn_clean = new System.Windows.Forms.Button();
             this.btn_xoa = new System.Windows.Forms.Button();
@@ -71,28 +75,23 @@
             this.sACHTableAdapter = new GUI.QuanLyThuVienDataSet2TableAdapters.SACHTableAdapter();
             this.tINHTRANGSACHTableAdapter = new GUI.QuanLyThuVienDataSet2TableAdapters.TINHTRANGSACHTableAdapter();
             this.btn_ds = new System.Windows.Forms.Button();
-            this.lb_tb = new System.Windows.Forms.Label();
             this.pHIEUMUONSACHBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.quanLyThuVienDataSet2BindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.cHITIETPHIEUMUONBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cHITIETPHIEUMUONTableAdapter = new GUI.QuanLyThuVienDataSet2TableAdapters.CHITIETPHIEUMUONTableAdapter();
             this.btn_them_phieu_phat = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pHIEUMUONSACHBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet2BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tINHTRANGSACHBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet2BindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sACHBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet2BindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cHITIETPHIEUMUONBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet2BindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nHANVIENBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pHIEUMUONSACHBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sACHBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet2BindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_phieu_tra)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pHIEUMUONSACHBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet2BindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cHITIETPHIEUMUONBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -122,6 +121,45 @@
             this.groupBox1.TabIndex = 31;
             this.groupBox1.TabStop = false;
             // 
+            // label11
+            // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(60, 372);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(140, 22);
+            this.label11.TabIndex = 47;
+            this.label11.Text = "Mã phiếu phạt";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox1.Location = new System.Drawing.Point(212, 364);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(326, 30);
+            this.textBox1.TabIndex = 46;
+            // 
+            // chk_check
+            // 
+            this.chk_check.AutoSize = true;
+            this.chk_check.Location = new System.Drawing.Point(60, 411);
+            this.chk_check.Name = "chk_check";
+            this.chk_check.Size = new System.Drawing.Size(212, 26);
+            this.chk_check.TabIndex = 25;
+            this.chk_check.Text = "Áp dụng phiếu phạt";
+            this.chk_check.UseVisualStyleBackColor = true;
+            this.chk_check.CheckedChanged += new System.EventHandler(this.chk_check_CheckedChanged);
+            // 
+            // lb_tb
+            // 
+            this.lb_tb.AutoSize = true;
+            this.lb_tb.Font = new System.Drawing.Font("JetBrains Mono NL", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_tb.ForeColor = System.Drawing.Color.Red;
+            this.lb_tb.Location = new System.Drawing.Point(278, 412);
+            this.lb_tb.Name = "lb_tb";
+            this.lb_tb.Size = new System.Drawing.Size(0, 22);
+            this.lb_tb.TabIndex = 45;
+            // 
             // cbb_ma_phieu_muon
             // 
             this.cbb_ma_phieu_muon.DataSource = this.pHIEUMUONSACHBindingSource1;
@@ -146,17 +184,6 @@
             // 
             this.quanLyThuVienDataSet2.DataSetName = "QuanLyThuVienDataSet2";
             this.quanLyThuVienDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // chk_check
-            // 
-            this.chk_check.AutoSize = true;
-            this.chk_check.Location = new System.Drawing.Point(60, 411);
-            this.chk_check.Name = "chk_check";
-            this.chk_check.Size = new System.Drawing.Size(212, 26);
-            this.chk_check.TabIndex = 25;
-            this.chk_check.Text = "Áp dụng phiếu phạt";
-            this.chk_check.UseVisualStyleBackColor = true;
-            this.chk_check.CheckedChanged += new System.EventHandler(this.chk_check_CheckedChanged);
             // 
             // cbb_ma_tinh_trang_sach
             // 
@@ -189,15 +216,15 @@
             this.cbb_ma_sach.Size = new System.Drawing.Size(324, 30);
             this.cbb_ma_sach.TabIndex = 23;
             // 
-            // sACHBindingSource
+            // cHITIETPHIEUMUONBindingSource
             // 
-            this.sACHBindingSource.DataMember = "SACH";
-            this.sACHBindingSource.DataSource = this.quanLyThuVienDataSet2BindingSource1;
+            this.cHITIETPHIEUMUONBindingSource.DataMember = "CHITIETPHIEUMUON";
+            this.cHITIETPHIEUMUONBindingSource.DataSource = this.quanLyThuVienDataSet2BindingSource3;
             // 
-            // quanLyThuVienDataSet2BindingSource1
+            // quanLyThuVienDataSet2BindingSource3
             // 
-            this.quanLyThuVienDataSet2BindingSource1.DataSource = this.quanLyThuVienDataSet2;
-            this.quanLyThuVienDataSet2BindingSource1.Position = 0;
+            this.quanLyThuVienDataSet2BindingSource3.DataSource = this.quanLyThuVienDataSet2;
+            this.quanLyThuVienDataSet2BindingSource3.Position = 0;
             // 
             // cbb_ma_nv
             // 
@@ -317,14 +344,15 @@
             this.label5.TabIndex = 12;
             this.label5.Text = "Mã phiếu mượn";
             // 
-            // btn_in
+            // sACHBindingSource
             // 
-            this.btn_in.Location = new System.Drawing.Point(648, 374);
-            this.btn_in.Name = "btn_in";
-            this.btn_in.Size = new System.Drawing.Size(165, 33);
-            this.btn_in.TabIndex = 42;
-            this.btn_in.Text = "In phiếu mượn";
-            this.btn_in.UseVisualStyleBackColor = true;
+            this.sACHBindingSource.DataMember = "SACH";
+            this.sACHBindingSource.DataSource = this.quanLyThuVienDataSet2BindingSource1;
+            // 
+            // quanLyThuVienDataSet2BindingSource1
+            // 
+            this.quanLyThuVienDataSet2BindingSource1.DataSource = this.quanLyThuVienDataSet2;
+            this.quanLyThuVienDataSet2BindingSource1.Position = 0;
             // 
             // label10
             // 
@@ -346,6 +374,7 @@
             this.btn_clean.TabIndex = 40;
             this.btn_clean.Text = "Làm mới";
             this.btn_clean.UseVisualStyleBackColor = true;
+            this.btn_clean.Click += new System.EventHandler(this.btn_clean_Click);
             // 
             // btn_xoa
             // 
@@ -355,6 +384,7 @@
             this.btn_xoa.TabIndex = 39;
             this.btn_xoa.Text = "Xóa";
             this.btn_xoa.UseVisualStyleBackColor = true;
+            this.btn_xoa.Click += new System.EventHandler(this.btn_xoa_Click);
             // 
             // btn_capnhat
             // 
@@ -364,6 +394,7 @@
             this.btn_capnhat.TabIndex = 38;
             this.btn_capnhat.Text = "Cập nhật";
             this.btn_capnhat.UseVisualStyleBackColor = true;
+            this.btn_capnhat.Click += new System.EventHandler(this.btn_capnhat_Click);
             // 
             // btn_them
             // 
@@ -452,30 +483,10 @@
             this.btn_ds.UseVisualStyleBackColor = true;
             this.btn_ds.Click += new System.EventHandler(this.btn_ds_Click);
             // 
-            // lb_tb
-            // 
-            this.lb_tb.AutoSize = true;
-            this.lb_tb.Font = new System.Drawing.Font("JetBrains Mono NL", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_tb.ForeColor = System.Drawing.Color.Red;
-            this.lb_tb.Location = new System.Drawing.Point(278, 412);
-            this.lb_tb.Name = "lb_tb";
-            this.lb_tb.Size = new System.Drawing.Size(0, 22);
-            this.lb_tb.TabIndex = 45;
-            // 
             // pHIEUMUONSACHBindingSource2
             // 
             this.pHIEUMUONSACHBindingSource2.DataMember = "PHIEUMUONSACH";
             this.pHIEUMUONSACHBindingSource2.DataSource = this.quanLyThuVienDataSet2;
-            // 
-            // quanLyThuVienDataSet2BindingSource3
-            // 
-            this.quanLyThuVienDataSet2BindingSource3.DataSource = this.quanLyThuVienDataSet2;
-            this.quanLyThuVienDataSet2BindingSource3.Position = 0;
-            // 
-            // cHITIETPHIEUMUONBindingSource
-            // 
-            this.cHITIETPHIEUMUONBindingSource.DataMember = "CHITIETPHIEUMUON";
-            this.cHITIETPHIEUMUONBindingSource.DataSource = this.quanLyThuVienDataSet2BindingSource3;
             // 
             // cHITIETPHIEUMUONTableAdapter
             // 
@@ -491,24 +502,6 @@
             this.btn_them_phieu_phat.UseVisualStyleBackColor = true;
             this.btn_them_phieu_phat.Click += new System.EventHandler(this.btn_them_phieu_phat_Click);
             // 
-            // label11
-            // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(60, 372);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(130, 22);
-            this.label11.TabIndex = 47;
-            this.label11.Text = "Mã phiếu trả";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.Location = new System.Drawing.Point(212, 364);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(326, 30);
-            this.textBox1.TabIndex = 46;
-            // 
             // PhieuTraForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
@@ -517,7 +510,6 @@
             this.Controls.Add(this.btn_them_phieu_phat);
             this.Controls.Add(this.btn_ds);
             this.Controls.Add(this.dgv_phieu_tra);
-            this.Controls.Add(this.btn_in);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.btn_clean);
             this.Controls.Add(this.btn_xoa);
@@ -540,14 +532,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tINHTRANGSACHBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet2BindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sACHBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet2BindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cHITIETPHIEUMUONBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet2BindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nHANVIENBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pHIEUMUONSACHBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sACHBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet2BindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_phieu_tra)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pHIEUMUONSACHBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet2BindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cHITIETPHIEUMUONBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -570,7 +562,6 @@
         private System.Windows.Forms.ComboBox cbb_ma_dg;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btn_in;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btn_clean;
         private System.Windows.Forms.Button btn_xoa;

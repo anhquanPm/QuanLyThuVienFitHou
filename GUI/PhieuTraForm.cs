@@ -60,6 +60,7 @@ namespace GUI
             chk_check.Enabled = false;
             btn_them_phieu_phat.Enabled = false;
             lb_tb.Text = "Sách nguyên vẹn";
+            tb_ma_phieu_tra.Enabled = false;
 
             DataSet data = phieuTraSachBUS.dsPhieuTraSach();
             dgv_phieu_tra.Rows.Clear();
@@ -129,20 +130,26 @@ namespace GUI
 
                 try
                 {
-                    int res = phieuTraSachBUS.themPhieuTraSach(maPT, maSach, maPm, maNV, ngayTraFomated, maDG, maTT);
-                    if(res > 0 )
+                    if(phieuTraSachBUS.checkMaPT("PHIEUTRASACH", "sMaPhieuTra", tb_ma_phieu_tra.Text.Trim()) 
+                        && phieuTraSachBUS.checkMaPT("PHIEUTRASACH", "sMaSach", cbb_ma_sach.Text.Trim()))
                     {
-                        MessageBox.Show("Thêm phiếu trả sách thành công");
-                        loadDanhSachPhieuTra();
+                        MessageBox.Show("Mã sách và phiếu trả đã tồn tại trong hệ thống");
                     }
                     else
                     {
-                        MessageBox.Show("Thêm phiếu trả sách thất bại");
+                        int res = phieuTraSachBUS.themPhieuTraSach(maPT, maSach, maPm, maNV, ngayTraFomated, maDG, maTT);
+                        if (res > 0)
+                        {
+                            MessageBox.Show("Thêm phiếu trả sách thành công");
+                            loadDanhSachPhieuTra();
+                            
+                        }
                     }
                 }
                 catch(Exception ex)
                 {
-                    MessageBox.Show("Lỗi: "+ex.Message);
+                    
+                    loadDanhSachPhieuTra();
                 }
             }
             else
@@ -201,6 +208,102 @@ namespace GUI
         private void btn_them_phieu_phat_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void btn_capnhat_Click(object sender, EventArgs e)
+        {
+            if (tb_ma_phieu_tra.Text.Trim() != "" &&
+                cbb_ma_dg.Text.Trim() != "" &&
+                cbb_ma_phieu_muon.Text != "" &&
+                cbb_ma_nv.Text != "" &&
+                cbb_ma_sach.Text != "" &&
+                cbb_ma_tinh_trang_sach.Text != "" &&
+                dtp_ngay_tra.Text != ""
+                )
+            {
+                string maPT = tb_ma_phieu_tra.Text.Trim();
+                string maPm = cbb_ma_phieu_muon.Text.Trim();
+                string maDG = cbb_ma_dg.Text;
+                string maNV = cbb_ma_nv.Text;
+                string maSach = cbb_ma_sach.Text;
+                int maTT = Convert.ToInt32(cbb_ma_tinh_trang_sach.Text);
+                DateTime ngayTra = dtp_ngay_tra.Value;
+                string ngayTraFomated = ngayTra.ToString("yyyy/MM/dd");
+
+                try
+                {
+                    int res = phieuTraSachBUS.capNhatPhieuTraSach(maPT, maSach, maPm, maNV, ngayTraFomated, maDG, maTT);
+                    if (res > 0)
+                    {
+                        MessageBox.Show("Cập nhật phiếu trả sách thành công");
+                        loadDanhSachPhieuTra();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cập nhật phiếu trả sách thất bại");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi: " + ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
+            }
+        }
+
+        private void btn_xoa_Click(object sender, EventArgs e)
+        {
+            if(tb_ma_phieu_tra.Text.Trim() != "") {
+                string maPT = tb_ma_phieu_tra.Text.Trim();
+
+                try
+                {
+                    DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa phiếu trả sách có mã là: " + maPT + " ?", "???"
+                        , MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    if(result == DialogResult.Yes)
+                    {
+                        int res = phieuTraSachBUS.xoaPhieuTra(maPT);
+                         if (res > 0)
+                        {
+                            MessageBox.Show("Xoá phiếu trả sách thành công");
+                            loadDanhSachPhieuTra() ;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Xóa phiếu mượn sách thất bại");
+                        }
+                    }
+                    else
+                    {
+
+                    }
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("Lỗi: "+ex);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn mã phiếu trả trước khi xóa");
+            }
+        }
+
+        private void btn_clean_Click(object sender, EventArgs e)
+        {
+            tb_ma_phieu_tra.Enabled = true;
+            tb_ma_phieu_tra.Text = "";
+            cbb_ma_dg.Text = "";
+            cbb_ma_nv.Text = "";
+            cbb_ma_phieu_muon.Text = "";
+            cbb_ma_sach.Text = "";
+            cbb_ma_tinh_trang_sach.Text = "";
+            dtp_ngay_tra.Text = "";
+
         }
     }
 }

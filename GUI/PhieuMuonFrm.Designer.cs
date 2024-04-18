@@ -67,16 +67,13 @@
             this.dgv_phieu_muon = new System.Windows.Forms.DataGridView();
             this.nHANVIENTableAdapter = new GUI.QuanLyThuVienDataSet1TableAdapters.NHANVIENTableAdapter();
             this.lOAIPHIEUTableAdapter = new GUI.QuanLyThuVienDataSet1TableAdapters.LOAIPHIEUTableAdapter();
-<<<<<<< HEAD
             this.quanLyThuVienDataSet = new GUI.QuanLyThuVienDataSet();
             this.pHIEUTRASACHBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pHIEUTRASACHTableAdapter = new GUI.QuanLyThuVienDataSetTableAdapters.PHIEUTRASACHTableAdapter();
             this.quanLyThuVienDataSet2BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sACHTableAdapter = new GUI.QuanLyThuVienDataSet2TableAdapters.SACHTableAdapter();
             this.btn_in = new System.Windows.Forms.Button();
-=======
-            this.chk_check = new System.Windows.Forms.CheckBox();
->>>>>>> 6fbe207437f69b598926bfb73747f3013897ac5e
+            this.inDS = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dOCGIABindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quanLyThuVienDataSet1)).BeginInit();
@@ -97,7 +94,7 @@
             this.cbb_ma_dg.DataSource = this.dOCGIABindingSource;
             this.cbb_ma_dg.DisplayMember = "sMaDG";
             this.cbb_ma_dg.FormattingEnabled = true;
-            this.cbb_ma_dg.Location = new System.Drawing.Point(213, 89);
+            this.cbb_ma_dg.Location = new System.Drawing.Point(214, 79);
             this.cbb_ma_dg.Name = "cbb_ma_dg";
             this.cbb_ma_dg.Size = new System.Drawing.Size(325, 30);
             this.cbb_ma_dg.TabIndex = 0;
@@ -200,7 +197,7 @@
             // chk_check
             // 
             this.chk_check.AutoSize = true;
-            this.chk_check.Location = new System.Drawing.Point(84, 372);
+            this.chk_check.Location = new System.Drawing.Point(77, 379);
             this.chk_check.Name = "chk_check";
             this.chk_check.Size = new System.Drawing.Size(392, 26);
             this.chk_check.TabIndex = 25;
@@ -213,7 +210,7 @@
             this.cbb_loai_phieu.DataSource = this.lOAIPHIEUBindingSource;
             this.cbb_loai_phieu.DisplayMember = "iMaLoaiPhieu";
             this.cbb_loai_phieu.FormattingEnabled = true;
-            this.cbb_loai_phieu.Location = new System.Drawing.Point(214, 283);
+            this.cbb_loai_phieu.Location = new System.Drawing.Point(215, 273);
             this.cbb_loai_phieu.Name = "cbb_loai_phieu";
             this.cbb_loai_phieu.Size = new System.Drawing.Size(324, 30);
             this.cbb_loai_phieu.TabIndex = 24;
@@ -228,7 +225,7 @@
             this.cbb_ma_sach.DataSource = this.sACHBindingSource;
             this.cbb_ma_sach.DisplayMember = "sMaSach";
             this.cbb_ma_sach.FormattingEnabled = true;
-            this.cbb_ma_sach.Location = new System.Drawing.Point(214, 231);
+            this.cbb_ma_sach.Location = new System.Drawing.Point(215, 221);
             this.cbb_ma_sach.Name = "cbb_ma_sach";
             this.cbb_ma_sach.Size = new System.Drawing.Size(324, 30);
             this.cbb_ma_sach.TabIndex = 23;
@@ -248,7 +245,7 @@
             this.cbb_ma_nv.DataSource = this.nHANVIENBindingSource;
             this.cbb_ma_nv.DisplayMember = "sMaNV";
             this.cbb_ma_nv.FormattingEnabled = true;
-            this.cbb_ma_nv.Location = new System.Drawing.Point(214, 176);
+            this.cbb_ma_nv.Location = new System.Drawing.Point(215, 166);
             this.cbb_ma_nv.Name = "cbb_ma_nv";
             this.cbb_ma_nv.Size = new System.Drawing.Size(324, 30);
             this.cbb_ma_nv.TabIndex = 22;
@@ -263,7 +260,7 @@
             this.dtp_ngay_muon.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtp_ngay_muon.CustomFormat = "dd/MM/yyyy";
             this.dtp_ngay_muon.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_ngay_muon.Location = new System.Drawing.Point(213, 136);
+            this.dtp_ngay_muon.Location = new System.Drawing.Point(214, 126);
             this.dtp_ngay_muon.Name = "dtp_ngay_muon";
             this.dtp_ngay_muon.Size = new System.Drawing.Size(326, 30);
             this.dtp_ngay_muon.TabIndex = 21;
@@ -272,7 +269,7 @@
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(70, 291);
+            this.label9.Location = new System.Drawing.Point(71, 281);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(140, 22);
             this.label9.TabIndex = 20;
@@ -282,7 +279,7 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(57, 51);
+            this.label3.Location = new System.Drawing.Point(58, 41);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(140, 22);
             this.label3.TabIndex = 6;
@@ -292,7 +289,7 @@
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(70, 332);
+            this.label8.Location = new System.Drawing.Point(71, 322);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(130, 22);
             this.label8.TabIndex = 18;
@@ -301,7 +298,7 @@
             // tb_ma_phieu_muon
             // 
             this.tb_ma_phieu_muon.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tb_ma_phieu_muon.Location = new System.Drawing.Point(213, 44);
+            this.tb_ma_phieu_muon.Location = new System.Drawing.Point(214, 34);
             this.tb_ma_phieu_muon.Name = "tb_ma_phieu_muon";
             this.tb_ma_phieu_muon.Size = new System.Drawing.Size(326, 30);
             this.tb_ma_phieu_muon.TabIndex = 1;
@@ -311,7 +308,7 @@
             this.dtp_ngay_hen_tra.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtp_ngay_hen_tra.CustomFormat = "dd/MM/yyyy";
             this.dtp_ngay_hen_tra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_ngay_hen_tra.Location = new System.Drawing.Point(212, 326);
+            this.dtp_ngay_hen_tra.Location = new System.Drawing.Point(213, 316);
             this.dtp_ngay_hen_tra.Name = "dtp_ngay_hen_tra";
             this.dtp_ngay_hen_tra.Size = new System.Drawing.Size(326, 30);
             this.dtp_ngay_hen_tra.TabIndex = 8;
@@ -320,7 +317,7 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(80, 92);
+            this.label4.Location = new System.Drawing.Point(81, 82);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(110, 22);
             this.label4.TabIndex = 8;
@@ -330,7 +327,7 @@
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(100, 234);
+            this.label7.Location = new System.Drawing.Point(101, 224);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(80, 22);
             this.label7.TabIndex = 15;
@@ -340,7 +337,7 @@
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(80, 178);
+            this.label6.Location = new System.Drawing.Point(81, 168);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(130, 22);
             this.label6.TabIndex = 13;
@@ -350,7 +347,7 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(80, 136);
+            this.label5.Location = new System.Drawing.Point(81, 126);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(100, 22);
             this.label5.TabIndex = 12;
@@ -409,7 +406,7 @@
             this.dgv_phieu_muon.Name = "dgv_phieu_muon";
             this.dgv_phieu_muon.RowHeadersWidth = 51;
             this.dgv_phieu_muon.RowTemplate.Height = 24;
-            this.dgv_phieu_muon.Size = new System.Drawing.Size(1147, 150);
+            this.dgv_phieu_muon.Size = new System.Drawing.Size(1147, 147);
             this.dgv_phieu_muon.TabIndex = 21;
             this.dgv_phieu_muon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_phieu_muon_CellClick);
             // 
@@ -421,7 +418,6 @@
             // 
             this.lOAIPHIEUTableAdapter.ClearBeforeFill = true;
             // 
-<<<<<<< HEAD
             // quanLyThuVienDataSet
             // 
             this.quanLyThuVienDataSet.DataSetName = "QuanLyThuVienDataSet";
@@ -447,31 +443,30 @@
             // 
             // btn_in
             // 
-            this.btn_in.Location = new System.Drawing.Point(834, 380);
+            this.btn_in.Location = new System.Drawing.Point(706, 380);
             this.btn_in.Name = "btn_in";
             this.btn_in.Size = new System.Drawing.Size(149, 33);
             this.btn_in.TabIndex = 32;
             this.btn_in.Text = "In phiếu mượn";
             this.btn_in.UseVisualStyleBackColor = true;
             this.btn_in.Click += new System.EventHandler(this.btn_in_Click);
-=======
-            // chk_check
             // 
-            this.chk_check.AutoSize = true;
-            this.chk_check.Location = new System.Drawing.Point(76, 389);
-            this.chk_check.Name = "chk_check";
-            this.chk_check.Size = new System.Drawing.Size(325, 27);
-            this.chk_check.TabIndex = 25;
-            this.chk_check.Text = "Thêm sách vào phiếu có mã đã tồn tại";
-            this.chk_check.UseVisualStyleBackColor = true;
-            this.chk_check.CheckedChanged += new System.EventHandler(this.chk_check_CheckedChanged);
->>>>>>> 6fbe207437f69b598926bfb73747f3013897ac5e
+            // inDS
+            // 
+            this.inDS.Location = new System.Drawing.Point(924, 379);
+            this.inDS.Name = "inDS";
+            this.inDS.Size = new System.Drawing.Size(149, 33);
+            this.inDS.TabIndex = 33;
+            this.inDS.Text = "In DS";
+            this.inDS.UseVisualStyleBackColor = true;
+            this.inDS.Click += new System.EventHandler(this.inDS_Click);
             // 
             // PhieuMuonFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1148, 573);
+            this.Controls.Add(this.inDS);
             this.Controls.Add(this.btn_in);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.btn_clean);
@@ -544,7 +539,7 @@
         private System.Windows.Forms.BindingSource lOAIPHIEUBindingSource;
         private QuanLyThuVienDataSet1TableAdapters.LOAIPHIEUTableAdapter lOAIPHIEUTableAdapter;
         private System.Windows.Forms.CheckBox chk_check;
-<<<<<<< HEAD
+
         private QuanLyThuVienDataSet quanLyThuVienDataSet;
         private System.Windows.Forms.BindingSource pHIEUTRASACHBindingSource;
         private QuanLyThuVienDataSetTableAdapters.PHIEUTRASACHTableAdapter pHIEUTRASACHTableAdapter;
@@ -554,7 +549,6 @@
         private System.Windows.Forms.BindingSource sACHBindingSource;
         private QuanLyThuVienDataSet2TableAdapters.SACHTableAdapter sACHTableAdapter;
         private System.Windows.Forms.Button btn_in;
-=======
->>>>>>> 6fbe207437f69b598926bfb73747f3013897ac5e
+        private System.Windows.Forms.Button inDS;
     }
 }

@@ -165,23 +165,24 @@ namespace GUI
 
                 try
                 {
-                    int res = phieuMuonBUS.themPhieuMuon(maPM, maDG, ngayMuonFormated, maNV, maSach, maLoaiPhieu);
-                    if(res > 0)
+                    if(phieuMuonBUS.checkKhoaChinh("PHIEUMUONSACH", "sMaSach", tb_ma_phieu_muon))
                     {
-                        MessageBox.Show("Thêm phiếu mượn sách thành công");
-                        loadPhieuMuon();
-                        tb_ma_phieu_muon.Enabled = false;
+                        int res = phieuMuonBUS.themPhieuMuon(maPM, maDG, ngayMuonFormated, maNV, maSach, maLoaiPhieu);
+                        if (res > 0)
+                        {
+                            MessageBox.Show("Thêm phiếu mượn sách thành công");
+                            loadPhieuMuon();
+                            tb_ma_phieu_muon.Enabled = false;
+                        }
                     }
                     else
                     {
-
+                        MessageBox.Show("Mã phiếu mượn đã tồn tại trong hệ thống");
                     }
                    
                 }
                 catch (Exception ex)
                 {
-                        // Xử lý lỗi SQL Server                 
-                        // Xử lý khi sách đã hết
                         MessageBox.Show("Lỗi: " + ex.Message); 
                 }
 
@@ -258,7 +259,7 @@ namespace GUI
             }
 
         }
-<<<<<<< HEAD
+
 
         private void btn_xoa_Click(object sender, EventArgs e)
         {
@@ -384,7 +385,29 @@ namespace GUI
             }
 
         }
-=======
->>>>>>> 6fbe207437f69b598926bfb73747f3013897ac5e
+
+        private void inDS_Click(object sender, EventArgs e)
+        {
+          
+                string maPM = tb_ma_phieu_muon.Text.Trim();
+               
+                DataSet dataSet = phieuMuonBUS.ds_phieuMuon();
+
+            if (dataSet.Tables.Count > 0 && dataSet.Tables[0].Rows.Count > 0)
+            {
+                DSPM r = new DSPM();
+                    r.SetDataSource(dataSet.Tables[0]); 
+
+                   
+                    ShowReport f = new ShowReport();
+                   
+                    f.crystalReportViewer1.ReportSource = r;
+                    f.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Không có phiếu mượn hợp lệ.");
+            }
+        }
     }
 }

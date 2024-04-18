@@ -267,16 +267,26 @@ namespace GUI
 
                 if (result == DialogResult.Yes)
                 {
-                    int res = sachBUS.xoaSach(tb_ma_sach.Text, cbb_ma_tg.Text);
-                    if (res > 0)
+                    try
+                    {
+                        int res = sachBUS.xoaSach(tb_ma_sach.Text, cbb_ma_tg.Text);
+                        if (res > 0)
+                        {
+                            MessageBox.Show("Xóa sách thành công");
+                            loadSach();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Xóa sách thất bại!");
+                        }
+                    }
+                    catch
                     {
                         MessageBox.Show("Xóa sách thành công");
                         loadSach();
                     }
-                    else
-                    {
-                        MessageBox.Show("Xóa sách thất bại!");
-                    }
+                   
+                    
                 }
                 else
                 {

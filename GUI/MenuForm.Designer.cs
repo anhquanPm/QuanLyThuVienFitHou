@@ -46,10 +46,6 @@
             this.phiếuMượnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.phiếuTrảToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.phiếuPhạtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.SachSapDenHanTraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.SachQuaHanTraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.TongTienPhatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.QLTCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trợGiúpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HDSDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -66,7 +62,6 @@
             this.hệThốngToolStripMenuItem,
             this.quảnLýToolStripMenuItem,
             this.phiếuToolStripMenuItem,
-            this.thốngKêToolStripMenuItem,
             this.QLTCToolStripMenuItem,
             this.trợGiúpToolStripMenuItem,
             this.homeToolStripMenuItem});
@@ -179,30 +174,6 @@
             resources.ApplyResources(this.phiếuPhạtToolStripMenuItem, "phiếuPhạtToolStripMenuItem");
             this.phiếuPhạtToolStripMenuItem.Name = "phiếuPhạtToolStripMenuItem";
             // 
-            // thốngKêToolStripMenuItem
-            // 
-            this.thốngKêToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.SachSapDenHanTraToolStripMenuItem,
-            this.SachQuaHanTraToolStripMenuItem,
-            this.TongTienPhatToolStripMenuItem});
-            resources.ApplyResources(this.thốngKêToolStripMenuItem, "thốngKêToolStripMenuItem");
-            this.thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
-            // 
-            // SachSapDenHanTraToolStripMenuItem
-            // 
-            resources.ApplyResources(this.SachSapDenHanTraToolStripMenuItem, "SachSapDenHanTraToolStripMenuItem");
-            this.SachSapDenHanTraToolStripMenuItem.Name = "SachSapDenHanTraToolStripMenuItem";
-            // 
-            // SachQuaHanTraToolStripMenuItem
-            // 
-            resources.ApplyResources(this.SachQuaHanTraToolStripMenuItem, "SachQuaHanTraToolStripMenuItem");
-            this.SachQuaHanTraToolStripMenuItem.Name = "SachQuaHanTraToolStripMenuItem";
-            // 
-            // TongTienPhatToolStripMenuItem
-            // 
-            resources.ApplyResources(this.TongTienPhatToolStripMenuItem, "TongTienPhatToolStripMenuItem");
-            this.TongTienPhatToolStripMenuItem.Name = "TongTienPhatToolStripMenuItem";
-            // 
             // QLTCToolStripMenuItem
             // 
             resources.ApplyResources(this.QLTCToolStripMenuItem, "QLTCToolStripMenuItem");
@@ -259,16 +230,12 @@
         private System.Windows.Forms.ToolStripMenuItem quảnLýToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem SachToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem NhanVienToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem thốngKêToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem trợGiúpToolStripMenuItem;
         private System.Windows.Forms.Panel panelContent;
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem DangXuatToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem HDSDToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem DocGiaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem SachSapDenHanTraToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem SachQuaHanTraToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem TongTienPhatToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tácGiảToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem phiếuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem phiếuMượnToolStripMenuItem;

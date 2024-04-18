@@ -15,14 +15,13 @@ namespace BUS
             return phieuMuonDAO.ds_phieuMuon();
         }
 
-<<<<<<< HEAD
+
         public DataSet ds_phieuMuonTheoMa(string maPM)
         {
             return phieuMuonDAO.ds_phieuMuonTheoMa(maPM);
         }
 
-=======
->>>>>>> 6fbe207437f69b598926bfb73747f3013897ac5e
+
         public int themPhieuMuon(string maPM, string maDG, string ngayMuon, string maNV,
                                    string maSach, string maLoaiPhieu)
         {
@@ -33,7 +32,7 @@ namespace BUS
         {
             return phieuMuonDAO.themChiTietPhieuMuon(maPM, maSach, maLoaiPhieu);
 
-<<<<<<< HEAD
+
         }
 
         public int xoaPhieuMuon(string PM)
@@ -56,8 +55,12 @@ namespace BUS
             return phieuMuonDAO.timKiemPhieuMuonTheoMaDG(maDG);
         }
 
-=======
+        public bool checkKhoaChinh(string tableName, string primaryKeyColumnName, object primaryKeyValue)
+        {
+            return phieuMuonDAO.checkKhoaChinh(tableName, primaryKeyColumnName, primaryKeyValue);
+        }
+
         } 
->>>>>>> 6fbe207437f69b598926bfb73747f3013897ac5e
+
     }
-}
+
