@@ -54,7 +54,7 @@ namespace GUI
 
             DataSet dataSet = sachBUS.getSachData();
             dgv_sach.Rows.Clear(); // Xóa dữ liệu cũ trước khi đổ dữ liệu mới
-           
+
             // Kiểm tra nếu có dữ liệu trong DataSet
             if (dataSet.Tables.Count > 0 && dataSet.Tables[0].Rows.Count > 0)
             {
@@ -72,7 +72,7 @@ namespace GUI
 
         private void loadSach()
         {
-          
+
             DataSet dataSet = sachBUS.getSachData();
             dgv_sach.Rows.Clear(); // Xóa dữ liệu cũ trước khi đổ dữ liệu mới
 
@@ -93,7 +93,7 @@ namespace GUI
 
         private void dgv_sach_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-           
+
             // Kiểm tra cột "Số lượng" và dòng có giá trị là 0
             if (dgv_sach.Columns[e.ColumnIndex].Name == "Số lượng" && Convert.ToInt32(e.Value) == 0)
             {
@@ -111,7 +111,7 @@ namespace GUI
             if (indexRow >= 0 && indexRow <= dgv_sach.Rows.Count)
             {
                 DataGridViewRow selectedRow = dgv_sach.Rows[indexRow];
-                
+
                 tb_ma_sach.Text = selectedRow.Cells["Mã sách"].Value.ToString();
                 tb_ten_sach.Text = selectedRow.Cells["Tên sách"].Value.ToString();
                 //dtp_nam_xb.Value = DateTime.Parse(selectedRow.Cells["Năm xuất bản"].Value.ToString());
@@ -126,20 +126,20 @@ namespace GUI
                 tb_so_luong.Text = selectedRow.Cells["Số lượng"].Value.ToString();
                 cbb_ma_loai.Text = selectedRow.Cells["Mã loại"].Value.ToString();
                 cbb_ma_tg.Text = selectedRow.Cells["Mã tác giả"].Value.ToString();
-                tb_gia_tien.Text = selectedRow.Cells["Giá tiền"].Value.ToString() ;
+                tb_gia_tien.Text = selectedRow.Cells["Giá tiền"].Value.ToString();
                 cbb_nha_xb.Text = selectedRow.Cells["Mã nhà xuất bản"].Value.ToString();
             }
         }
 
         private void btn_them_Click(object sender, EventArgs e)
         {
-            if(tb_ma_sach.Text != "" &&
+            if (tb_ma_sach.Text != "" &&
                 tb_ten_sach.Text != "" &&
                 dtp_nam_xb.Text != "" &&
                 tb_so_luong.Text != "" &&
                 cbb_ma_loai.Text != "" &&
                 cbb_ma_tg.Text != "" &&
-                tb_gia_tien.Text != ""&&
+                tb_gia_tien.Text != "" &&
                 cbb_nha_xb.Text != "" && chk_dongTG.Checked == false)
             {
                 string maSach = tb_ma_sach.Text.Trim();
@@ -152,25 +152,41 @@ namespace GUI
                 string maTG = cbb_ma_tg.Text.Trim();
                 float giaTien = float.Parse(tb_gia_tien.Text.Trim());
                 string nhaXB = cbb_nha_xb.Text.Trim();
-                int res = sachBUS.themSach(maSach, tenSach, namXBFormatted, soLuong, maLoai, maTG, giaTien, nhaXB);
-                if(res > 0)
+                try
                 {
-                    MessageBox.Show("Thêm sách thành công");
-                    loadSach();
-                    tb_ma_sach.Enabled = false;
+                    if(sachBUS.checkKey("dbo.SACH", "sMaSach", tb_ma_sach))
+                    {
+                        MessageBox.Show("Mã sách đã tồn tại trong hệ thống");
+                    }
+                    else
+                    {
+                        int res = sachBUS.themSach(maSach, tenSach, namXBFormatted, soLuong, maLoai, maTG, giaTien, nhaXB);
+                        if (res > 0)
+                        {
+                            MessageBox.Show("Thêm sách thành công");
+                            loadSach();
+                            tb_ma_sach.Enabled = false;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Thêm sách thất bại!");
+                        }
+                    }
+                    
                 }
-                else
+                catch
                 {
-                    MessageBox.Show("Thêm sách thất bại!");
+                    MessageBox.Show("Mã sách đã tồn tại trong hệ thống");
                 }
+                
             }
             else if (chk_dongTG.Checked == true && cbb_ma_tg.Text.Trim() != ""
-                 && tb_ma_sach.Text.Trim() != ""   ) 
+                 && tb_ma_sach.Text.Trim() != "")
             {
                 try
                 {
                     int res = sachBUS.dongTacGia(cbb_ma_tg.Text.Trim(), tb_ma_sach.Text.Trim());
-                    if(res > 0)
+                    if (res > 0)
                     {
                         MessageBox.Show("Thêm đồng tác giả thành công");
                         loadSach();
@@ -180,11 +196,12 @@ namespace GUI
                     {
                         MessageBox.Show("Thêm đồng tác giả thất bại");
                     }
-                }catch
+                }
+                catch
                 {
                     MessageBox.Show("Tác giả này đã viết cuốn sách này rồi, bạn không thể thêm");
                 }
-               
+
             }
             else
             {
@@ -195,7 +212,7 @@ namespace GUI
         private void btn_clean_Click(object sender, EventArgs e)
         {
 
-            if(tb_ma_sach.Text != "" ||
+            if (tb_ma_sach.Text != "" ||
                 tb_ten_sach.Text != "" ||
                 dtp_nam_xb.Text != "" ||
                 tb_so_luong.Text != "" ||
@@ -258,7 +275,7 @@ namespace GUI
 
         private void btn_xoa_Click(object sender, EventArgs e)
         {
-            if(tb_ma_sach.Text.Trim() != "" && cbb_ma_tg.Text.Trim() != "")
+            if (tb_ma_sach.Text.Trim() != "" && cbb_ma_tg.Text.Trim() != "")
             {
                 string maSach = tb_ma_sach.Text.Trim();
                 DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa: " + maSach +
@@ -285,29 +302,29 @@ namespace GUI
                         MessageBox.Show("Xóa sách thành công");
                         loadSach();
                     }
-                   
-                    
+
+
                 }
                 else
                 {
 
                 }
-                
+
             }
         }
 
         private void tb_timkiem_TextChanged(object sender, EventArgs e)
         {
-            if(cbb_boloc.Text == "Mã sách")
+            if (cbb_boloc.Text == "Mã sách")
             {
                 dgv_sach.Rows.Clear();
-             DataSet data  = sachBUS.timKiemSachTheoMaSach(tb_timkiem.Text.Trim());
+                DataSet data = sachBUS.timKiemSachTheoMaSach(tb_timkiem.Text.Trim());
 
-                    foreach (DataRow row in data.Tables[0].Rows)
-                    {
-                        // Thêm dữ liệu từ mỗi dòng của DataSet vào DataGridView
-                        dgv_sach.Rows.Add(row.ItemArray);
-                    }
+                foreach (DataRow row in data.Tables[0].Rows)
+                {
+                    // Thêm dữ liệu từ mỗi dòng của DataSet vào DataGridView
+                    dgv_sach.Rows.Add(row.ItemArray);
+                }
             }
 
             if (cbb_boloc.Text == "Tên sách")
@@ -337,7 +354,7 @@ namespace GUI
 
         private void chk_dongTG_CheckedChanged(object sender, EventArgs e)
         {
-            if(chk_dongTG.Checked == true)
+            if (chk_dongTG.Checked == true)
             {
                 tb_ma_sach.Enabled = false;
                 tb_ten_sach.Enabled = false;
@@ -345,7 +362,7 @@ namespace GUI
                 tb_so_luong.Enabled = false;
                 cbb_ma_loai.Enabled = false;
                 tb_gia_tien.Enabled = false;
-                cbb_nha_xb.Enabled=false;
+                cbb_nha_xb.Enabled = false;
             }
             else
             {
@@ -357,5 +374,27 @@ namespace GUI
                 cbb_nha_xb.Enabled = true;
             }
         }
+
+        private void btn_in_Click(object sender, EventArgs e)
+        {
+            DataSet dataSet = sachBUS.getSachData();
+
+            if (dataSet.Tables.Count > 0 && dataSet.Tables[0].Rows.Count > 0)
+            {
+                DsSach r = new DsSach();
+                r.SetDataSource(dataSet.Tables[0]);
+
+
+                ShowReport f = new ShowReport();
+
+                f.crystalReportViewer1.ReportSource = r;
+                f.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Không có phiếu mượn hợp lệ.");
+            }
+        }
     }
 }
+

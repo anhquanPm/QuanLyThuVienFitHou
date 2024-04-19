@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using DTO;
 namespace DAO
 {
-    public class SachDAO:DataProviceder
+    public class SachDAO : DataProviceder
     {
         public DataSet getSachData()
         {
@@ -39,12 +39,12 @@ namespace DAO
             parameters.Add("@namXB", namXb);
             parameters.Add("@soLuong", soLuong);
             parameters.Add("@maLoai", maLoai);
-            
+
             parameters.Add("@giaTien", giaTien);
             parameters.Add("@maNXB", maNXB);
             return them_sua_xoa("proc_capNhatSachs", parameters);
         }
-        
+
         public int dongTacGia(string maTG, string maSach)
         {
             Dictionary<string, object> parameters = new Dictionary<string, object>();
@@ -80,6 +80,11 @@ namespace DAO
             Dictionary<string, object> parameters = new Dictionary<string, object>();
             parameters.Add("@maLoai", maLoai);
             return GetDataDTO("proc_timKiemTheoMaLoai", parameters);
+        }
+
+        public bool checkKey(string tableName, string primaryKeyColumnName, object primaryKeyValue)
+        {
+            return SachDAO.CheckPrimaryKeyExist(tableName, primaryKeyColumnName, primaryKeyValue);
         }
     }
 }

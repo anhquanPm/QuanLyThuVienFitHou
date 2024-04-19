@@ -65,6 +65,7 @@
             this.tHELOAISACHTableAdapter = new GUI.QuanLyThuVienDataSetTableAdapters.THELOAISACHTableAdapter();
             this.tACGIATableAdapter = new GUI.QuanLyThuVienDataSetTableAdapters.TACGIATableAdapter();
             this.nHAXUATBANTableAdapter = new GUI.QuanLyThuVienDataSetTableAdapters.NHAXUATBANTableAdapter();
+            this.btn_in = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_sach)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tHELOAISACHBindingSource)).BeginInit();
@@ -400,11 +401,22 @@
             // 
             this.nHAXUATBANTableAdapter.ClearBeforeFill = true;
             // 
+            // btn_in
+            // 
+            this.btn_in.Location = new System.Drawing.Point(670, 394);
+            this.btn_in.Name = "btn_in";
+            this.btn_in.Size = new System.Drawing.Size(138, 30);
+            this.btn_in.TabIndex = 31;
+            this.btn_in.Text = "In Ds sách";
+            this.btn_in.UseVisualStyleBackColor = true;
+            this.btn_in.Click += new System.EventHandler(this.btn_in_Click);
+            // 
             // SachForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1148, 627);
+            this.Controls.Add(this.btn_in);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.btn_clean);
             this.Controls.Add(this.btn_xoa);
@@ -471,5 +483,6 @@
         private System.Windows.Forms.BindingSource nHAXUATBANBindingSource;
         private QuanLyThuVienDataSetTableAdapters.NHAXUATBANTableAdapter nHAXUATBANTableAdapter;
         private System.Windows.Forms.CheckBox chk_dongTG;
+        private System.Windows.Forms.Button btn_in;
     }
 }

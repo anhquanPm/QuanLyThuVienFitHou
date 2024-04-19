@@ -53,5 +53,10 @@ namespace BUS
         {
             return sachDAO.timKiemSachTheoMaLoai(maLoai);
         }
+
+        public bool checkKey(string tableName, string primaryKeyColumnName, object primaryKeyValue)
+        {
+            return sachDAO.checkKey(tableName, primaryKeyColumnName, primaryKeyValue);
+        }
     }
 }
