@@ -377,11 +377,11 @@ namespace GUI
 
         private void btn_in_Click(object sender, EventArgs e)
         {
-            DataSet dataSet = sachBUS.getSachData();
+            DataSet dataSet = sachBUS.getSachChocLoc();
 
             if (dataSet.Tables.Count > 0 && dataSet.Tables[0].Rows.Count > 0)
             {
-                DsSach r = new DsSach();
+                DSSachChonLoc r = new DSSachChonLoc();
                 r.SetDataSource(dataSet.Tables[0]);
 
 

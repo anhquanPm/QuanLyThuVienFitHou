@@ -15,6 +15,12 @@ namespace DAO
             return GetDataDTO("proc_getSach", parameters);
         }
 
+        public DataSet getSachChonLoc()
+        {
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            return GetDataDTO("proc_getSachChonLoc", parameters);
+        }
+
         public int themSach(string maSach, string tenSach, string namXb, int soLuong,
             string maLoai, string maTG, float giaTien, string maNXB)
         {

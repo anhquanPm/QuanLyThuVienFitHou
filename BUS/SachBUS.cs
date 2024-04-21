@@ -17,6 +17,11 @@ namespace BUS
             return sachDAO.getSachData();
         }
 
+        public DataSet getSachChocLoc()
+        {
+            return sachDAO.getSachChonLoc();
+        }
+
         public int themSach(string maSach, string tenSach, string namXb, int soLuong,
             string maLoai, string maTG, float giaTien, string maNXB)
         {

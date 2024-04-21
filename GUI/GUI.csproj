@@ -88,6 +88,12 @@
       <DependentUpon>DSPM.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="DSSachChonLoc.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSSachChonLoc.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="PhieuTraForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,6 +214,10 @@
     <EmbeddedResource Include="DSPM.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>DSPM.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DSSachChonLoc.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DSSachChonLoc.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuForm.resx">
       <DependentUpon>MenuForm.cs</DependentUpon>
