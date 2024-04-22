@@ -31,8 +31,6 @@ namespace GUI
             else
             {
                 NhanVienToolStripMenuItem.Visible = false;
-                QLTCToolStripMenuItem.Visible = false;
-               
                 TKToolStripMenuItem.Visible = false;
             }
         }

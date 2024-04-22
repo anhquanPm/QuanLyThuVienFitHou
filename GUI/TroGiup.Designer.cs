@@ -96,11 +96,12 @@
             this.lb_tacgia.AutoSize = true;
             this.lb_tacgia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lb_tacgia.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_tacgia.Location = new System.Drawing.Point(414, 74);
+            this.lb_tacgia.Location = new System.Drawing.Point(305, 36);
             this.lb_tacgia.Name = "lb_tacgia";
-            this.lb_tacgia.Size = new System.Drawing.Size(245, 23);
+            this.lb_tacgia.Size = new System.Drawing.Size(404, 46);
             this.lb_tacgia.TabIndex = 5;
-            this.lb_tacgia.Text = "Phát triển bởi Trần Anh Quân";
+            this.lb_tacgia.Text = "Phát triển bởi Trần Anh Quân sinh viên khóa k22 \r\nKhoa công nghệ thông tin - Đại " +
+    "học Mở Hà Nội\r\n";
             // 
             // btn_lhtg
             // 

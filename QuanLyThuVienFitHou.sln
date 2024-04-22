@@ -14,6 +14,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{B4F2660D-FA9E-432F-A062-98F16DA3C4E5}"
 	ProjectSection(SolutionItems) = preProject
 		Database.sql = Database.sql
+		proc_trigger.sql = proc_trigger.sql
 	EndProjectSection
 EndProject
 Global

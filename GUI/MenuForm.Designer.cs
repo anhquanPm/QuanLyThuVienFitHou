@@ -46,7 +46,6 @@
             this.phiếuMượnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.phiếuTrảToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.phiếuPhạtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.QLTCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trợGiúpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HDSDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,7 +61,6 @@
             this.hệThốngToolStripMenuItem,
             this.quảnLýToolStripMenuItem,
             this.phiếuToolStripMenuItem,
-            this.QLTCToolStripMenuItem,
             this.trợGiúpToolStripMenuItem,
             this.homeToolStripMenuItem});
             this.menuStrip1.Name = "menuStrip1";
@@ -174,11 +172,6 @@
             resources.ApplyResources(this.phiếuPhạtToolStripMenuItem, "phiếuPhạtToolStripMenuItem");
             this.phiếuPhạtToolStripMenuItem.Name = "phiếuPhạtToolStripMenuItem";
             // 
-            // QLTCToolStripMenuItem
-            // 
-            resources.ApplyResources(this.QLTCToolStripMenuItem, "QLTCToolStripMenuItem");
-            this.QLTCToolStripMenuItem.Name = "QLTCToolStripMenuItem";
-            // 
             // trợGiúpToolStripMenuItem
             // 
             this.trợGiúpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -241,7 +234,6 @@
         private System.Windows.Forms.ToolStripMenuItem phiếuMượnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem phiếuTrảToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem phiếuPhạtToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem QLTCToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem TKToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem loaiSachToolStripMenuItem;
     }
